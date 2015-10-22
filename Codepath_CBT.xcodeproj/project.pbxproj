@@ -14,6 +14,8 @@
 		4D360E611BD88B9500576A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D360E5F1BD88B9500576A69 /* LaunchScreen.storyboard */; };
 		4D360E6C1BD88B9500576A69 /* Codepath_CBTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E6B1BD88B9500576A69 /* Codepath_CBTTests.swift */; };
 		4D360E771BD88B9500576A69 /* Codepath_CBTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E761BD88B9500576A69 /* Codepath_CBTUITests.swift */; };
+		4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E841BD89AE700576A69 /* Item1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E861BD89AFE00576A69 /* Item2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4D360E721BD88B9500576A69 /* Codepath_CBTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Codepath_CBTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D360E761BD88B9500576A69 /* Codepath_CBTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codepath_CBTUITests.swift; sourceTree = "<group>"; };
 		4D360E781BD88B9500576A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D360E841BD89AE700576A69 /* Item1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item1ViewController.swift; path = Codepath_CBT/Item1ViewController.swift; sourceTree = "<group>"; };
+		4D360E861BD89AFE00576A69 /* Item2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item2ViewController.swift; path = Codepath_CBT/Item2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		4D360E4A1BD88B9500576A69 = {
 			isa = PBXGroup;
 			children = (
+				4D360E841BD89AE700576A69 /* Item1ViewController.swift */,
+				4D360E861BD89AFE00576A69 /* Item2ViewController.swift */,
 				4D360E551BD88B9500576A69 /* Codepath_CBT */,
 				4D360E6A1BD88B9500576A69 /* Codepath_CBTTests */,
 				4D360E751BD88B9500576A69 /* Codepath_CBTUITests */,
@@ -258,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */,
 				4D360E591BD88B9500576A69 /* ViewController.swift in Sources */,
+				4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */,
 				4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +492,7 @@
 				4D360E7D1BD88B9500576A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D360E7E1BD88B9500576A69 /* Build configuration list for PBXNativeTarget "Codepath_CBTTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				4D360E801BD88B9500576A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D360E811BD88B9500576A69 /* Build configuration list for PBXNativeTarget "Codepath_CBTUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				4D360E831BD88B9500576A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
