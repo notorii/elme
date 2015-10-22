@@ -16,6 +16,14 @@
 		4D360E771BD88B9500576A69 /* Codepath_CBTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E761BD88B9500576A69 /* Codepath_CBTUITests.swift */; };
 		4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E841BD89AE700576A69 /* Item1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E861BD89AFE00576A69 /* Item2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8E1BD8A0AB00576A69 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E901BD8A26F00576A69 /* MenuLoggedInViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		4D360E781BD88B9500576A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D360E841BD89AE700576A69 /* Item1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item1ViewController.swift; path = Codepath_CBT/Item1ViewController.swift; sourceTree = "<group>"; };
 		4D360E861BD89AFE00576A69 /* Item2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item2ViewController.swift; path = Codepath_CBT/Item2ViewController.swift; sourceTree = "<group>"; };
+		4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteQuestionPromptViewController.swift; path = Codepath_CBT/CompleteQuestionPromptViewController.swift; sourceTree = "<group>"; };
+		4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepListViewController.swift; path = Codepath_CBT/StepListViewController.swift; sourceTree = "<group>"; };
+		4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PastGoalsViewController.swift; path = Codepath_CBT/PastGoalsViewController.swift; sourceTree = "<group>"; };
+		4D360E8E1BD8A0AB00576A69 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Codepath_CBT/SignUpViewController.swift; sourceTree = "<group>"; };
+		4D360E901BD8A26F00576A69 /* MenuLoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuLoggedInViewController.swift; path = Codepath_CBT/MenuLoggedInViewController.swift; sourceTree = "<group>"; };
+		4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStepDetails1ViewController.swift; path = Codepath_CBT/AddStepDetails1ViewController.swift; sourceTree = "<group>"; };
+		4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStepDetails2ViewController.swift; path = Codepath_CBT/AddStepDetails2ViewController.swift; sourceTree = "<group>"; };
+		4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStepsKeyboardViewController.swift; path = Codepath_CBT/AddStepsKeyboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +97,16 @@
 		4D360E4A1BD88B9500576A69 = {
 			isa = PBXGroup;
 			children = (
+				4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */,
+				4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */,
+				4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */,
+				4D360E901BD8A26F00576A69 /* MenuLoggedInViewController.swift */,
+				4D360E8E1BD8A0AB00576A69 /* SignUpViewController.swift */,
 				4D360E841BD89AE700576A69 /* Item1ViewController.swift */,
 				4D360E861BD89AFE00576A69 /* Item2ViewController.swift */,
+				4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */,
+				4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */,
+				4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */,
 				4D360E551BD88B9500576A69 /* Codepath_CBT */,
 				4D360E6A1BD88B9500576A69 /* Codepath_CBTTests */,
 				4D360E751BD88B9500576A69 /* Codepath_CBTUITests */,
@@ -264,10 +288,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */,
 				4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */,
+				4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */,
 				4D360E591BD88B9500576A69 /* ViewController.swift in Sources */,
+				4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */,
 				4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */,
+				4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */,
+				4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */,
+				4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */,
+				4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */,
 				4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */,
+				4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
