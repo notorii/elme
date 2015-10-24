@@ -15,9 +15,17 @@ class CompleteQuestionPromptViewController: UIViewController {
     @IBOutlet weak var stepView: UIView!
     @IBOutlet weak var distressLevelView: UIView!
     @IBOutlet weak var thoughtsView: UIView!
+    @IBOutlet weak var completeStepButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        distressLevelView.layer.borderWidth = 1
+        distressLevelView.layer.borderColor = UIColor(red:0.92, green:0.80, blue:0.69, alpha:1.0).CGColor
+        thoughtsView.layer.borderWidth = 1
+        thoughtsView.layer.borderColor = UIColor(red:0.92, green:0.80, blue:0.69, alpha:1.0).CGColor
+        completeStepButton.layer.borderWidth = 1
+        completeStepButton.layer.borderColor = UIColor(red:0.92, green:0.80, blue:0.69, alpha:1.0).CGColor
     }
 
     override func didReceiveMemoryWarning() {

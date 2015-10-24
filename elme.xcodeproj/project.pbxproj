@@ -14,16 +14,19 @@
 		4D360E611BD88B9500576A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D360E5F1BD88B9500576A69 /* LaunchScreen.storyboard */; };
 		4D360E6C1BD88B9500576A69 /* Codepath_CBTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E6B1BD88B9500576A69 /* Codepath_CBTTests.swift */; };
 		4D360E771BD88B9500576A69 /* Codepath_CBTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E761BD88B9500576A69 /* Codepath_CBTUITests.swift */; };
-		4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E841BD89AE700576A69 /* Item1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E861BD89AFE00576A69 /* Item2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8E1BD8A0AB00576A69 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E901BD8A26F00576A69 /* MenuLoggedInViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E841BD89AE700576A69 /* Item1ViewController.swift */; };
+		4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E861BD89AFE00576A69 /* Item2ViewController.swift */; };
+		4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */; };
+		4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */; };
+		4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */; };
+		4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8E1BD8A0AB00576A69 /* SignUpViewController.swift */; };
+		4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E901BD8A26F00576A69 /* MenuLoggedInViewController.swift */; };
+		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; };
+		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; };
+		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; };
+		4D9CA0A51BDC2353008B0A6F /* components in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A41BDC2353008B0A6F /* components */; };
+		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
+		AF7A3D894C0EACA0689061C5 /* Pods_elme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB4DC5DE6D6A6B29495227C /* Pods_elme.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		108B90CD52CC0663173E3248 /* Pods-elme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elme/Pods-elme.debug.xcconfig"; sourceTree = "<group>"; };
 		4D360E531BD88B9500576A69 /* elme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D360E561BD88B9500576A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D360E581BD88B9500576A69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,10 @@
 		4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails1ViewController.swift; sourceTree = "<group>"; };
 		4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails2ViewController.swift; sourceTree = "<group>"; };
 		4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsKeyboardViewController.swift; sourceTree = "<group>"; };
+		4D9CA0A41BDC2353008B0A6F /* components */ = {isa = PBXFileReference; lastKnownFileType = folder; path = components; sourceTree = "<group>"; };
+		4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
+		979B977131BE5C93AE501A83 /* Pods-elme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elme.release.xcconfig"; path = "Pods/Target Support Files/Pods-elme/Pods-elme.release.xcconfig"; sourceTree = "<group>"; };
+		BAB4DC5DE6D6A6B29495227C /* Pods_elme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7A3D894C0EACA0689061C5 /* Pods_elme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +110,8 @@
 				4D360E6A1BD88B9500576A69 /* elmeTests */,
 				4D360E751BD88B9500576A69 /* elmeUITests */,
 				4D360E541BD88B9500576A69 /* Products */,
+				BF90448FBE85AF4EBEF50D22 /* Pods */,
+				D45792C3F8C4543364E8ADF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,7 +140,9 @@
 				4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */,
 				4D360E561BD88B9500576A69 /* AppDelegate.swift */,
 				4D360E581BD88B9500576A69 /* ViewController.swift */,
+				4D9CA0A41BDC2353008B0A6F /* components */,
 				4D360E5A1BD88B9500576A69 /* Main.storyboard */,
+				4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */,
 				4D360E5D1BD88B9500576A69 /* Assets.xcassets */,
 				4D360E5F1BD88B9500576A69 /* LaunchScreen.storyboard */,
 				4D360E621BD88B9500576A69 /* Info.plist */,
@@ -155,6 +168,23 @@
 			path = elmeUITests;
 			sourceTree = "<group>";
 		};
+		BF90448FBE85AF4EBEF50D22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				108B90CD52CC0663173E3248 /* Pods-elme.debug.xcconfig */,
+				979B977131BE5C93AE501A83 /* Pods-elme.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D45792C3F8C4543364E8ADF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAB4DC5DE6D6A6B29495227C /* Pods_elme.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D360E7B1BD88B9500576A69 /* Build configuration list for PBXNativeTarget "elme" */;
 			buildPhases = (
+				5FB54963CC2F94E9BE6DABE6 /* Check Pods Manifest.lock */,
 				4D360E4F1BD88B9500576A69 /* Sources */,
 				4D360E501BD88B9500576A69 /* Frameworks */,
 				4D360E511BD88B9500576A69 /* Resources */,
+				AC521F7FECB2F557BC031183 /* Embed Pods Frameworks */,
+				284001B29AB8A9E49C87F92B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D9CA0A51BDC2353008B0A6F /* components in Resources */,
 				4D360E611BD88B9500576A69 /* LaunchScreen.storyboard in Resources */,
 				4D360E5E1BD88B9500576A69 /* Assets.xcassets in Resources */,
 				4D360E5C1BD88B9500576A69 /* Main.storyboard in Resources */,
@@ -283,6 +317,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		284001B29AB8A9E49C87F92B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elme/Pods-elme-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FB54963CC2F94E9BE6DABE6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC521F7FECB2F557BC031183 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elme/Pods-elme-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4D360E4F1BD88B9500576A69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -299,6 +381,7 @@
 				4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */,
 				4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */,
 				4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */,
+				4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */,
 				4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +520,7 @@
 		};
 		4D360E7C1BD88B9500576A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 108B90CD52CC0663173E3248 /* Pods-elme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = elme/Info.plist;
@@ -448,6 +532,7 @@
 		};
 		4D360E7D1BD88B9500576A69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 979B977131BE5C93AE501A83 /* Pods-elme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = elme/Info.plist;

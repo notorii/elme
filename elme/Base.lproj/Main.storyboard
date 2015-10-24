@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HhJ-yh-X0b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HhJ-yh-X0b">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
         <!--Add Steps Keyboard View Controller-->
         <scene sceneID="mvq-Oz-ccX">
             <objects>
-                <viewController id="54G-fL-Bgk" customClass="AddStepsKeyboardViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="54G-fL-Bgk" customClass="AddStepsKeyboardViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qq2-l3-Tl3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
         <!--Add Step Details1 View Controller-->
         <scene sceneID="Uhd-kd-KTr">
             <objects>
-                <viewController id="goo-wd-tz7" customClass="AddStepDetails1ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="goo-wd-tz7" customClass="AddStepDetails1ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HXj-Ky-twx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
         <!--Add Step Details2 View Controller-->
         <scene sceneID="GXM-bw-x4l">
             <objects>
-                <viewController id="EFJ-rK-Mc4" customClass="AddStepDetails2ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EFJ-rK-Mc4" customClass="AddStepDetails2ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hCQ-96-mpp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,7 +194,7 @@
         <!--Menu Logged In View Controller-->
         <scene sceneID="0sO-dm-Rss">
             <objects>
-                <viewController id="686-BV-4wo" customClass="MenuLoggedInViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="686-BV-4wo" customClass="MenuLoggedInViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uhX-b4-68C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,22 +237,18 @@
         <!--Complete Question Prompt View Controller-->
         <scene sceneID="eqP-6I-W1F">
             <objects>
-                <viewController id="HhJ-yh-X0b" customClass="CompleteQuestionPromptViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HhJ-yh-X0b" customClass="CompleteQuestionPromptViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QrK-sn-XKT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="7 - complete step" id="CYw-Yx-cSw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j6d-6s-eEU">
                                 <rect key="frame" x="9" y="603" width="356" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.79291735200000002" green="0.2471474095" blue="0.2836914062" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.94901960784313721" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                 <state key="normal" title="Complete Step">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.63529411764705879" green="0.25490196078431371" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onCompletePress:" destination="HhJ-yh-X0b" eventType="touchUpInside" id="bj3-Gg-jKy"/>
@@ -272,22 +268,21 @@
                                             <action selector="onSliderChange:" destination="HhJ-yh-X0b" eventType="valueChanged" id="2Qn-nh-iWd"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling bad to the point that you begin to think something bad idk" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3zY-1F-At9">
-                                        <rect key="frame" x="20" y="109" width="351" height="67"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How distressing was it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BMV-GJ-iDY">
                                         <rect key="frame" x="26" y="20" width="179" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.63529411764705879" green="0.25490196078431371" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling bad to the point that you begin to think something bad idk" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3zY-1F-At9">
+                                        <rect key="frame" x="23" y="106" width="343" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <color key="textColor" red="0.63529411764705879" green="0.25490196078431371" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="tOa-7U-bj4">
                                 <rect key="frame" x="0.0" y="65" width="375" height="127"/>
@@ -296,39 +291,43 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday, October 19, 9:00PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mes-f6-ACJ">
                                         <rect key="frame" x="74" y="86" width="224" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <color key="textColor" red="0.28627450980392155" green="0.18431372549019609" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask a question in class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bRH-R4-koy">
                                         <rect key="frame" x="20" y="27" width="345" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                        <color key="textColor" red="0.28627450980392155" green="0.18431372549019609" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="mYi-6X-Ifb">
-                                <rect key="frame" x="0.0" y="419" width="375" height="110"/>
+                                <rect key="frame" x="-9" y="426" width="394" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="How did it go? What did you expect to happen? What actually happened?" textAlignment="natural" id="mLz-fx-o0g">
-                                        <rect key="frame" x="17" y="5" width="340" height="100"/>
+                                        <rect key="frame" x="20" y="8" width="351" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.90812602796052633" green="0.96268503289473684" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="7WC-Sk-L7y" customClass="GradientSlider">
+                                <rect key="frame" x="13" y="192" width="350" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.97647058823529409" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="completeStepButton" destination="j6d-6s-eEU" id="9fV-y4-txR"/>
                         <outlet property="distressLevelLabel" destination="3zY-1F-At9" id="zLb-pF-GlR"/>
                         <outlet property="distressLevelView" destination="UOe-WX-kE3" id="ptW-Mp-Uqw"/>
                         <outlet property="slider" destination="bIn-rg-eDw" id="Iw0-JY-jzz"/>
@@ -343,7 +342,7 @@
         <!--Step List View Controller-->
         <scene sceneID="Dk2-dz-23c">
             <objects>
-                <viewController id="Ta2-gq-nEA" customClass="StepListViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ta2-gq-nEA" customClass="StepListViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LcN-d5-0uS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,7 +392,7 @@
         <!--Item2 View Controller-->
         <scene sceneID="gHF-91-GP4">
             <objects>
-                <viewController id="PZV-Jy-cd1" customClass="Item2ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PZV-Jy-cd1" customClass="Item2ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZn-G5-FvX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,7 +423,7 @@
         <!--Item1 View Controller-->
         <scene sceneID="gdI-gS-CRG">
             <objects>
-                <viewController id="xt5-Zc-Sae" customClass="Item1ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xt5-Zc-Sae" customClass="Item1ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qwF-QQ-Pdi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -490,7 +489,7 @@
         <!--Past Goals View Controller-->
         <scene sceneID="hrd-eL-gs1">
             <objects>
-                <viewController id="J8a-Uf-n7A" customClass="PastGoalsViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J8a-Uf-n7A" customClass="PastGoalsViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Fj-9f-GN9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -567,7 +566,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="Oa1-km-wzz">
             <objects>
-                <viewController id="evh-Cs-Te7" customClass="SignUpViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="evh-Cs-Te7" customClass="SignUpViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="naK-y9-gDr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -892,7 +891,6 @@
         <image name="5.1 - step details" width="375" height="667"/>
         <image name="5.2 - step details" width="375" height="667"/>
         <image name="6 - next step" width="375" height="667"/>
-        <image name="7 - complete step" width="375" height="667"/>
         <image name="8 - steps" width="375" height="667"/>
         <image name="9.1 - step detail incomplete" width="375" height="667"/>
         <image name="9.2 - step detail complete" width="375" height="667"/>
