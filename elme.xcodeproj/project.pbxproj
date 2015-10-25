@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32BA57E21BDD8F3800ACAEC0 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BA57E11BDD8F3800ACAEC0 /* BaseTransition.swift */; };
 		4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E561BD88B9500576A69 /* AppDelegate.swift */; };
 		4D360E591BD88B9500576A69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E581BD88B9500576A69 /* ViewController.swift */; };
 		4D360E5C1BD88B9500576A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D360E5A1BD88B9500576A69 /* Main.storyboard */; };
@@ -14,16 +15,16 @@
 		4D360E611BD88B9500576A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D360E5F1BD88B9500576A69 /* LaunchScreen.storyboard */; };
 		4D360E6C1BD88B9500576A69 /* Codepath_CBTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E6B1BD88B9500576A69 /* Codepath_CBTTests.swift */; };
 		4D360E771BD88B9500576A69 /* Codepath_CBTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E761BD88B9500576A69 /* Codepath_CBTUITests.swift */; };
-		4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E841BD89AE700576A69 /* Item1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E861BD89AFE00576A69 /* Item2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8E1BD8A0AB00576A69 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E901BD8A26F00576A69 /* MenuLoggedInViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E841BD89AE700576A69 /* Item1ViewController.swift */; };
+		4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E861BD89AFE00576A69 /* Item2ViewController.swift */; };
+		4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */; };
+		4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */; };
+		4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */; };
+		4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8E1BD8A0AB00576A69 /* SignUpViewController.swift */; };
+		4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E901BD8A26F00576A69 /* MenuLoggedInViewController.swift */; };
+		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; };
+		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; };
+		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32BA57E11BDD8F3800ACAEC0 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		4D360E531BD88B9500576A69 /* elme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D360E561BD88B9500576A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D360E581BD88B9500576A69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				4D360E561BD88B9500576A69 /* AppDelegate.swift */,
 				4D360E581BD88B9500576A69 /* ViewController.swift */,
 				4D360E5A1BD88B9500576A69 /* Main.storyboard */,
+				32BA57E11BDD8F3800ACAEC0 /* BaseTransition.swift */,
 				4D360E5D1BD88B9500576A69 /* Assets.xcassets */,
 				4D360E5F1BD88B9500576A69 /* LaunchScreen.storyboard */,
 				4D360E621BD88B9500576A69 /* Info.plist */,
@@ -217,6 +220,7 @@
 		4D360E4B1BD88B9500576A69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = maggled;
 				TargetAttributes = {
@@ -298,6 +302,7 @@
 				4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */,
 				4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */,
 				4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */,
+				32BA57E21BDD8F3800ACAEC0 /* BaseTransition.swift in Sources */,
 				4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */,
 				4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */,
 			);
@@ -461,7 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = Codepath_CBTTests/Info.plist;
+				INFOPLIST_FILE = elmeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maggled.Codepath-CBTTests";
 				PRODUCT_NAME = elme;
@@ -473,7 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = Codepath_CBTTests/Info.plist;
+				INFOPLIST_FILE = elmeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maggled.Codepath-CBTTests";
 				PRODUCT_NAME = elme;
@@ -484,7 +489,7 @@
 		4D360E821BD88B9500576A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Codepath_CBTUITests/Info.plist;
+				INFOPLIST_FILE = elmeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maggled.Codepath-CBTUITests";
 				PRODUCT_NAME = elme;
@@ -496,7 +501,7 @@
 		4D360E831BD88B9500576A69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Codepath_CBTUITests/Info.plist;
+				INFOPLIST_FILE = elmeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maggled.Codepath-CBTUITests";
 				PRODUCT_NAME = elme;
