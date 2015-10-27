@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HhJ-yh-X0b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3EC-Rk-N0m">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
         <!--Add Steps Keyboard View Controller-->
         <scene sceneID="mvq-Oz-ccX">
             <objects>
-                <viewController id="54G-fL-Bgk" customClass="AddStepsKeyboardViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="54G-fL-Bgk" customClass="AddStepsKeyboardViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qq2-l3-Tl3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
         <!--Add Step Details1 View Controller-->
         <scene sceneID="Uhd-kd-KTr">
             <objects>
-                <viewController id="goo-wd-tz7" customClass="AddStepDetails1ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="goo-wd-tz7" customClass="AddStepDetails1ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HXj-Ky-twx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
         <!--Add Step Details2 View Controller-->
         <scene sceneID="GXM-bw-x4l">
             <objects>
-                <viewController id="EFJ-rK-Mc4" customClass="AddStepDetails2ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EFJ-rK-Mc4" customClass="AddStepDetails2ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hCQ-96-mpp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +132,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6EE-Co-5ly">
-                                <rect key="frame" x="10" y="602" width="181" height="53.5"/>
+                                <rect key="frame" x="10" y="602" width="181" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="onPreviousPress:" destination="EFJ-rK-Mc4" eventType="touchUpInside" id="UGO-Ax-Cma"/>
@@ -171,7 +171,7 @@
                                 <rect key="frame" x="0.0" y="10" width="49" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="686-BV-4wo" kind="push" animates="NO" id="m5b-bf-n5g"/>
+                                    <segue destination="3EC-Rk-N0m" kind="push" animates="NO" id="m5b-bf-n5g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QJQ-cR-gQ3">
@@ -194,7 +194,7 @@
         <!--Menu Logged In View Controller-->
         <scene sceneID="0sO-dm-Rss">
             <objects>
-                <viewController id="686-BV-4wo" customClass="MenuLoggedInViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="686-BV-4wo" customClass="MenuLoggedInViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uhX-b4-68C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,7 +221,7 @@
                                 <rect key="frame" x="0.0" y="92" width="247" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="Tqh-nY-CtW" kind="modal" modalTransitionStyle="crossDissolve" id="GAe-vd-zzE"/>
+                                    <segue destination="VrO-q9-ipq" kind="push" identifier="editProfileSegue" id="Pek-pz-rjm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -232,12 +232,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8q-2h-gOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145.5" y="2058.5"/>
+            <point key="canvasLocation" x="1032.5" y="2866.5"/>
         </scene>
         <!--Complete Question Prompt View Controller-->
         <scene sceneID="eqP-6I-W1F">
             <objects>
-                <viewController id="HhJ-yh-X0b" customClass="CompleteQuestionPromptViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HhJ-yh-X0b" customClass="CompleteQuestionPromptViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QrK-sn-XKT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -343,7 +343,7 @@
         <!--Step List View Controller-->
         <scene sceneID="Dk2-dz-23c">
             <objects>
-                <viewController id="Ta2-gq-nEA" customClass="StepListViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ta2-gq-nEA" customClass="StepListViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LcN-d5-0uS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,7 +393,7 @@
         <!--Item2 View Controller-->
         <scene sceneID="gHF-91-GP4">
             <objects>
-                <viewController id="PZV-Jy-cd1" customClass="Item2ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PZV-Jy-cd1" customClass="Item2ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZn-G5-FvX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,7 +424,7 @@
         <!--Item1 View Controller-->
         <scene sceneID="gdI-gS-CRG">
             <objects>
-                <viewController id="xt5-Zc-Sae" customClass="Item1ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xt5-Zc-Sae" customClass="Item1ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qwF-QQ-Pdi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -485,12 +485,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPy-bf-3uS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597.5" y="2058.5"/>
+            <point key="canvasLocation" x="2208.5" y="2058.5"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="TQd-zL-v5h">
+            <objects>
+                <viewController id="VrO-q9-ipq" customClass="EditProfileViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ych-Bw-nyk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav bar" id="7IP-Ca-vvM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="zbK-m8-NNb">
+                                <rect key="frame" x="0.0" y="109" width="375" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Edit_profile_fields" id="jnD-2l-9fc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Carl Jung" placeholder="Name" textAlignment="natural" minimumFontSize="17" id="fEk-SF-eLR">
+                                        <rect key="frame" x="8" y="67" width="349" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.22352941179999999" green="0.13725490200000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New password" textAlignment="natural" minimumFontSize="17" id="Du0-F9-rq0">
+                                        <rect key="frame" x="8" y="121" width="349" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.22352941179999999" green="0.13725490200000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Carl.Jung@gmail.com" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="cnh-ar-Jng">
+                                        <rect key="frame" x="8" y="15" width="349" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.22352941179999999" green="0.13725490200000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8xo-Bf-zXc">
+                                <rect key="frame" x="146" y="17" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.22352941176470589" green="0.13725490196078433" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4S6-Q2-0pl">
+                                <rect key="frame" x="10" y="292" width="355" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Save_Button"/>
+                                <connections>
+                                    <action selector="onSignIn:" destination="VrO-q9-ipq" eventType="touchUpInside" id="hiP-DL-8BX"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" alpha="0.5" contentMode="scaleToFill" id="WEo-Cu-Ne7" userLabel="Smoke Screen">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" id="Xvq-BK-kfP">
+                                        <rect key="frame" x="177" y="238" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.69574652777777779" green="0.69574652777777779" blue="0.69574652777777779" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ab8-f6-BgL">
+                                <rect key="frame" x="16" y="16" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chevron"/>
+                                <connections>
+                                    <action selector="onBackButton:" destination="VrO-q9-ipq" eventType="touchUpInside" id="K7g-m2-d0b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.97254901960784312" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kKD-7H-6mO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailField" destination="cnh-ar-Jng" id="dMb-JC-XpA"/>
+                        <outlet property="nameField" destination="fEk-SF-eLR" id="1vs-mH-9xY"/>
+                        <outlet property="onBackButton" destination="Ab8-f6-BgL" id="fDR-Ci-fz5"/>
+                        <outlet property="passwordField" destination="Du0-F9-rq0" id="frV-n3-d7H"/>
+                        <outlet property="smokeScreen" destination="WEo-Cu-Ne7" id="Yop-Ja-DjL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wox-ex-XJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614.5" y="2866.5"/>
         </scene>
         <!--Past Goals View Controller-->
         <scene sceneID="hrd-eL-gs1">
             <objects>
-                <viewController id="J8a-Uf-n7A" customClass="PastGoalsViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J8a-Uf-n7A" customClass="PastGoalsViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Fj-9f-GN9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -514,7 +609,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qfq-Gb-pk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2046.5" y="2058.5"/>
+            <point key="canvasLocation" x="2633.5" y="2058.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="DdU-jU-0sy">
@@ -567,7 +662,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="Oa1-km-wzz">
             <objects>
-                <viewController id="evh-Cs-Te7" customClass="SignUpViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="evh-Cs-Te7" customClass="SignUpViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="naK-y9-gDr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -876,6 +971,26 @@
             </objects>
             <point key="canvasLocation" x="1635.5" y="406.5"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OHE-LQ-aro">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="3EC-Rk-N0m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="4xR-1o-yPV"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FBa-6G-zUt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="686-BV-4wo" kind="relationship" relationship="rootViewController" id="YHU-0d-o89"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MyB-kC-9c6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172.5" y="2058.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1 - new goal" width="375" height="667"/>
@@ -896,12 +1011,16 @@
         <image name="8 - steps" width="375" height="667"/>
         <image name="9.1 - step detail incomplete" width="375" height="667"/>
         <image name="9.2 - step detail complete" width="375" height="667"/>
+        <image name="Edit_profile_fields" width="375" height="163"/>
+        <image name="Save_Button" width="355" height="55"/>
+        <image name="chevron" width="8" height="12"/>
+        <image name="nav bar" width="375" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rJR-DO-oiV"/>
         <segue reference="1wB-43-CYC"/>
         <segue reference="GSp-Nu-Nuf"/>
-        <segue reference="oSL-aF-mz6"/>
+        <segue reference="7MS-wv-ZHb"/>
         <segue reference="svM-Ml-6mi"/>
     </inferredMetricsTieBreakers>
 </document>

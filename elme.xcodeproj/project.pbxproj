@@ -24,6 +24,7 @@
 		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6E6719291BDE8B5E002A0CE0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails1ViewController.swift; sourceTree = "<group>"; };
 		4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails2ViewController.swift; sourceTree = "<group>"; };
 		4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsKeyboardViewController.swift; sourceTree = "<group>"; };
+		6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				4D360E561BD88B9500576A69 /* AppDelegate.swift */,
 				4D360E581BD88B9500576A69 /* ViewController.swift */,
 				4D360E5A1BD88B9500576A69 /* Main.storyboard */,
+				6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */,
 				4D360E5D1BD88B9500576A69 /* Assets.xcassets */,
 				4D360E5F1BD88B9500576A69 /* LaunchScreen.storyboard */,
 				4D360E621BD88B9500576A69 /* Info.plist */,
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E6719291BDE8B5E002A0CE0 /* EditProfileViewController.swift in Sources */,
 				4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */,
 				4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */,
 				4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */,
