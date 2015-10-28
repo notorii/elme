@@ -132,7 +132,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6EE-Co-5ly">
-                                <rect key="frame" x="10" y="602" width="181" height="54"/>
+                                <rect key="frame" x="10" y="602" width="181" height="53.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="onPreviousPress:" destination="EFJ-rK-Mc4" eventType="touchUpInside" id="UGO-Ax-Cma"/>

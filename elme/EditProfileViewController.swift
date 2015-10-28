@@ -42,7 +42,7 @@ class EditProfileViewController: UIViewController {
     @IBAction func onSignIn(sender: AnyObject) {
         
         //SUCCESS
-        if emailField.text == "email" && passwordField.text == "password" {
+        if emailField.text == "" || passwordField.text == "" || nameField.text == "" {
             
             //SPINNER
             self.smokeScreen.hidden = false
