@@ -183,13 +183,13 @@ import UIKit
         let thumb = CALayer()
         thumb.cornerRadius = defaultThumbSize/2.0
         thumb.bounds = CGRectMake(0, 0, defaultThumbSize, defaultThumbSize)
-       // thumb.backgroundColor = mediumTextColor
+        thumb.backgroundColor = lightBackgroundColor.CGColor
       //  thumb.shadowColor = UIColor.blackColor().CGColor
        // thumb.shadowOffset = CGSizeMake(0.0, 2.5)
         //thumb.shadowRadius = 2.0
       //  thumb.shadowOpacity = 0.25
-      //  thumb.borderColor = UIColor.blackColor().colorWithAlphaComponent(0.15).CGColor
-      //  thumb.borderWidth = 0.5
+      thumb.borderColor = mediumTextColor.CGColor
+      thumb.borderWidth = 1
         return thumb
     }()
     
@@ -424,6 +424,7 @@ import UIKit
         _trackLayer.colors = locations.map({return UIColor(hue: $0, saturation: s, brightness: l, alpha: a).CGColor})
         _trackLayer.locations = locations
     }
+    
 }
 
 
