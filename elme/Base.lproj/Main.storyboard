@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="20f-TC-Rkl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fka-9F-S2u">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
@@ -818,23 +818,25 @@
             </objects>
             <point key="canvasLocation" x="1156.5" y="-457.5"/>
         </scene>
-        <!--View Controller-->
+        <!--New Goal View Controller-->
         <scene sceneID="f00-3b-Amb">
             <objects>
-                <viewController id="fka-9F-S2u" sceneMemberID="viewController">
+                <viewController id="fka-9F-S2u" customClass="NewGoalViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0t2-rp-Vfl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="3 - new goal overall goal" id="1kN-3k-Df7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jGR-PT-jvu">
-                                <rect key="frame" x="10" y="601" width="354" height="57"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yxh-Wu-Wkh">
+                                <rect key="frame" x="10" y="604" width="355" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.94901960780000005" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Add Steps">
+                                    <color key="titleColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="bVs-Av-5T4" kind="push" animates="NO" id="HhV-3O-L2h"/>
+                                    <action selector="addSteps:" destination="fka-9F-S2u" eventType="touchUpInside" id="Hnr-Jm-f3P"/>
+                                    <action selector="onCompletePress:" destination="HhJ-yh-X0b" eventType="touchUpInside" id="WwB-JF-065"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -842,6 +844,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="ahu-dV-6xl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="addSteps" destination="Yxh-Wu-Wkh" id="Nwp-HS-uEC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2b-pn-vgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1140,7 +1145,7 @@
                                 <rect key="frame" x="50" y="201" width="263" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1274,7 +1279,7 @@
                                 <rect key="frame" x="158" y="146" width="58" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1316,7 +1321,6 @@
         <image name="13 - menu" width="375" height="667"/>
         <image name="14 - edit profile" width="375" height="667"/>
         <image name="2 - new goal tapped" width="375" height="667"/>
-        <image name="3 - new goal overall goal" width="375" height="667"/>
         <image name="4.1 - new goal add steps" width="375" height="667"/>
         <image name="4.2 - new goal add steps" width="375" height="667"/>
         <image name="4.3 - new goal add steps" width="375" height="667"/>
@@ -1326,13 +1330,17 @@
         <image name="8 - steps" width="375" height="667"/>
         <image name="9.1 - step detail incomplete" width="375" height="667"/>
         <image name="9.2 - step detail complete" width="375" height="667"/>
-        <image name="LoginFields" width="375" height="109"/>
         <image name="Edit_profile_fields" width="375" height="163"/>
+        <image name="LoginFields" width="375" height="109"/>
         <image name="Save_Button" width="355" height="55"/>
         <image name="chevron" width="8" height="12"/>
         <image name="nav bar" width="375" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="rJR-DO-oiV"/>
         <segue reference="94d-9p-6Kf"/>
+        <segue reference="GSp-Nu-Nuf"/>
+        <segue reference="oSL-aF-mz6"/>
+        <segue reference="svM-Ml-6mi"/>
     </inferredMetricsTieBreakers>
 </document>
