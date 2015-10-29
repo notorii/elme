@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
         <!--Add Steps Keyboard View Controller-->
         <scene sceneID="mvq-Oz-ccX">
             <objects>
-                <viewController id="54G-fL-Bgk" customClass="AddStepsKeyboardViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="54G-fL-Bgk" customClass="AddStepsKeyboardViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qq2-l3-Tl3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
         <!--Add Step Details1 View Controller-->
         <scene sceneID="Uhd-kd-KTr">
             <objects>
-                <viewController id="goo-wd-tz7" customClass="AddStepDetails1ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="goo-wd-tz7" customClass="AddStepDetails1ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HXj-Ky-twx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
         <!--Add Step Details2 View Controller-->
         <scene sceneID="GXM-bw-x4l">
             <objects>
-                <viewController id="EFJ-rK-Mc4" customClass="AddStepDetails2ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EFJ-rK-Mc4" customClass="AddStepDetails2ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hCQ-96-mpp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,7 +194,7 @@
         <!--Menu Logged In View Controller-->
         <scene sceneID="0sO-dm-Rss">
             <objects>
-                <viewController id="686-BV-4wo" customClass="MenuLoggedInViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="686-BV-4wo" customClass="MenuLoggedInViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uhX-b4-68C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,12 +232,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8q-2h-gOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145.5" y="2058.5"/>
+            <point key="canvasLocation" x="1179.5" y="2058.5"/>
         </scene>
         <!--Complete Question Prompt View Controller-->
         <scene sceneID="eqP-6I-W1F">
             <objects>
-                <viewController id="HhJ-yh-X0b" customClass="CompleteQuestionPromptViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HhJ-yh-X0b" customClass="CompleteQuestionPromptViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QrK-sn-XKT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -343,7 +343,7 @@
         <!--Step List View Controller-->
         <scene sceneID="Dk2-dz-23c">
             <objects>
-                <viewController id="Ta2-gq-nEA" customClass="StepListViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ta2-gq-nEA" customClass="StepListViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LcN-d5-0uS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,7 +393,7 @@
         <!--Item2 View Controller-->
         <scene sceneID="gHF-91-GP4">
             <objects>
-                <viewController id="PZV-Jy-cd1" customClass="Item2ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PZV-Jy-cd1" customClass="Item2ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZn-G5-FvX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,7 +424,7 @@
         <!--Item1 View Controller-->
         <scene sceneID="gdI-gS-CRG">
             <objects>
-                <viewController id="xt5-Zc-Sae" customClass="Item1ViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xt5-Zc-Sae" customClass="Item1ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qwF-QQ-Pdi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -490,7 +490,7 @@
         <!--Past Goals View Controller-->
         <scene sceneID="hrd-eL-gs1">
             <objects>
-                <viewController id="J8a-Uf-n7A" customClass="PastGoalsViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J8a-Uf-n7A" customClass="PastGoalsViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Fj-9f-GN9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -567,7 +567,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="Oa1-km-wzz">
             <objects>
-                <viewController id="evh-Cs-Te7" customClass="SignUpViewController" customModule="Codepath_CBT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="evh-Cs-Te7" customClass="SignUpViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="naK-y9-gDr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -876,6 +876,114 @@
             </objects>
             <point key="canvasLocation" x="1635.5" y="406.5"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="cyw-nR-A0h">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="erx-WP-caw" customClass="HomeViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DSn-ij-anu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.96470588235294119" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XcQ-g5-8go" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1719" y="3744"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tTS-18-8Jt">
+            <objects>
+                <viewController id="W7w-2x-6zx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kPz-X7-tYs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.95686274509803926" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCo-ew-f1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="3744"/>
+        </scene>
+        <!--Hamburger View Controller-->
+        <scene sceneID="skM-oi-S17">
+            <objects>
+                <viewController id="nvA-7C-NCP" customClass="HamburgerViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Yr-fj-heI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="xra-au-cnk" userLabel="MenuView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.79335956773830041" blue="0.38942296953596389" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="SKg-wb-y5E" userLabel="ContentView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35230684341160867" green="0.67556152187742025" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NnS-1H-edv" appends="YES" id="Uge-fv-kHd"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="contentView" destination="SKg-wb-y5E" id="moc-jC-aeg"/>
+                        <outlet property="menuView" destination="xra-au-cnk" id="hMr-DY-37m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9l-iD-IT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="NnS-1H-edv">
+                    <connections>
+                        <action selector="onPan:" destination="nvA-7C-NCP" id="4OQ-I7-e5c"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1425" y="2903"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="lxM-pE-iqr">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="oZJ-kU-7Fn" customClass="MenuViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aEx-35-WDS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sai Perchard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dL6-EG-Vae">
+                                <rect key="frame" x="20" y="34" width="90" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4id-Hg-Aq8">
+                                <rect key="frame" x="20" y="151" width="60" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.56862745098039214" green="0.18431372549019609" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wm1-Au-6qu">
+                                <rect key="frame" x="20" y="109" width="79" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.56862745098039214" green="0.18431372549019609" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.86274509803921573" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUt-w4-qJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="3744"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1 - new goal" width="375" height="667"/>
@@ -898,10 +1006,6 @@
         <image name="9.2 - step detail complete" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rJR-DO-oiV"/>
-        <segue reference="1wB-43-CYC"/>
-        <segue reference="GSp-Nu-Nuf"/>
-        <segue reference="oSL-aF-mz6"/>
         <segue reference="svM-Ml-6mi"/>
     </inferredMetricsTieBreakers>
 </document>
