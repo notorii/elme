@@ -12,12 +12,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="2 - new goal tapped" id="1li-DQ-844">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="top-nav-bg" id="TMQ-IN-xqZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="1 - new goal" id="dxv-WT-NXt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="top-help" id="QBG-cw-oiE">
+                                <rect key="frame" x="336" y="15" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="top-menu" id="SXh-MH-WvO">
+                                <rect key="frame" x="15" y="15" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qUR-1F-PjW">
@@ -28,18 +32,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bUc-iY-GoN">
-                                <rect key="frame" x="5" y="6" width="45" height="45"/>
+                                <rect key="frame" x="0.0" y="0.0" width="57" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="iLE-XU-4CD" kind="push" animates="NO" id="cyJ-lF-SfO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oi2-GI-xwA">
-                                <rect key="frame" x="333" y="14" width="34" height="33"/>
+                                <rect key="frame" x="321" y="0.0" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.94901960784313721" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="j7l-yG-rtW"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -878,13 +882,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1 - new goal" width="375" height="667"/>
         <image name="10 - past goals" width="375" height="667"/>
         <image name="11 - log in" width="375" height="667"/>
         <image name="12 - sign up" width="375" height="667"/>
         <image name="13 - menu" width="375" height="667"/>
         <image name="14 - edit profile" width="375" height="667"/>
-        <image name="2 - new goal tapped" width="375" height="667"/>
         <image name="3 - new goal overall goal" width="375" height="667"/>
         <image name="4.1 - new goal add steps" width="375" height="667"/>
         <image name="4.2 - new goal add steps" width="375" height="667"/>
@@ -896,6 +898,9 @@
         <image name="8 - steps" width="375" height="667"/>
         <image name="9.1 - step detail incomplete" width="375" height="667"/>
         <image name="9.2 - step detail complete" width="375" height="667"/>
+        <image name="top-help" width="24" height="24"/>
+        <image name="top-menu" width="24" height="24"/>
+        <image name="top-nav-bg" width="375" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rJR-DO-oiV"/>
