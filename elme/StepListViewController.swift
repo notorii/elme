@@ -26,8 +26,8 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         tableView.dataSource = self
         tableView.delegate = self
-       
-        steps = ["Cats","dogs","monkies","ponies"]
+        tableView.estimatedRowHeight = 4
+        steps = ["Cats","dogs","monkies monkies Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.","ponies"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +55,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //let steps = steps[indexPath.row]
         
-        cell.stepTextLabel.text = "cats"
+        cell.stepTextLabel.text = steps[indexPath.row]
         cell.stepNumberLabel.text = "1"
         
         return cell
