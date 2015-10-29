@@ -8,12 +8,26 @@
 
 import UIKit
 
-class StepListViewController: UIViewController {
+class StepListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var stepsTitleLabel: UILabel!
+    @IBOutlet weak var navBarView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    
+   var steps: [String]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       // navBarView.backgroundColor = lightBackgroundColor
+        navBarView.layer.borderWidth = 1
+        //navBarView.layer.borderColor = borderColor.CGColor
+        
+        //stepsTitleLabel.textColor = darkTextColor
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+       
+        steps = ["Cats","dogs","monkies","ponies"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,9 +36,31 @@ class StepListViewController: UIViewController {
     }
     
     @IBAction func onBackPress(sender: UIButton) {
-        navigationController!.popViewControllerAnimated(true)
+      //  navigationController!.popViewControllerAnimated(true)
+        print("on back press")
     }
 
+    
+    @IBAction func onListPress(sender: UIButton) {
+        print("list press")
+    }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return steps.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("StepListCell") as! StepListCell
+        
+        //let steps = steps[indexPath.row]
+        
+        cell.stepTextLabel.text = "cats"
+        cell.stepNumberLabel.text = "1"
+        
+        return cell
+    }
+    
     /*
     // MARK: - Navigation
 
