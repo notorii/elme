@@ -10,13 +10,24 @@ import UIKit
 
 class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var navBarView: UIView!
     var pastGoals: [String]!
 
+    @IBOutlet weak var pastGoalsTitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pastGoals = ["one", "two", "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.", "four"]
+        
+        view.backgroundColor = lightBackgroundColor
+        tableView.backgroundColor = lightBackgroundColor
+        
+        navBarView.backgroundColor = lightBackgroundColor
+        navBarView.layer.borderWidth = 1
+        navBarView.layer.borderColor = borderColor.CGColor
+        pastGoalsTitleLabel.textColor = darkTextColor
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 4
@@ -38,6 +49,8 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("PastGoalViewCell") as! PastGoalViewCell
         
+        cell.backgroundColor = lightBackgroundColor
+        cell.pastGoalLabel.textColor = darkTextColor
         
         cell.pastGoalLabel.text = pastGoals[indexPath.row]
         

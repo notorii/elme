@@ -18,16 +18,20 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // navBarView.backgroundColor = lightBackgroundColor
+        view.backgroundColor = lightBackgroundColor
+        navBarView.backgroundColor = lightBackgroundColor
         navBarView.layer.borderWidth = 1
-        //navBarView.layer.borderColor = borderColor.CGColor
+        navBarView.layer.borderColor = borderColor.CGColor
         
-        //stepsTitleLabel.textColor = darkTextColor
+        stepsTitleLabel.textColor = darkTextColor
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundColor = lightBackgroundColor
         tableView.estimatedRowHeight = 4
+        
         steps = ["Cats","dogs","monkies monkies Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.","ponies"]
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +58,10 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         var cell = tableView.dequeueReusableCellWithIdentifier("StepListCell") as! StepListCell
         
         //let steps = steps[indexPath.row]
+        cell.backgroundColor = lightBackgroundColor
+        cell.stepTextLabel.textColor = darkTextColor
+        cell.stepNumberLabel.textColor = darkTextColor
+        
         
         cell.stepTextLabel.text = steps[indexPath.row]
         cell.stepNumberLabel.text = "1"
