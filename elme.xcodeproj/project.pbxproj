@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D1A9B8C1BE1DDC4006ECAE0 /* StepListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */; };
+		4D1A9B8E1BE1EBEE006ECAE0 /* PastGoalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */; };
 		4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E561BD88B9500576A69 /* AppDelegate.swift */; };
 		4D360E591BD88B9500576A69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E581BD88B9500576A69 /* ViewController.swift */; };
 		4D360E5C1BD88B9500576A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D360E5A1BD88B9500576A69 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepListCell.swift; sourceTree = "<group>"; };
+		4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastGoalViewCell.swift; sourceTree = "<group>"; };
 		4D360E531BD88B9500576A69 /* elme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D360E561BD88B9500576A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D360E581BD88B9500576A69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				4D360E861BD89AFE00576A69 /* Item2ViewController.swift */,
 				4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */,
 				4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */,
+				4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */,
 				4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */,
 				4D360E561BD88B9500576A69 /* AppDelegate.swift */,
 				4D360E581BD88B9500576A69 /* ViewController.swift */,
@@ -318,6 +321,7 @@
 				4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */,
 				4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */,
 				4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */,
+				4D1A9B8E1BE1EBEE006ECAE0 /* PastGoalViewCell.swift in Sources */,
 				4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */,
 				4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */,
 			);

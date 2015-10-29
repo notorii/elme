@@ -8,12 +8,18 @@
 
 import UIKit
 
-class PastGoalsViewController: UIViewController {
+class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var pastGoals: [String]!
+
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        pastGoals = ["one", "two", "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.", "four"]
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.estimatedRowHeight = 4
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +30,20 @@ class PastGoalsViewController: UIViewController {
     @IBAction func onBackPress(sender: UIButton) {
         navigationController!.popViewControllerAnimated(true)
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pastGoals.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("PastGoalViewCell") as! PastGoalViewCell
+        
+        
+        cell.pastGoalLabel.text = pastGoals[indexPath.row]
+        
+        return cell
+    }
+
 
     /*
     // MARK: - Navigation
