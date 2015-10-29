@@ -10,22 +10,49 @@ import UIKit
 
 class CompleteQuestionPromptViewController: UIViewController {
 
+    @IBOutlet weak var stepView: UIView!
+    @IBOutlet weak var stepLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+
+    @IBOutlet weak var distressLevelView: UIView!
+    @IBOutlet weak var howDistressingLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var distressLevelLabel: UILabel!
-    @IBOutlet weak var stepView: UIView!
-    @IBOutlet weak var distressLevelView: UIView!
+    
     @IBOutlet weak var thoughtsView: UIView!
+    @IBOutlet weak var thoughtsTextView: UITextView!
+
     @IBOutlet weak var completeStepButton: UIButton!
+    @IBOutlet weak var distressSlider: GradientSlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        view.backgroundColor = lightBackgroundColor
+        
+    
+        
+        stepLabel.textColor = darkTextColor
+        dateLabel.textColor = darkSecondaryTextColor
+        
+        howDistressingLabel.textColor = mediumTextColor
+        distressLevelLabel.textColor = mediumSecondaryTextColor
+        distressLevelView.backgroundColor = lightBackgroundColor
         distressLevelView.layer.borderWidth = 1
-        distressLevelView.layer.borderColor = UIColor(red:0.92, green:0.80, blue:0.69, alpha:1.0).CGColor
+        distressLevelView.layer.borderColor = borderColor.CGColor
+        
         thoughtsView.layer.borderWidth = 1
-        thoughtsView.layer.borderColor = UIColor(red:0.92, green:0.80, blue:0.69, alpha:1.0).CGColor
+        thoughtsView.layer.borderColor = borderColor.CGColor
+        thoughtsTextView.textColor = placeholderTextColor
+        
         completeStepButton.layer.borderWidth = 1
-        completeStepButton.layer.borderColor = UIColor(red:0.92, green:0.80, blue:0.69, alpha:1.0).CGColor
+        completeStepButton.layer.borderColor = borderColor.CGColor
+        completeStepButton.setTitleColor(mediumTextColor, forState: .Normal)
+        completeStepButton.layer.cornerRadius = 4
+        
+        distressSlider.thickness = 5.0
+        distressSlider.thumbSize = 40.0
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,40 +64,22 @@ class CompleteQuestionPromptViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    class CustomUISlider : UISlider
-    {
-        override func trackRectForBounds(bounds: CGRect) -> CGRect {
-            //keeps original origin and width, changes height, you get the idea
-            let customBounds = CGRect(origin: bounds.origin, size: CGSize(width: bounds.size.width, height: 60.0))
-            super.trackRectForBounds(customBounds)
-            return customBounds
-        }
-        
-     
-        //while we are here, why not change the image here as well? (bonus material)
-        override func awakeFromNib() {
-            self.setThumbImage(UIImage(named: "customThumb"), forState: .Normal)
-            super.awakeFromNib()
-        }
-    }
- 
-
-    @IBAction func onSliderChange(sender: UISlider) {
-        if slider.value > 50 {
-            slider.minimumTrackTintColor = UIColor.blackColor()
-            distressLevelLabel.text = "Different text"
-        } else if slider.value > 25 && slider.value < 50 {
-            slider.minimumTrackTintColor = UIColor.blueColor()
+    @IBAction func onSliderChange(sender: GradientSlider) {
+        if sender.value > 40 && sender.value < 60 {
+            distressLevelLabel.text = "Moderately upset, uncomfortable. Unpleasant feelings are still manageable with some effort."
+        } else if sender.value > 25 && sender.value < 50 {
             distressLevelLabel.text = "middle text"
-
+            
+        } else if sender.value > 60 {
+            distressLevelLabel.text = "Feeling bad to the point that you begin to think something ought to be done about the way you feel."
         } else {
-            slider.minimumTrackTintColor = UIColor.redColor()
             distressLevelLabel.text = "lowest text"
-
+            
         }
     }
-    
+       
     func textViewDidBeginEditing(textView: UITextView) {
+        print("text view editing")
         if textView.textColor == UIColor.lightGrayColor() {
             textView.text = nil
             textView.textColor = UIColor.blackColor()

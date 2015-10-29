@@ -24,8 +24,8 @@
 		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; };
 		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; };
 		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; };
-		4D9CA0A51BDC2353008B0A6F /* components in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A41BDC2353008B0A6F /* components */; };
 		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
+		4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */; };
 		AF7A3D894C0EACA0689061C5 /* Pods_elme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB4DC5DE6D6A6B29495227C /* Pods_elme.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,8 +71,8 @@
 		4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails1ViewController.swift; sourceTree = "<group>"; };
 		4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails2ViewController.swift; sourceTree = "<group>"; };
 		4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsKeyboardViewController.swift; sourceTree = "<group>"; };
-		4D9CA0A41BDC2353008B0A6F /* components */ = {isa = PBXFileReference; lastKnownFileType = folder; path = components; sourceTree = "<group>"; };
 		4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
+		4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
 		979B977131BE5C93AE501A83 /* Pods-elme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elme.release.xcconfig"; path = "Pods/Target Support Files/Pods-elme/Pods-elme.release.xcconfig"; sourceTree = "<group>"; };
 		BAB4DC5DE6D6A6B29495227C /* Pods_elme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,12 +140,12 @@
 				4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */,
 				4D360E561BD88B9500576A69 /* AppDelegate.swift */,
 				4D360E581BD88B9500576A69 /* ViewController.swift */,
-				4D9CA0A41BDC2353008B0A6F /* components */,
 				4D360E5A1BD88B9500576A69 /* Main.storyboard */,
 				4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */,
 				4D360E5D1BD88B9500576A69 /* Assets.xcassets */,
 				4D360E5F1BD88B9500576A69 /* LaunchScreen.storyboard */,
 				4D360E621BD88B9500576A69 /* Info.plist */,
+				4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */,
 			);
 			path = elme;
 			sourceTree = "<group>";
@@ -294,7 +294,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D9CA0A51BDC2353008B0A6F /* components in Resources */,
 				4D360E611BD88B9500576A69 /* LaunchScreen.storyboard in Resources */,
 				4D360E5E1BD88B9500576A69 /* Assets.xcassets in Resources */,
 				4D360E5C1BD88B9500576A69 /* Main.storyboard in Resources */,
@@ -373,6 +372,7 @@
 				4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */,
 				4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */,
 				4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */,
+				4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */,
 				4D360E591BD88B9500576A69 /* ViewController.swift in Sources */,
 				4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */,
 				4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */,

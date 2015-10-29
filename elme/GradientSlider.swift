@@ -39,11 +39,11 @@ import UIKit
                     l.anchorPoint = CGPointMake(0.0, 0.5)
                     self.layer.addSublayer(l)
                     return l
-                }()
+                    }()
                 imgLayer.contents = img.CGImage
                 imgLayer.bounds = CGRectMake(0, 0, img.size.width, img.size.height)
                 _minTrackImageLayer = imgLayer
-                    
+                
             }else{
                 _minTrackImageLayer?.removeFromSuperlayer()
                 _minTrackImageLayer = nil
@@ -183,13 +183,13 @@ import UIKit
         let thumb = CALayer()
         thumb.cornerRadius = defaultThumbSize/2.0
         thumb.bounds = CGRectMake(0, 0, defaultThumbSize, defaultThumbSize)
-        thumb.backgroundColor = UIColor.whiteColor().CGColor
-        thumb.shadowColor = UIColor.blackColor().CGColor
-        thumb.shadowOffset = CGSizeMake(0.0, 2.5)
-        thumb.shadowRadius = 2.0
-        thumb.shadowOpacity = 0.25
-        thumb.borderColor = UIColor.blackColor().colorWithAlphaComponent(0.15).CGColor
-        thumb.borderWidth = 0.5
+       // thumb.backgroundColor = mediumTextColor
+      //  thumb.shadowColor = UIColor.blackColor().CGColor
+       // thumb.shadowOffset = CGSizeMake(0.0, 2.5)
+        //thumb.shadowRadius = 2.0
+      //  thumb.shadowOpacity = 0.25
+      //  thumb.borderColor = UIColor.blackColor().colorWithAlphaComponent(0.15).CGColor
+      //  thumb.borderWidth = 0.5
         return thumb
     }()
     
@@ -222,7 +222,7 @@ import UIKit
         super.init(frame: frame)
         commonSetup()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -232,7 +232,7 @@ import UIKit
         value = aDecoder.decodeObjectForKey("value") as? CGFloat ?? 0.0
         minimumValue = aDecoder.decodeObjectForKey("minimumValue") as? CGFloat ?? 0.0
         maximumValue = aDecoder.decodeObjectForKey("maximumValue") as? CGFloat ?? 1.0
-
+        
         minimumValueImage = aDecoder.decodeObjectForKey("minimumValueImage") as? UIImage
         maximumValueImage = aDecoder.decodeObjectForKey("maximumValueImage") as? UIImage
         
@@ -280,7 +280,7 @@ import UIKit
     }
     
     override func layoutSublayersOfLayer(layer: CALayer) {
-//        super.layoutSublayersOfLayer(layer)
+        //        super.layoutSublayersOfLayer(layer)
         
         if layer != self.layer {return}
         
@@ -355,7 +355,7 @@ import UIKit
         }
         actionBlock(self,_value)
         sendActionsForControlEvents([UIControlEvents.ValueChanged, UIControlEvents.TouchUpInside])
-
+        
     }
     
     //MARK: - Private Functions
