@@ -51,7 +51,7 @@ class EditProfileViewController: UIViewController {
             //DELAY
             delay(2){
                 //self.performSegueWithIdentifier("editProfileSegue", sender: nil)
-                navigationController!.popViewControllerAnimated(true)
+                self.navigationController!.popViewControllerAnimated(true)
             }
         }
 
