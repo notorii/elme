@@ -20,8 +20,8 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         pastGoals = ["one", "two", "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.", "four"]
         
-        view.backgroundColor = lightBackgroundColor
-        tableView.backgroundColor = lightBackgroundColor
+        view.backgroundColor = darkBackgroundColor
+        tableView.backgroundColor = darkBackgroundColor
         
         navBarView.backgroundColor = lightBackgroundColor
         navBarView.layer.borderWidth = 1
@@ -51,6 +51,13 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
         
         cell.backgroundColor = lightBackgroundColor
         cell.pastGoalLabel.textColor = darkTextColor
+        
+        cell.borderView.layer.borderColor = borderColor.CGColor
+        cell.borderView.layer.borderWidth = 1
+        
+        if indexPath.row == pastGoals.count - 1 {
+            cell.borderView.frame.size.height = 55
+        }
         
         cell.pastGoalLabel.text = pastGoals[indexPath.row]
         

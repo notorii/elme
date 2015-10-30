@@ -18,7 +18,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = lightBackgroundColor
+        view.backgroundColor = darkBackgroundColor
         navBarView.backgroundColor = lightBackgroundColor
         navBarView.layer.borderWidth = 1
         navBarView.layer.borderColor = borderColor.CGColor
@@ -27,8 +27,9 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.backgroundColor = lightBackgroundColor
+        tableView.backgroundColor = darkBackgroundColor
         tableView.estimatedRowHeight = 4
+        tableView.separatorColor = borderColor
         
         steps = ["Cats","dogs","monkies monkies Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.","ponies"]
         
@@ -40,8 +41,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     @IBAction func onBackPress(sender: UIButton) {
-      //  navigationController!.popViewControllerAnimated(true)
-        print("on back press")
+     navigationController!.popViewControllerAnimated(true)
     }
 
     
@@ -61,7 +61,15 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.backgroundColor = lightBackgroundColor
         cell.stepTextLabel.textColor = darkTextColor
         cell.stepNumberLabel.textColor = darkTextColor
+        cell.borderView.layer.borderColor = borderColor.CGColor
+        cell.borderView.layer.borderWidth = 1
         
+        if indexPath.row == steps.count - 1 {
+            cell.borderView.frame.size.height = 57
+        }
+        
+        //cell.layer.borderColor = borderColor
+        //cell.layer.borderWidth = 1
         
         cell.stepTextLabel.text = steps[indexPath.row]
         cell.stepNumberLabel.text = "1"
