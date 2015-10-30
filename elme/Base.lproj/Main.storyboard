@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PZV-Jy-cd1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xt5-Zc-Sae">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
@@ -499,7 +499,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="McSweeney's Truffaut semiotics High Life tilde leggings Helvetica gentrify master cleanse authentic. " textAlignment="natural" selectable="NO" id="u53-aA-Ned">
-                                                <rect key="frame" x="5" y="41" width="333" height="81"/>
+                                                <rect key="frame" x="5" y="37" width="333" height="81"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -535,7 +535,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="B8w-Tz-aW3">
-                                        <rect key="frame" x="0.0" y="493" width="355" height="1"/>
+                                        <rect key="frame" x="0.0" y="490" width="355" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -573,10 +573,117 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="9.2 - step detail complete" id="VS8-nX-ZsR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" id="5dV-c8-Koa">
+                                <rect key="frame" x="10" y="10" width="354" height="644"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AGX-lf-wbr">
+                                        <rect key="frame" x="316" y="0.0" width="38" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="x"/>
+                                        <connections>
+                                            <action selector="onClosePress:" destination="PZV-Jy-cd1" eventType="touchUpInside" id="lbA-eQ-SX3"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How distressing was it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9NU-Wo-bC7">
+                                        <rect key="frame" x="9" y="113" width="179" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <color key="textColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" id="suF-df-IiX">
+                                        <rect key="frame" x="0.0" y="214" width="319" height="83"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday, October 19, 2:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aoK-Tc-8Ry">
+                                                <rect key="frame" x="9" y="42" width="228" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind me on" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Lk-LV-JKw">
+                                                <rect key="frame" x="10" y="16" width="110" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="Ppx-vm-vYY">
+                                        <rect key="frame" x="0.0" y="294" width="329" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="McSweeney's Truffaut semiotics High Life tilde leggings Helvetica gentrify master cleanse authentic. " textAlignment="natural" selectable="NO" id="qYZ-h8-IHX">
+                                                <rect key="frame" x="5" y="37" width="333" height="81"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creation note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="czR-lF-ngX">
+                                                <rect key="frame" x="10" y="16" width="104" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ask question in class" textAlignment="center" minimumFontSize="17" id="j4d-YK-dWQ">
+                                        <rect key="frame" x="25" y="10" width="304" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" id="RoP-ks-5No">
+                                        <rect key="frame" x="0.0" y="214" width="355" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="fw5-nl-8hP">
+                                        <rect key="frame" x="0.0" y="294" width="355" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="zhO-zU-5XZ">
+                                        <rect key="frame" x="0.0" y="98" width="355" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="8nK-rq-4Fj">
+                                        <rect key="frame" x="0.0" y="424" width="355" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="HsV-jy-5sH">
+                                        <rect key="frame" x="-1" y="550" width="355" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="5w9-7i-9u3">
+                                        <rect key="frame" x="0.0" y="424" width="319" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="McSweeney's Truffaut semiotics High Life tilde leggings Helvetica gentrify master cleanse authentic. " textAlignment="natural" selectable="NO" id="uKZ-Hb-k7q">
+                                                <rect key="frame" x="5" y="37" width="333" height="81"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflection note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TOC-ID-xiF">
+                                                <rect key="frame" x="10" y="16" width="104" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.93725490199999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ptn-3t-Abd">
                                 <rect key="frame" x="330" y="15" width="38" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -589,7 +696,19 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="border1" destination="zhO-zU-5XZ" id="fQg-aV-nYh"/>
+                        <outlet property="border2" destination="RoP-ks-5No" id="hfy-Bj-s48"/>
+                        <outlet property="border3" destination="fw5-nl-8hP" id="fsN-GN-0ln"/>
+                        <outlet property="border4" destination="8nK-rq-4Fj" id="gdC-jA-aIm"/>
+                        <outlet property="border5" destination="HsV-jy-5sH" id="TpM-Yx-3ae"/>
                         <outlet property="closeButton" destination="Ptn-3t-Abd" id="RSy-zQ-dQi"/>
+                        <outlet property="creationNoteLabel" destination="czR-lF-ngX" id="Mja-ts-XVO"/>
+                        <outlet property="howDistressingLabel" destination="9NU-Wo-bC7" id="XCP-np-XKA"/>
+                        <outlet property="remindMeLabel" destination="2Lk-LV-JKw" id="8as-tK-5y4"/>
+                        <outlet property="stepDetailsCompleteView" destination="5dV-c8-Koa" id="rvK-0g-h0N"/>
+                        <outlet property="thoughtsTextView" destination="qYZ-h8-IHX" id="FLA-sG-fTy"/>
+                        <outlet property="timeLabel" destination="aoK-Tc-8Ry" id="Ek6-DB-LrI"/>
+                        <outlet property="titleTextField" destination="j4d-YK-dWQ" id="xpl-0x-FuF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yuo-XG-yUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1439,7 +1558,6 @@
         <image name="5.2 - step details" width="375" height="667"/>
         <image name="6 - next step" width="375" height="667"/>
         <image name="8 - steps" width="375" height="667"/>
-        <image name="9.2 - step detail complete" width="375" height="667"/>
         <image name="Edit_profile_fields" width="375" height="163"/>
         <image name="LoginFields" width="375" height="109"/>
         <image name="Save_Button" width="355" height="55"/>
@@ -1452,6 +1570,6 @@
         <segue reference="rJR-DO-oiV"/>
         <segue reference="94d-9p-6Kf"/>
         <segue reference="GSp-Nu-Nuf"/>
-        <segue reference="svM-Ml-6mi"/>
+        <segue reference="m4b-gD-ggo"/>
     </inferredMetricsTieBreakers>
 </document>
