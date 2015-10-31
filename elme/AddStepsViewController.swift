@@ -8,14 +8,32 @@
 
 import UIKit
 
-class AddStepsViewController: UIViewController, UITextFieldDelegate {
+class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    var steps: [String]!
+    var textField: [UITextField]!
+    var cell: AddStepCell
     
+    @IBOutlet weak var AddStepsView: UIView!
+    @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        steps = ["cats"]
+        
+        AddStepsView.backgroundColor = lightBackgroundColor
+        AddStepsView.layer.borderColor = borderColor.CGColor
+        AddStepsView.layer.borderWidth = 1.0
+        
+        nextButton.backgroundColor = lightBackgroundColor
+        nextButton.layer.borderColor = borderColor.CGColor
+        nextButton.layer.borderWidth = 1.0
 
         // Do any additional setup after loading the view.
-        //addStepsTextField.delegate = self
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,18 +41,37 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return steps.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        cell = tableView.dequeueReusableCellWithIdentifier("AddStepCell") as! AddStepCell
+        cell.addStepTextField.delegate = self
+        var stepField = cell.addStepTextField as! StepField
+        stepField.index = indexPath.row
+        cell.stepNumberLabel.text = "\(indexPath.row + 1)"
+        return cell
+    }
+    
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        //addStepsTextField.resignFirstResponder()
+        
+        cell.addStepTextField.resignFirstResponder()
+        steps.append(cell.addStepTextField.text!)
+        print(steps)
         print("testing")
-//        if x.text == "" {
-//            print("do nothing")
-//        } else {
-//            print("create new table view")
-//            
-//        }
+                if cell.addStepTextField.text == "" {
+                    print("do nothing")
+                } else {
+                }
+        
+        tableView.reloadData()
         
         return true
     }
+
+
     
 
     /*

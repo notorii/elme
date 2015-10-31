@@ -8,8 +8,12 @@
 
 import UIKit
 
-class addStepCell: UITableViewCell {
+class AddStepCell: UITableViewCell {
 
+    
+    @IBOutlet weak var stepNumberLabel: UILabel!
+    @IBOutlet weak var addStepTextField: StepField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
