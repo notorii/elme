@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
+        
         accountSignUpButton.layer.borderWidth = 1
         accountSignUpButton.layer.borderColor = borderColor.CGColor
         accountSignUpButton.setTitleColor(mediumTextColor, forState: .Normal)
@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         loginButton.layer.borderColor = borderColor.CGColor
         loginButton.setTitleColor(mediumTextColor, forState: .Normal)
         loginButton.layer.cornerRadius = 4
-        */
+        
 
         // Do any additional setup after loading the view.
     }
@@ -49,11 +49,20 @@ class LoginViewController: UIViewController {
             dispatch_get_main_queue(), closure)
     }
 
+    @IBAction func onTap(sender: UITapGestureRecognizer) {
+        keyboardDismiss()
+    }
+    
+    func keyboardDismiss() {
+        view.endEditing(true)
+        print("tap gesture")
+            }
+    
     
     @IBAction func onLogin(sender: AnyObject) {
         
         //SUCCESS EMAIL AND PASSWORD
-        if usernameField.text == "email" && passwordField.text == "password" {
+        if usernameField.text == "name" && passwordField.text == "password" {
             
             // PUT SPINNER HERE SIGNNING IN...
             self.activityControllerView.hidden = false
@@ -85,6 +94,8 @@ class LoginViewController: UIViewController {
                 alert.show()
             }
         }
+        
+        
         
     }
 
