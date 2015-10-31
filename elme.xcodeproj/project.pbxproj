@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1A9B8C1BE1DDC4006ECAE0 /* StepListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */; };
+		4D1A9B8E1BE1EBEE006ECAE0 /* PastGoalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */; };
 		4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E561BD88B9500576A69 /* AppDelegate.swift */; };
 		4D360E591BD88B9500576A69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E581BD88B9500576A69 /* ViewController.swift */; };
 		4D360E5C1BD88B9500576A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D360E5A1BD88B9500576A69 /* Main.storyboard */; };
@@ -24,6 +26,10 @@
 		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; };
 		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; };
 		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; };
+		6E6719231BDC286D002A0CE0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719221BDC286D002A0CE0 /* MenuViewController.swift */; };
+		6E6719251BDC28AB002A0CE0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719241BDC28AB002A0CE0 /* HomeViewController.swift */; };
+		6E6719271BDC295F002A0CE0 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719261BDC295F002A0CE0 /* HamburgerViewController.swift */; };
+		6E6719291BDE8B5E002A0CE0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */; };
 		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
 		4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */; };
 		AF7A3D894C0EACA0689061C5 /* Pods_elme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB4DC5DE6D6A6B29495227C /* Pods_elme.framework */; };
@@ -37,11 +43,15 @@
 		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6E6719291BDE8B5E002A0CE0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
+		4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */; };
 		6E6719231BDC286D002A0CE0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719221BDC286D002A0CE0 /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6E6719251BDC28AB002A0CE0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719241BDC28AB002A0CE0 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6E6719271BDC295F002A0CE0 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719261BDC295F002A0CE0 /* HamburgerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6E6719291BDE8B5E002A0CE0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6EB3DFD01BE1D59700C4756F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3DFCF1BE1D59700C4756F /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6EFB55161BE1EFA300870B0F /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB55151BE1EFA300870B0F /* SignUp2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AF7A3D894C0EACA0689061C5 /* Pods_elme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB4DC5DE6D6A6B29495227C /* Pods_elme.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepListCell.swift; sourceTree = "<group>"; };
+		4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastGoalViewCell.swift; sourceTree = "<group>"; };
 		108B90CD52CC0663173E3248 /* Pods-elme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elme/Pods-elme.debug.xcconfig"; sourceTree = "<group>"; };
 		4D360E531BD88B9500576A69 /* elme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D360E561BD88B9500576A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,15 +98,20 @@
 		4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails1ViewController.swift; sourceTree = "<group>"; };
 		4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails2ViewController.swift; sourceTree = "<group>"; };
 		4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsKeyboardViewController.swift; sourceTree = "<group>"; };
-		4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
-		4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
-		979B977131BE5C93AE501A83 /* Pods-elme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elme.release.xcconfig"; path = "Pods/Target Support Files/Pods-elme/Pods-elme.release.xcconfig"; sourceTree = "<group>"; };
-		BAB4DC5DE6D6A6B29495227C /* Pods_elme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		6E6719221BDC286D002A0CE0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		6E6719241BDC28AB002A0CE0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6E6719261BDC295F002A0CE0 /* HamburgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
+		6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
+		4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
+		6E6719221BDC286D002A0CE0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6E6719241BDC28AB002A0CE0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6E6719261BDC295F002A0CE0 /* HamburgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
+		6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		6EB3DFCF1BE1D59700C4756F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6EFB55151BE1EFA300870B0F /* SignUp2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
+		979B977131BE5C93AE501A83 /* Pods-elme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elme.release.xcconfig"; path = "Pods/Target Support Files/Pods-elme/Pods-elme.release.xcconfig"; sourceTree = "<group>"; };
+		BAB4DC5DE6D6A6B29495227C /* Pods_elme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,10 +174,13 @@
 				4D360E861BD89AFE00576A69 /* Item2ViewController.swift */,
 				4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */,
 				4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */,
+				4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */,
 				4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */,
 				4D360E561BD88B9500576A69 /* AppDelegate.swift */,
 				4D360E581BD88B9500576A69 /* ViewController.swift */,
 				4D360E5A1BD88B9500576A69 /* Main.storyboard */,
+				6EFB55151BE1EFA300870B0F /* SignUp2ViewController.swift */,
+				4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */,
 				6EB3DFCF1BE1D59700C4756F /* LoginViewController.swift */,
 				4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */,
 				6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */,
@@ -395,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E6719291BDE8B5E002A0CE0 /* EditProfileViewController.swift in Sources */,
+				6EFB55161BE1EFA300870B0F /* SignUp2ViewController.swift in Sources */,
 				4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */,
 				4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */,
 				4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */,
@@ -406,10 +427,12 @@
 				4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */,
 				4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */,
 				6E6719231BDC286D002A0CE0 /* MenuViewController.swift in Sources */,
+				4D1A9B8C1BE1DDC4006ECAE0 /* StepListCell.swift in Sources */,
 				4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */,
 				4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */,
 				6EB3DFD01BE1D59700C4756F /* LoginViewController.swift in Sources */,
 				4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */,
+				4D1A9B8E1BE1EBEE006ECAE0 /* PastGoalViewCell.swift in Sources */,
 				4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */,
 				4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */,
 				4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */,
