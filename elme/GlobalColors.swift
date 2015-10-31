@@ -16,7 +16,7 @@ import DynamicColor
 
 
 let lightBackgroundColor = UIColor(red:0.99, green:0.98, blue:0.96, alpha:1.0)
-let darkBackgroundColor = lightBackgroundColor.darkerColor()
+let darkBackgroundColor = UIColor(red:0.98, green:0.95, blue:0.92, alpha:1.0)
 let menuBackgroundColor = UIColor(red:1.00, green:0.88, blue:0.69, alpha:1.0)
 let navBackgroundColor = UIColor(red:0.99, green:0.99, blue:0.98, alpha:1.0)
 let buttonBackgroundColor = UIColor(red:0.98, green:0.95, blue:0.92, alpha:1.0)
