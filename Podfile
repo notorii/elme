@@ -4,8 +4,8 @@
 use_frameworks!
 
 target 'elme' do
-		pod 'AFNetworking'
-		pod 'DynamicColor', '~> 2.0'
+  pod 'Parse'
+  pod 'DynamicColor', '~> 2.0'
 end
 
 target 'elmeTests' do
