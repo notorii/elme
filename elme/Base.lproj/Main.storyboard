@@ -585,7 +585,7 @@
                                             <action selector="onClosePress:" destination="PZV-Jy-cd1" eventType="touchUpInside" id="lbA-eQ-SX3"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How distressing was it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9NU-Wo-bC7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level of distress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9NU-Wo-bC7">
                                         <rect key="frame" x="9" y="113" width="179" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
@@ -681,12 +681,57 @@
                                             </label>
                                         </subviews>
                                     </view>
+                                    <view contentMode="scaleToFill" id="0Z5-Ld-I94">
+                                        <rect key="frame" x="10" y="165" width="334" height="4"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="cbC-5e-Tjr">
+                                        <rect key="frame" x="101" y="135" width="49" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="cCj-H4-eOO">
+                                                <rect key="frame" x="22" y="23" width="6" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actual" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W0z-B9-fKj">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="i8q-H3-QtG">
+                                        <rect key="frame" x="144" y="135" width="72" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CQ7-Qb-Tn4">
+                                                <rect key="frame" x="0.0" y="44" width="72" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="ldm-t4-2ag">
+                                                <rect key="frame" x="32" y="23" width="6" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.93725490199999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ptn-3t-Abd">
                                 <rect key="frame" x="330" y="15" width="38" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onClosePress:" destination="xt5-Zc-Sae" eventType="touchUpInside" id="nsX-m1-IC1"/>
                                 </connections>
@@ -696,6 +741,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="actualBar" destination="cCj-H4-eOO" id="OkG-GQ-sB9"/>
+                        <outlet property="actualLabel" destination="W0z-B9-fKj" id="5FT-YR-7sm"/>
+                        <outlet property="actualMarkerView" destination="cbC-5e-Tjr" id="c4k-xu-8r6"/>
                         <outlet property="border1" destination="zhO-zU-5XZ" id="fQg-aV-nYh"/>
                         <outlet property="border2" destination="RoP-ks-5No" id="hfy-Bj-s48"/>
                         <outlet property="border3" destination="fw5-nl-8hP" id="fsN-GN-0ln"/>
@@ -703,7 +751,13 @@
                         <outlet property="border5" destination="HsV-jy-5sH" id="TpM-Yx-3ae"/>
                         <outlet property="closeButton" destination="Ptn-3t-Abd" id="RSy-zQ-dQi"/>
                         <outlet property="creationNoteLabel" destination="czR-lF-ngX" id="Mja-ts-XVO"/>
+                        <outlet property="distressBar" destination="0Z5-Ld-I94" id="uQj-Kv-bPi"/>
+                        <outlet property="expectedBar" destination="ldm-t4-2ag" id="Z43-K6-GJ4"/>
+                        <outlet property="expectedLabel" destination="CQ7-Qb-Tn4" id="SMQ-1L-5Hh"/>
+                        <outlet property="expectedMarkerView" destination="i8q-H3-QtG" id="Uau-5E-82U"/>
                         <outlet property="howDistressingLabel" destination="9NU-Wo-bC7" id="XCP-np-XKA"/>
+                        <outlet property="reflectionNoteLabel" destination="TOC-ID-xiF" id="00w-CJ-Glp"/>
+                        <outlet property="reflectionTextView" destination="uKZ-Hb-k7q" id="3VP-dg-EJJ"/>
                         <outlet property="remindMeLabel" destination="2Lk-LV-JKw" id="8as-tK-5y4"/>
                         <outlet property="stepDetailsCompleteView" destination="5dV-c8-Koa" id="rvK-0g-h0N"/>
                         <outlet property="thoughtsTextView" destination="qYZ-h8-IHX" id="FLA-sG-fTy"/>
