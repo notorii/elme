@@ -13,6 +13,8 @@ class AddStepCell: UITableViewCell {
     
     @IBOutlet weak var stepNumberLabel: UILabel!
     @IBOutlet weak var addStepTextField: StepField!
+    @IBOutlet weak var topBorder: UIView!
+    @IBOutlet weak var bottomBorder: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

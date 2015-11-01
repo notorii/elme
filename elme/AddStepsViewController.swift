@@ -9,12 +9,17 @@
 import UIKit
 
 class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     @IBOutlet weak var tableView: UITableView!
     var steps: [String]!
     var textField: [UITextField]!
-    var cell: AddStepCell
+    var cell: AddStepCell!
     
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var AddStepsView: UIView!
     @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {
@@ -22,11 +27,16 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         
-        steps = ["cats"]
+        steps = []
+        
+        
+        closeButton.tintColor = mediumTextColor
         
         AddStepsView.backgroundColor = lightBackgroundColor
         AddStepsView.layer.borderColor = borderColor.CGColor
         AddStepsView.layer.borderWidth = 1.0
+        
+        tableView.backgroundColor = lightBackgroundColor
         
         nextButton.backgroundColor = lightBackgroundColor
         nextButton.layer.borderColor = borderColor.CGColor
@@ -43,12 +53,26 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return steps.count
+        return steps.count + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         cell = tableView.dequeueReusableCellWithIdentifier("AddStepCell") as! AddStepCell
+
         cell.addStepTextField.delegate = self
+        if indexPath.row > 4 {
+            print("greater than six")
+        }
+        cell.stepNumberLabel.textColor = darkTextColor
+        cell.backgroundColor = lightBackgroundColor
+        cell.topBorder.backgroundColor = borderColor
+        cell.bottomBorder.hidden = true
+        
+        if indexPath.row == steps.count {
+            cell.bottomBorder.hidden = false
+            cell.bottomBorder.backgroundColor = borderColor
+        }
+        
         var stepField = cell.addStepTextField as! StepField
         stepField.index = indexPath.row
         cell.stepNumberLabel.text = "\(indexPath.row + 1)"
@@ -57,16 +81,18 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         
-        cell.addStepTextField.resignFirstResponder()
-        steps.append(cell.addStepTextField.text!)
-        print(steps)
-        print("testing")
+        
                 if cell.addStepTextField.text == "" {
                     print("do nothing")
+                    
                 } else {
+                    steps.append(cell.addStepTextField.text!)
+                    print(steps)
                 }
-        
+        cell.addStepTextField.resignFirstResponder()
+
         tableView.reloadData()
+        
         
         return true
     }

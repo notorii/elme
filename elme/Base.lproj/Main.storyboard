@@ -1273,12 +1273,24 @@
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                 </textField>
+                                                                <view contentMode="scaleToFill" id="cxS-va-DBm">
+                                                                    <rect key="frame" x="0.0" y="54" width="354" height="1"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" id="Amz-Cy-gUi">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="1"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </view>
                                                             </subviews>
                                                         </tableViewCellContentView>
                                                         <color key="backgroundColor" red="1" green="0.94685265323538692" blue="0.43656271335271013" alpha="1" colorSpace="calibratedRGB"/>
                                                         <connections>
                                                             <outlet property="addStepTextField" destination="l8d-3i-gxq" id="fDx-hu-DNV"/>
+                                                            <outlet property="bottomBorder" destination="cxS-va-DBm" id="h7j-uM-ypk"/>
                                                             <outlet property="stepNumberLabel" destination="Pw2-LK-lDR" id="OFK-R0-Pc5"/>
+                                                            <outlet property="topBorder" destination="Amz-Cy-gUi" id="YcV-Us-3SV"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -1314,6 +1326,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="AddStepsView" destination="DuK-1T-IKB" id="v8t-7o-RwF"/>
+                        <outlet property="closeButton" destination="MZS-OM-52G" id="i5w-Oe-js3"/>
                         <outlet property="nextButton" destination="dDf-FH-gH4" id="Ith-y4-LMS"/>
                         <outlet property="tableView" destination="GIV-KG-VRs" id="GS3-KN-t7T"/>
                     </connections>
