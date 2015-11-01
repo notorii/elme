@@ -11,6 +11,8 @@
 		322E8FAE1BE3127500746883 /* AddStepsTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E8FAD1BE3127500746883 /* AddStepsTransition.swift */; };
 		322E8FB01BE312E500746883 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E8FAF1BE312E500746883 /* BaseTransition.swift */; };
 		32674E0F1BE1F55200E53EBC /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32674E0E1BE1F55200E53EBC /* NewGoalViewController.swift */; };
+		3247E5E51BE58ECB00933BFE /* StepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247E5E41BE58ECB00933BFE /* StepData.swift */; };
+		32FECF1B1BE56D5A00FFAB4C /* AddStepDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FECF1A1BE56D5A00FFAB4C /* AddStepDetailsViewController.swift */; };
 		4D1A9B8C1BE1DDC4006ECAE0 /* StepListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */; };
 		4D1A9B8E1BE1EBEE006ECAE0 /* PastGoalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */; };
 		4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E561BD88B9500576A69 /* AppDelegate.swift */; };
@@ -35,6 +37,8 @@
 		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
 		4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */; };
 		4DE522931BE57CE400BDAF6F /* StepField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE522921BE57CE400BDAF6F /* StepField.swift */; };
+		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
+		4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */; };
 		6E6719231BDC286D002A0CE0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719221BDC286D002A0CE0 /* MenuViewController.swift */; };
 		6E6719251BDC28AB002A0CE0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719241BDC28AB002A0CE0 /* HomeViewController.swift */; };
 		6E6719271BDC295F002A0CE0 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719261BDC295F002A0CE0 /* HamburgerViewController.swift */; };
@@ -89,6 +93,8 @@
 		322E8FAD1BE3127500746883 /* AddStepsTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsTransition.swift; sourceTree = "<group>"; };
 		322E8FAF1BE312E500746883 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		32674E0E1BE1F55200E53EBC /* NewGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGoalViewController.swift; sourceTree = "<group>"; };
+		3247E5E41BE58ECB00933BFE /* StepData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepData.swift; sourceTree = "<group>"; };
+		32FECF1A1BE56D5A00FFAB4C /* AddStepDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetailsViewController.swift; sourceTree = "<group>"; };
 		4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepListCell.swift; sourceTree = "<group>"; };
 		4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastGoalViewCell.swift; sourceTree = "<group>"; };
 		4D360E531BD88B9500576A69 /* elme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elme.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +218,7 @@
 				322E8FAD1BE3127500746883 /* AddStepsTransition.swift */,
 				32674E0E1BE1F55200E53EBC /* NewGoalViewController.swift */,
 				6E21E0041BE589AC00AC1F5C /* NextStepViewViewController.swift */,
+				32FECF1A1BE56D5A00FFAB4C /* AddStepDetailsViewController.swift */,
 				6EFB55151BE1EFA300870B0F /* SignUp2ViewController.swift */,
 				4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */,
 				6EB3DFCF1BE1D59700C4756F /* LoginViewController.swift */,
@@ -225,6 +232,7 @@
 				4D360E621BD88B9500576A69 /* Info.plist */,
 				4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */,
 				320FA67B1BE322E900D2EB4C /* GlobalViewFunctions.swift */,
+				3247E5E41BE58ECB00933BFE /* StepData.swift */,
 			);
 			path = elme;
 			sourceTree = "<group>";
@@ -335,7 +343,7 @@
 				TargetAttributes = {
 					4D360E521BD88B9500576A69 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = Y6GTEZ73XM;
+						DevelopmentTeam = S3F4KLL6T8;
 					};
 					4D360E661BD88B9500576A69 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -469,12 +477,14 @@
 				4D1A9B8C1BE1DDC4006ECAE0 /* StepListCell.swift in Sources */,
 				4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */,
 				4D9A7E671BE56B39009C8578 /* AddStepsViewController.swift in Sources */,
+				32FECF1B1BE56D5A00FFAB4C /* AddStepDetailsViewController.swift in Sources */,
 				4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */,
 				6E21E00F1BE5AFF300AC1F5C /* Menu2ViewController.swift in Sources */,
 				32674E0F1BE1F55200E53EBC /* NewGoalViewController.swift in Sources */,
 				320FA67C1BE322E900D2EB4C /* GlobalViewFunctions.swift in Sources */,
 				6EB3DFD01BE1D59700C4756F /* LoginViewController.swift in Sources */,
 				4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */,
+				3247E5E51BE58ECB00933BFE /* StepData.swift in Sources */,
 				4D1A9B8E1BE1EBEE006ECAE0 /* PastGoalViewCell.swift in Sources */,
 				4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */,
 				6E21E00B1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift in Sources */,
@@ -622,10 +632,13 @@
 			baseConfigurationReference = 108B90CD52CC0663173E3248 /* Pods-elme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = elme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maggled.Codepath-CBT";
 				PRODUCT_NAME = elme;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -634,10 +647,13 @@
 			baseConfigurationReference = 979B977131BE5C93AE501A83 /* Pods-elme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = elme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maggled.Codepath-CBT";
 				PRODUCT_NAME = elme;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
