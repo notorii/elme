@@ -10,14 +10,23 @@ import UIKit
 
 class StepListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+
     @IBOutlet weak var stepsTitleLabel: UILabel!
     @IBOutlet weak var navBarView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-   var steps: [String]!
+    let CellIdentifier = "StepListCell"
+    
+    var steps: [String]!
+    var checked: [Bool]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        steps = ["Cats","dogs","monkies monkies Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.","ponies"]
+
+        checked = [Bool](count: steps.count, repeatedValue: false)
+        tableView.registerClass(StepListCell.self, forCellReuseIdentifier: CellIdentifier)
+        
         view.backgroundColor = darkBackgroundColor
         navBarView.backgroundColor = lightBackgroundColor
         navBarView.layer.borderWidth = 1
@@ -31,7 +40,6 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.estimatedRowHeight = 4
         tableView.separatorColor = borderColor
         
-        steps = ["Cats","dogs","monkies monkies Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.","ponies"]
         
     }
 
@@ -54,10 +62,18 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         return steps.count
     }
     
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        checked[indexPath.row] = !checked[indexPath.row]
+//        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+//    }
+
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("StepListCell") as! StepListCell
         
         //let steps = steps[indexPath.row]
+        cell.checkmark.hidden = true
         cell.backgroundColor = lightBackgroundColor
         cell.stepTextLabel.textColor = darkTextColor
         cell.stepNumberLabel.textColor = darkTextColor
@@ -67,6 +83,13 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         if indexPath.row == steps.count - 1 {
             cell.borderView.frame.size.height = 57
         }
+//        if checked[indexPath.row] {
+//            cell.checkmark.hidden = false
+//            cell.stepNumberLabel.hidden = true
+//        } else {
+//            cell.checkmark.hidden = true
+//            cell.stepNumberLabel.hidden = false
+//        }
         
         //cell.layer.borderColor = borderColor
         //cell.layer.borderWidth = 1
@@ -76,16 +99,26 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         return cell
     }
-    
-    
-    /*
-    // MARK: - Navigation
+//    
+//    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let destinationViewController = segue.destinationViewController
+//
+//        stepDetailsIncompleteViewController.view.backgroundColor = UIColor.clearColor()
+//        stepsViewController.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+//        stepsViewController.presentViewController(self, animated: true completion: nil)
+//    }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        var destinationViewController = segue.destinationViewController
+        
+        
+        destinationViewController.view.backgroundColor = UIColor.clearColor()
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        destinationViewController.presentViewController(self, animated: true, completion: nil)
     }
-    */
 
 }
+

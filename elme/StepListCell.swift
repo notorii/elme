@@ -13,6 +13,7 @@ class StepListCell: UITableViewCell {
     @IBOutlet weak var stepNumberLabel: UILabel!
     @IBOutlet weak var stepTextLabel: UILabel!
     @IBOutlet weak var borderView: UIView!
+    @IBOutlet weak var checkmark: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
