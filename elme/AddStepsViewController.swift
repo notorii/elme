@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class AddStepsViewController: UIViewController {
 
@@ -18,10 +19,12 @@ class AddStepsViewController: UIViewController {
     @IBOutlet weak var stepTitle: UILabel!
     @IBOutlet weak var stepNumber: UILabel!
     
+    let stepData = StepData.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let steps = [
+        self.stepData.steps = [
             "Ask another student a question",
             "Ask a professor a question",
             "Ask a question in class",
@@ -47,15 +50,13 @@ class AddStepsViewController: UIViewController {
         containerView.layer.borderColor = borderColor.CGColor
         containerView.layer.cornerRadius = 2.0
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let stepIndex = defaults.integerForKey("stepIndex")
-        
-        if (defaults.objectForKey("stepIndex") == nil) {
-            defaults.setInteger(0, forKey: "stepIndex")
+        if (self.stepData.stepIndex == nil) {
+            self.stepData.stepIndex = 0 //defaults.setInteger(0, forKey: "stepIndex")
         }
         
-        stepTitle.text = steps[stepIndex]
-        stepNumber.text = "Step \(stepIndex) of \(steps.count)"
+        stepTitle.text = self.stepData.steps[self.stepData.stepIndex] as? String
+        stepNumber.text = "Step \(self.stepData.stepIndex+1) of \(self.stepData.steps.count)"
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,7 +100,7 @@ class AddStepsViewController: UIViewController {
             distressSlider.maxColor = scale7
             distressSlider.minColor = scale7
         } else if sender.value >= 72 && sender.value < 81 {
-            distressLevelLabel.text = " Freaking out. The beginning of alienation."
+            distressLevelLabel.text = "Freaking out. The beginning of alienation."
             distressSlider.maxColor = scale8
             distressSlider.minColor = scale8
         } else if sender.value >= 81 && sender.value < 90 {
@@ -118,12 +119,11 @@ class AddStepsViewController: UIViewController {
     
     @IBAction func previousButton(sender: UIButton) {
         navigationController!.popViewControllerAnimated(true)
+        self.stepData.stepIndex = self.stepData.stepIndex - 1
     }
 
     @IBAction func nextButton(sender: UIButton) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let stepIndex = defaults.integerForKey("stepIndex")
-        defaults.setInteger(stepIndex + 1, forKey: "stepIndex")
+        self.stepData.stepIndex = self.stepData.stepIndex + 1
     }
     
     /*
