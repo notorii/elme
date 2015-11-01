@@ -60,7 +60,7 @@ class EditProfileViewController: UIViewController {
     //BACK BUTTON
 
     @IBAction func onBackButton(sender: AnyObject) {
-        navigationController!.popViewControllerAnimated(true)
+    dismissViewControllerAnimated(true, completion: nil)
     }
    
    
