@@ -160,7 +160,6 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
         if (dateTextField.text == "Remind me on...") {
             dateTextField.textColor = placeholderTextColor
         } else {
-            print("not equalt o remidn me on")
             dateTextField.textColor = darkTextColor
         }
     }
@@ -185,10 +184,6 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
             dismissKeyboard()
         }
         return true
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
     }
     
     /*
