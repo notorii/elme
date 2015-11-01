@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class AddStepsViewController: UIViewController {
+class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var distressSlider: GradientSlider!
     @IBOutlet weak var distressLevelLabel: UILabel!
@@ -18,6 +18,8 @@ class AddStepsViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var stepTitle: UILabel!
     @IBOutlet weak var stepNumber: UILabel!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var rememberTextView: UITextView!
     
     let stepData = StepData.sharedInstance
     
@@ -51,12 +53,22 @@ class AddStepsViewController: UIViewController {
         containerView.layer.cornerRadius = 2.0
         
         if (self.stepData.stepIndex == nil) {
-            self.stepData.stepIndex = 0 //defaults.setInteger(0, forKey: "stepIndex")
+            self.stepData.stepIndex = 0
         }
         
         stepTitle.text = self.stepData.steps[self.stepData.stepIndex] as? String
         stepNumber.text = "Step \(self.stepData.stepIndex+1) of \(self.stepData.steps.count)"
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
+        rememberTextView.textColor = placeholderTextColor
+        rememberTextView.text = "Remember..."
+        rememberTextView.delegate = self
+        rememberTextView.returnKeyType = UIReturnKeyType.Done
+        
+        dateTextField.textColor = placeholderTextColor
+        dateTextField.text = "Remind me on..."
     }
 
     override func didReceiveMemoryWarning() {
@@ -124,6 +136,59 @@ class AddStepsViewController: UIViewController {
 
     @IBAction func nextButton(sender: UIButton) {
         self.stepData.stepIndex = self.stepData.stepIndex + 1
+    }
+    
+    @IBAction func editDate(sender: UITextField) {
+        
+        let datePickerView:UIDatePicker = UIDatePicker()
+        
+        datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
+        
+        sender.inputView = datePickerView
+        
+        datePickerView.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        dateTextField.text = dateFormatter.stringFromDate(sender.date)
+    }
+    
+    @IBAction func remindEndEdit(sender: UITextField) {
+        if (dateTextField.text == "Remind me on...") {
+            dateTextField.textColor = placeholderTextColor
+        } else {
+            print("not equalt o remidn me on")
+            dateTextField.textColor = darkTextColor
+        }
+    }
+    
+    func textViewDidBeginEditing(rememberTextView: UITextView) {
+        if rememberTextView.textColor == placeholderTextColor {
+            rememberTextView.text = nil
+            rememberTextView.textColor = darkTextColor
+        }
+    }
+    
+    func textViewDidEndEditing(rememberTextView: UITextView) {
+        if rememberTextView.text.isEmpty {
+            rememberTextView.text = "Remember..."
+            rememberTextView.textColor = placeholderTextColor
+        }
+    }
+    
+    // http://stackoverflow.com/questions/703754/how-to-dismiss-keyboard-for-uitextview-with-return-key
+    func textView(rememberTextView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            dismissKeyboard()
+        }
+        return true
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     /*

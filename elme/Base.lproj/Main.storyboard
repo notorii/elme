@@ -757,7 +757,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -770,7 +770,7 @@
                                                 <rect key="frame" x="0.0" y="44" width="72" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" id="ldm-t4-2ag">
@@ -1216,10 +1216,10 @@
             </objects>
             <point key="canvasLocation" x="2086.5" y="406.5"/>
         </scene>
-        <!--Add Steps View Controller-->
+        <!--Add Step Details View Controller-->
         <scene sceneID="fg7-D5-h6x">
             <objects>
-                <viewController id="qEe-gr-3zK" customClass="AddStepsViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qEe-gr-3zK" customClass="AddStepDetailsViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsu-3r-iNm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1228,12 +1228,49 @@
                                 <rect key="frame" x="10" y="10" width="355" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lby-XT-S1u">
+                                        <rect key="frame" x="10" y="11" width="335" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" red="0.28627450980392155" green="0.18431372549019609" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step x of y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Bn-oN-ajb">
+                                        <rect key="frame" x="10" y="37" width="335" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <color key="textColor" red="0.28627450980392155" green="0.18431372549019609" blue="0.13725490196078433" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2NN-F5-gCa">
+                                        <rect key="frame" x="178" y="592" width="177" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.63529411764705879" green="0.25490196078431371" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButton:" destination="qEe-gr-3zK" eventType="touchUpInside" id="Qmy-pb-hqT"/>
+                                            <segue destination="qEe-gr-3zK" kind="push" id="auq-pI-kFH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NbA-uo-SBi">
+                                        <rect key="frame" x="0.0" y="592" width="177" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <state key="normal" title="Previous">
+                                            <color key="titleColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="previousButton:" destination="qEe-gr-3zK" eventType="touchUpInside" id="dML-sQ-C4f"/>
+                                        </connections>
+                                    </button>
                                     <view contentMode="scaleToFill" id="VR1-RL-e8D">
-                                        <rect key="frame" x="0.0" y="96" width="355" height="180"/>
+                                        <rect key="frame" x="0.0" y="83" width="355" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How distressing was it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cJY-LA-Do9">
-                                                <rect key="frame" x="10" y="20" width="179" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How distressing do you think this will be?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cJY-LA-Do9">
+                                                <rect key="frame" x="10" y="20" width="318" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -1273,43 +1310,28 @@
                                             </view>
                                         </subviews>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lby-XT-S1u">
-                                        <rect key="frame" x="10" y="11" width="335" height="22"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="stepDetailsFields" id="4kZ-xg-fEg">
+                                        <rect key="frame" x="0.0" y="263" width="355" height="165"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Remind me on..." textAlignment="natural" minimumFontSize="17" id="klr-O4-aCI">
+                                        <rect key="frame" x="10" y="276" width="335" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.28627450980000002" green="0.1843137255" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" red="0.28627450980392155" green="0.18431372549019609" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step x of y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Bn-oN-ajb">
-                                        <rect key="frame" x="10" y="37" width="335" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                        <color key="textColor" red="0.28627450980392155" green="0.18431372549019609" blue="0.13725490196078433" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2NN-F5-gCa">
-                                        <rect key="frame" x="178" y="592" width="177" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                        <state key="normal" title="Next">
-                                            <color key="titleColor" red="0.63529411764705879" green="0.25490196078431371" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="nextButton:" destination="qEe-gr-3zK" eventType="touchUpInside" id="Qmy-pb-hqT"/>
-                                            <segue destination="qEe-gr-3zK" kind="push" id="auq-pI-kFH"/>
+                                            <action selector="editDate:" destination="qEe-gr-3zK" eventType="editingDidBegin" id="J6N-JP-uJP"/>
+                                            <action selector="remindEndEdit:" destination="qEe-gr-3zK" eventType="editingDidEnd" id="jKO-HJ-65I"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NbA-uo-SBi">
-                                        <rect key="frame" x="0.0" y="592" width="177" height="55"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Remember..." textAlignment="natural" id="5Y4-hB-NNp">
+                                        <rect key="frame" x="5" y="324" width="345" height="94"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.28627450980000002" green="0.1843137255" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                        <state key="normal" title="Previous">
-                                            <color key="titleColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="previousButton:" destination="qEe-gr-3zK" eventType="touchUpInside" id="dML-sQ-C4f"/>
-                                        </connections>
-                                    </button>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.94901960784313721" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -1319,10 +1341,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="containerView" destination="bEC-o5-zJA" id="Iji-jM-roO"/>
+                        <outlet property="dateTextField" destination="klr-O4-aCI" id="vcU-AK-rgH"/>
                         <outlet property="distressLevelLabel" destination="5fB-ev-kNk" id="C8c-AO-flF"/>
                         <outlet property="distressLevelView" destination="VR1-RL-e8D" id="Flu-xG-RwM"/>
                         <outlet property="distressSlider" destination="hV8-0P-gBs" id="Wak-aU-iI1"/>
                         <outlet property="howDistressingLabel" destination="cJY-LA-Do9" id="Be0-o9-1sJ"/>
+                        <outlet property="rememberTextView" destination="5Y4-hB-NNp" id="fx4-aD-FB9"/>
                         <outlet property="stepNumber" destination="0Bn-oN-ajb" id="tuD-DM-Bbr"/>
                         <outlet property="stepTitle" destination="Lby-XT-S1u" id="oNj-Jb-xPY"/>
                     </connections>
@@ -1999,6 +2023,7 @@
         <image name="chevron" width="8" height="12"/>
         <image name="listIcon" width="20" height="12"/>
         <image name="nav bar" width="375" height="55"/>
+        <image name="stepDetailsFields" width="355" height="165"/>
         <image name="x" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
