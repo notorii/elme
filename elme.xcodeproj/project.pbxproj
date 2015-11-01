@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320FA67C1BE322E900D2EB4C /* GlobalViewFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FA67B1BE322E900D2EB4C /* GlobalViewFunctions.swift */; };
+		322E8FAE1BE3127500746883 /* AddStepsTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E8FAD1BE3127500746883 /* AddStepsTransition.swift */; };
+		322E8FB01BE312E500746883 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E8FAF1BE312E500746883 /* BaseTransition.swift */; };
+		32674E0F1BE1F55200E53EBC /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32674E0E1BE1F55200E53EBC /* NewGoalViewController.swift */; };
 		4D1A9B8C1BE1DDC4006ECAE0 /* StepListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */; };
 		4D1A9B8E1BE1EBEE006ECAE0 /* PastGoalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */; };
 		4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E561BD88B9500576A69 /* AppDelegate.swift */; };
@@ -81,6 +85,10 @@
 
 /* Begin PBXFileReference section */
 		108B90CD52CC0663173E3248 /* Pods-elme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elme/Pods-elme.debug.xcconfig"; sourceTree = "<group>"; };
+		320FA67B1BE322E900D2EB4C /* GlobalViewFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalViewFunctions.swift; sourceTree = "<group>"; };
+		322E8FAD1BE3127500746883 /* AddStepsTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsTransition.swift; sourceTree = "<group>"; };
+		322E8FAF1BE312E500746883 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		32674E0E1BE1F55200E53EBC /* NewGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGoalViewController.swift; sourceTree = "<group>"; };
 		4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepListCell.swift; sourceTree = "<group>"; };
 		4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastGoalViewCell.swift; sourceTree = "<group>"; };
 		4D360E531BD88B9500576A69 /* elme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elme.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				6E21E00A1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift */,
+				322E8FAF1BE312E500746883 /* BaseTransition.swift */,
 				4DE522921BE57CE400BDAF6F /* StepField.swift */,
 				4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */,
 				4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */,
@@ -200,6 +209,8 @@
 				4D360E5A1BD88B9500576A69 /* Main.storyboard */,
 				6E21E00E1BE5AFF300AC1F5C /* Menu2ViewController.swift */,
 				6E21E00C1BE5AFC200AC1F5C /* Home2ViewController.swift */,
+				322E8FAD1BE3127500746883 /* AddStepsTransition.swift */,
+				32674E0E1BE1F55200E53EBC /* NewGoalViewController.swift */,
 				6E21E0041BE589AC00AC1F5C /* NextStepViewViewController.swift */,
 				6EFB55151BE1EFA300870B0F /* SignUp2ViewController.swift */,
 				4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */,
@@ -213,6 +224,7 @@
 				4D360E5F1BD88B9500576A69 /* LaunchScreen.storyboard */,
 				4D360E621BD88B9500576A69 /* Info.plist */,
 				4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */,
+				320FA67B1BE322E900D2EB4C /* GlobalViewFunctions.swift */,
 			);
 			path = elme;
 			sourceTree = "<group>";
@@ -317,6 +329,7 @@
 		4D360E4B1BD88B9500576A69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = maggled;
 				TargetAttributes = {
@@ -441,6 +454,7 @@
 				6EFB55161BE1EFA300870B0F /* SignUp2ViewController.swift in Sources */,
 				4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */,
 				4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */,
+				322E8FAE1BE3127500746883 /* AddStepsTransition.swift in Sources */,
 				4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */,
 				4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */,
 				6E21E00D1BE5AFC200AC1F5C /* Home2ViewController.swift in Sources */,
@@ -457,11 +471,14 @@
 				4D9A7E671BE56B39009C8578 /* AddStepsViewController.swift in Sources */,
 				4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */,
 				6E21E00F1BE5AFF300AC1F5C /* Menu2ViewController.swift in Sources */,
+				32674E0F1BE1F55200E53EBC /* NewGoalViewController.swift in Sources */,
+				320FA67C1BE322E900D2EB4C /* GlobalViewFunctions.swift in Sources */,
 				6EB3DFD01BE1D59700C4756F /* LoginViewController.swift in Sources */,
 				4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */,
 				4D1A9B8E1BE1EBEE006ECAE0 /* PastGoalViewCell.swift in Sources */,
 				4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */,
 				6E21E00B1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift in Sources */,
+				322E8FB01BE312E500746883 /* BaseTransition.swift in Sources */,
 				4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */,
 				4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */,
 				4DE522931BE57CE400BDAF6F /* StepField.swift in Sources */,

@@ -46,7 +46,7 @@ class EditProfileViewController: UIViewController {
             
             //SPINNER
             self.smokeScreen.hidden = false
-            print("smoke")
+            print("smoke", terminator: "")
             
             //DELAY
             delay(2){
