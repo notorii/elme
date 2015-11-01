@@ -765,7 +765,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -778,7 +778,7 @@
                                                 <rect key="frame" x="0.0" y="44" width="72" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" id="ldm-t4-2ag">
@@ -1615,7 +1615,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dx4-sS-ncX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3059.5" y="4565.5"/>
+            <point key="canvasLocation" x="3053.5" y="5315.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tTS-18-8Jt">
@@ -1927,6 +1927,77 @@
             </objects>
             <point key="canvasLocation" x="3522.5" y="4562.5"/>
         </scene>
+        <!--Next Step View View Controller-->
+        <scene sceneID="Mhv-K8-j4f">
+            <objects>
+                <viewController id="Gss-5Q-TJW" customClass="NextStepViewViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rPM-po-cMI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav bar" id="Mxk-ld-Wmo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.97254901960784312" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Step" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Bb-vE-eam">
+                                <rect key="frame" x="155" y="20" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.22352941176470589" green="0.13725490196078433" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask a question in class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nPT-FV-1Y5">
+                                <rect key="frame" x="65" y="110" width="246" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.22352941179999999" green="0.13725490200000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday, October 19, 2:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1CR-4h-lGn">
+                                <rect key="frame" x="90" y="142" width="195" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.52156862745098043" green="0.46666666666666667" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="apG-Pp-nlp">
+                                <rect key="frame" x="151" y="298" width="72" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="checkmark_step_complete"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JW6-UO-Rir">
+                                <rect key="frame" x="335" y="17" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Chevron_right"/>
+                                <connections>
+                                    <action selector="onRightChevronTap:" destination="Gss-5Q-TJW" eventType="touchUpInside" id="WCa-MX-NQG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ntb-HA-aS3">
+                                <rect key="frame" x="16" y="17" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Menu_icon"/>
+                                <connections>
+                                    <action selector="onMenuTap:" destination="Gss-5Q-TJW" eventType="touchUpInside" id="GB6-AQ-Z4T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.93725490196078431" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="navBarView" destination="Mxk-ld-Wmo" id="xCi-el-0Cb"/>
+                        <outlet property="navLabel" destination="1Bb-vE-eam" id="ovo-fX-VRm"/>
+                        <outlet property="onCheckmarkTap" destination="apG-Pp-nlp" id="w2o-dJ-8Ez"/>
+                        <outlet property="stepLabel" destination="nPT-FV-1Y5" id="G34-z7-ZEb"/>
+                        <outlet property="timeDateLabel" destination="1CR-4h-lGn" id="egi-vV-jcS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m72-bQ-edW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4046.5" y="4499.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1 - new goal" width="375" height="667"/>
@@ -1941,17 +2012,17 @@
         <image name="5.1 - step details" width="375" height="667"/>
         <image name="5.2 - step details" width="375" height="667"/>
         <image name="6 - next step" width="375" height="667"/>
+        <image name="Chevron_right" width="8" height="12"/>
         <image name="Edit_profile_fields" width="375" height="163"/>
         <image name="LoginFields" width="375" height="109"/>
+        <image name="Menu_icon" width="18" height="12"/>
         <image name="Save_Button" width="355" height="55"/>
+        <image name="checkmark_step_complete" width="72" height="72"/>
         <image name="chevron" width="8" height="12"/>
         <image name="listIcon" width="20" height="12"/>
         <image name="nav bar" width="375" height="55"/>
         <image name="x" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="94d-9p-6Kf"/>
-        <segue reference="rJR-DO-oiV"/>
-        <segue reference="oSL-aF-mz6"/>
     </inferredMetricsTieBreakers>
 </document>
