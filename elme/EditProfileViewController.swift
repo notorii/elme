@@ -46,7 +46,7 @@ class EditProfileViewController: UIViewController {
             
             //SPINNER
             self.smokeScreen.hidden = false
-            print("smoke")
+            print("smoke", terminator: "")
             
             //DELAY
             delay(2){
@@ -60,7 +60,7 @@ class EditProfileViewController: UIViewController {
     //BACK BUTTON
 
     @IBAction func onBackButton(sender: AnyObject) {
-        navigationController!.popViewControllerAnimated(true)
+    dismissViewControllerAnimated(true, completion: nil)
     }
    
    
