@@ -50,7 +50,7 @@ class SignUp2ViewController: UIViewController {
 
    
     @IBAction func onLogIn(sender: AnyObject) {
-        navigationController!.popViewControllerAnimated(true)
+        //navigationController!.popViewControllerAnimated(true)
     }
     @IBAction func onTermsButton(sender: AnyObject) {
     
