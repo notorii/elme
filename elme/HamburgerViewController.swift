@@ -27,7 +27,7 @@ class HamburgerViewController: UIViewController {
         
         menuViewController = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
         
-        homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
+        homeViewController = storyboard.instantiateViewControllerWithIdentifier("NextStepViewViewController")
 
         // Do any additional setup after loading the view.
         
@@ -55,6 +55,9 @@ class HamburgerViewController: UIViewController {
             
         } else if sender.state == UIGestureRecognizerState.Changed{
             contentView.center = CGPoint(x: translation.x + initialCenter.x, y:initialCenter.y)
+            if velocity.x < 0 {
+                self.contentView.center = self.view.center
+            }
             
         } else if sender.state == UIGestureRecognizerState.Ended{
             UIView.animateWithDuration(0.3, animations: { () -> Void in

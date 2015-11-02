@@ -27,8 +27,7 @@ class Hamburger2ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         menuViewController = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
-        
-        homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
+        homeViewController = storyboard.instantiateViewControllerWithIdentifier("Home2ViewController")
         
         // Do any additional setup after loading the view.
         
