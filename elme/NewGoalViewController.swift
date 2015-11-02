@@ -14,6 +14,7 @@ class NewGoalViewController: UIViewController {
     @IBOutlet weak var screenMask: UIView!
     
     var addStepsTransition: AddStepsTransition!
+    var newGoalButton: CAShapeLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,22 @@ class NewGoalViewController: UIViewController {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        newGoalButton = CAShapeLayer()
+        newGoalButton.frame = CGRect(x: 162.5, y: 308.5, width: 50, height: 50)
+        newGoalButton.path = UIBezierPath(ovalInRect:newGoalButton.bounds).CGPath
+        newGoalButton.strokeColor = borderColor.CGColor
+        newGoalButton.lineWidth = 1
+        
+        view.layer.mask = newGoalButton
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        CATransaction.begin()
+        CATransaction.setValue(0.8, forKey: kCATransactionAnimationDuration)
+        newGoalButton.transform = CATransform3DMakeScale(20, 20, 1)
+        CATransaction.commit()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +58,7 @@ class NewGoalViewController: UIViewController {
         addStepsTransition = AddStepsTransition()
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
         destinationViewController.transitioningDelegate = addStepsTransition
-        addStepsTransition.duration = 0.1
+        addStepsTransition.duration = 0.05
     }
     
     @IBAction func addSteps(sender: AnyObject) {
@@ -59,6 +76,16 @@ class NewGoalViewController: UIViewController {
         
     }
 
+    @IBAction func onDismissButton(sender: UIButton) {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock { () -> Void in
+            self.dismissViewControllerAnimated(false, completion: nil)
+        }
+        CATransaction.setValue(0.2, forKey: kCATransactionAnimationDuration)
+        newGoalButton.transform = CATransform3DMakeScale(0.01, 0.01, 1)
+        CATransaction.commit()
+    }
+    
     /*
     // MARK: - Navigation
 
