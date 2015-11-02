@@ -25,7 +25,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         steps = ["Cats","dogs","monkies monkies Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.","ponies"]
 
         checked = [Bool](count: steps.count, repeatedValue: false)
-        tableView.registerClass(StepListCell.self, forCellReuseIdentifier: CellIdentifier)
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         view.backgroundColor = darkBackgroundColor
         navBarView.backgroundColor = lightBackgroundColor
@@ -62,11 +62,12 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         return steps.count
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//        checked[indexPath.row] = !checked[indexPath.row]
-//        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("something selected")
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        checked[indexPath.row] = !checked[indexPath.row]
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+    }
 
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -100,21 +101,14 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
 //    
-//    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let destinationViewController = segue.destinationViewController
-//
-//        stepDetailsIncompleteViewController.view.backgroundColor = UIColor.clearColor()
-//        stepsViewController.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
-//        stepsViewController.presentViewController(self, animated: true completion: nil)
-//    }
+
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
         var destinationViewController = segue.destinationViewController
         
-        
+        print(checked)
         destinationViewController.view.backgroundColor = UIColor.clearColor()
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
         destinationViewController.presentViewController(self, animated: true, completion: nil)
