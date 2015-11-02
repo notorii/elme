@@ -40,6 +40,8 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.estimatedRowHeight = 4
         tableView.separatorColor = borderColor
         
+        checked[0] = true
+        
         
     }
 
@@ -64,9 +66,18 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("something selected")
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        checked[indexPath.row] = !checked[indexPath.row]
-        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+//        checked[indexPath.row] = !checked[indexPath.row]
+//        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        //if checked, run segue to complete details view controller
+        if checked[indexPath.row] == true {
+            performSegueWithIdentifier("stepDetailsCompleteSegue", sender: self)
+        }
+        //if unchecked, run segue to incomplete view controller
+        else {
+            performSegueWithIdentifier("stepDetailsIncompleteSegue", sender: self)
+        }
     }
 
     
