@@ -10,12 +10,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var behindTransition: BehindTransition!
+    var newGoalTransition: NewGoalTransition!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,11 +22,13 @@ class HomeViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         let destinationViewController = segue.destinationViewController
-        behindTransition = BehindTransition()
+        newGoalTransition = NewGoalTransition()
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
-        destinationViewController.transitioningDelegate = behindTransition
-        behindTransition.duration = 1
+        destinationViewController.transitioningDelegate = newGoalTransition
+        //destinationViewController.presentViewController(self, animated: true, completion: nil)
+        newGoalTransition.duration = 0.01
     }
     
     /*
