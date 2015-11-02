@@ -61,7 +61,6 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     //list press action -> navigate to past goals view controller
     @IBAction func onListPress(sender: UIButton) {
         print("list press")
-        performSegueWithIdentifier("listPress", sender: self)
 
     }
     
