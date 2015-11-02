@@ -55,7 +55,10 @@ class Hamburger2ViewController: UIViewController {
             initialCenter = contentView.center
             
         } else if sender.state == UIGestureRecognizerState.Changed{
-            contentView.center = CGPoint(x: translation.x + initialCenter.x, y:initialCenter.y)
+            
+            if velocity.x > 0 {
+                contentView.center = CGPoint(x: translation.x + initialCenter.x, y:initialCenter.y)
+            }
             
         } else if sender.state == UIGestureRecognizerState.Ended{
             UIView.animateWithDuration(0.3, animations: { () -> Void in
