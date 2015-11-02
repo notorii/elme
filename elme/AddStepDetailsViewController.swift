@@ -135,7 +135,12 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
     }
 
     @IBAction func nextButton(sender: UIButton) {
-        self.stepData.stepIndex = self.stepData.stepIndex + 1
+        // If we're on the last step detail screen, open the 'next step' home screen
+        if (self.stepData.stepIndex == (self.stepData.steps.count-1)) {
+            performSegueWithIdentifier("lastStepDetailSegue", sender: self)
+        } else {
+            self.stepData.stepIndex = self.stepData.stepIndex + 1
+        }
     }
     
     @IBAction func editDate(sender: UITextField) {
