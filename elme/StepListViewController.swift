@@ -22,7 +22,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        steps = ["Cats","dogs","monkies monkies Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.","ponies"]
+        steps = ["One","Two","Ask a question in class","Four"]
 
         checked = [Bool](count: steps.count, repeatedValue: false)
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
