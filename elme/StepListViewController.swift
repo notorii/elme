@@ -122,7 +122,6 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         return cell
     }
-//    
 
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -135,7 +134,6 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
             
         } else {
             destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
-            destinationViewController.presentViewController(self, animated: true, completion: nil)
         }
     }
 
