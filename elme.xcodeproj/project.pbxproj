@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		320FA67C1BE322E900D2EB4C /* GlobalViewFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FA67B1BE322E900D2EB4C /* GlobalViewFunctions.swift */; };
 		322E8FAE1BE3127500746883 /* AddStepsTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E8FAD1BE3127500746883 /* AddStepsTransition.swift */; };
-		322E8FB01BE312E500746883 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E8FAF1BE312E500746883 /* BaseTransition.swift */; };
-		32674E0F1BE1F55200E53EBC /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32674E0E1BE1F55200E53EBC /* NewGoalViewController.swift */; };
 		3247E5E51BE58ECB00933BFE /* StepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247E5E41BE58ECB00933BFE /* StepData.swift */; };
+		32674E0F1BE1F55200E53EBC /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32674E0E1BE1F55200E53EBC /* NewGoalViewController.swift */; };
+		32F74C531BE6DB3D00B2FF56 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F74C521BE6DB3D00B2FF56 /* BaseTransition.swift */; };
+		32F74C551BE6E43000B2FF56 /* NewGoalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F74C541BE6E43000B2FF56 /* NewGoalTransition.swift */; };
 		32FECF1B1BE56D5A00FFAB4C /* AddStepDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FECF1A1BE56D5A00FFAB4C /* AddStepDetailsViewController.swift */; };
 		4D1A9B8C1BE1DDC4006ECAE0 /* StepListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */; };
 		4D1A9B8E1BE1EBEE006ECAE0 /* PastGoalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */; };
@@ -37,36 +38,16 @@
 		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
 		4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */; };
 		4DE522931BE57CE400BDAF6F /* StepField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE522921BE57CE400BDAF6F /* StepField.swift */; };
-		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
-		4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */; };
+		6E21E0051BE589AC00AC1F5C /* NextStepViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E0041BE589AC00AC1F5C /* NextStepViewViewController.swift */; };
+		6E21E00B1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00A1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift */; };
+		6E21E00D1BE5AFC200AC1F5C /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00C1BE5AFC200AC1F5C /* Home2ViewController.swift */; };
+		6E21E00F1BE5AFF300AC1F5C /* Menu2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00E1BE5AFF300AC1F5C /* Menu2ViewController.swift */; };
 		6E6719231BDC286D002A0CE0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719221BDC286D002A0CE0 /* MenuViewController.swift */; };
 		6E6719251BDC28AB002A0CE0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719241BDC28AB002A0CE0 /* HomeViewController.swift */; };
 		6E6719271BDC295F002A0CE0 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719261BDC295F002A0CE0 /* HamburgerViewController.swift */; };
 		6E6719291BDE8B5E002A0CE0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */; };
 		6EB3DFD01BE1D59700C4756F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3DFCF1BE1D59700C4756F /* LoginViewController.swift */; };
 		6EFB55161BE1EFA300870B0F /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB55151BE1EFA300870B0F /* SignUp2ViewController.swift */; };
-		4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E841BD89AE700576A69 /* Item1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E861BD89AFE00576A69 /* Item2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8E1BD8A0AB00576A69 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E901BD8A26F00576A69 /* MenuLoggedInViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
-		4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */; };
-		6E21E00B1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00A1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6E21E00D1BE5AFC200AC1F5C /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00C1BE5AFC200AC1F5C /* Home2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6E21E00F1BE5AFF300AC1F5C /* Menu2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00E1BE5AFF300AC1F5C /* Menu2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6E21E0051BE589AC00AC1F5C /* NextStepViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E0041BE589AC00AC1F5C /* NextStepViewViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6E6719231BDC286D002A0CE0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719221BDC286D002A0CE0 /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6E6719251BDC28AB002A0CE0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719241BDC28AB002A0CE0 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6E6719271BDC295F002A0CE0 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719261BDC295F002A0CE0 /* HamburgerViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6E6719291BDE8B5E002A0CE0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6EB3DFD01BE1D59700C4756F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3DFCF1BE1D59700C4756F /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6EFB55161BE1EFA300870B0F /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB55151BE1EFA300870B0F /* SignUp2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AF7A3D894C0EACA0689061C5 /* Pods_elme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB4DC5DE6D6A6B29495227C /* Pods_elme.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,9 +72,10 @@
 		108B90CD52CC0663173E3248 /* Pods-elme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elme/Pods-elme.debug.xcconfig"; sourceTree = "<group>"; };
 		320FA67B1BE322E900D2EB4C /* GlobalViewFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalViewFunctions.swift; sourceTree = "<group>"; };
 		322E8FAD1BE3127500746883 /* AddStepsTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsTransition.swift; sourceTree = "<group>"; };
-		322E8FAF1BE312E500746883 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
-		32674E0E1BE1F55200E53EBC /* NewGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGoalViewController.swift; sourceTree = "<group>"; };
 		3247E5E41BE58ECB00933BFE /* StepData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepData.swift; sourceTree = "<group>"; };
+		32674E0E1BE1F55200E53EBC /* NewGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGoalViewController.swift; sourceTree = "<group>"; };
+		32F74C521BE6DB3D00B2FF56 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		32F74C541BE6E43000B2FF56 /* NewGoalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGoalTransition.swift; sourceTree = "<group>"; };
 		32FECF1A1BE56D5A00FFAB4C /* AddStepDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetailsViewController.swift; sourceTree = "<group>"; };
 		4D1A9B8B1BE1DDC4006ECAE0 /* StepListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepListCell.swift; sourceTree = "<group>"; };
 		4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastGoalViewCell.swift; sourceTree = "<group>"; };
@@ -120,19 +102,15 @@
 		4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails1ViewController.swift; sourceTree = "<group>"; };
 		4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails2ViewController.swift; sourceTree = "<group>"; };
 		4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsKeyboardViewController.swift; sourceTree = "<group>"; };
-		4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
-		4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
-		6E21E00A1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hamburger2ViewController.swift; sourceTree = "<group>"; };
-		6E21E00C1BE5AFC200AC1F5C /* Home2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2ViewController.swift; sourceTree = "<group>"; };
-		6E21E00E1BE5AFF300AC1F5C /* Menu2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu2ViewController.swift; sourceTree = "<group>"; };
 		4D9A7E661BE56B39009C8578 /* AddStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsViewController.swift; sourceTree = "<group>"; };
 		4D9A7E681BE570FC009C8578 /* AddStepCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepCell.swift; sourceTree = "<group>"; };
 		4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
 		4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
 		4DE522921BE57CE400BDAF6F /* StepField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepField.swift; sourceTree = "<group>"; };
-		4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
-		4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
 		6E21E0041BE589AC00AC1F5C /* NextStepViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextStepViewViewController.swift; sourceTree = "<group>"; };
+		6E21E00A1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hamburger2ViewController.swift; sourceTree = "<group>"; };
+		6E21E00C1BE5AFC200AC1F5C /* Home2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2ViewController.swift; sourceTree = "<group>"; };
+		6E21E00E1BE5AFF300AC1F5C /* Menu2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu2ViewController.swift; sourceTree = "<group>"; };
 		6E6719221BDC286D002A0CE0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		6E6719241BDC28AB002A0CE0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6E6719261BDC295F002A0CE0 /* HamburgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
@@ -195,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				6E21E00A1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift */,
-				322E8FAF1BE312E500746883 /* BaseTransition.swift */,
 				4DE522921BE57CE400BDAF6F /* StepField.swift */,
 				4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */,
 				4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */,
@@ -207,6 +184,7 @@
 				4D360E841BD89AE700576A69 /* Item1ViewController.swift */,
 				4D360E861BD89AFE00576A69 /* Item2ViewController.swift */,
 				4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */,
+				32F74C521BE6DB3D00B2FF56 /* BaseTransition.swift */,
 				4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */,
 				4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */,
 				4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */,
@@ -233,6 +211,7 @@
 				4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */,
 				320FA67B1BE322E900D2EB4C /* GlobalViewFunctions.swift */,
 				3247E5E41BE58ECB00933BFE /* StepData.swift */,
+				32F74C541BE6E43000B2FF56 /* NewGoalTransition.swift */,
 			);
 			path = elme;
 			sourceTree = "<group>";
@@ -463,6 +442,7 @@
 				4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */,
 				4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */,
 				322E8FAE1BE3127500746883 /* AddStepsTransition.swift in Sources */,
+				32F74C551BE6E43000B2FF56 /* NewGoalTransition.swift in Sources */,
 				4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */,
 				4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */,
 				6E21E00D1BE5AFC200AC1F5C /* Home2ViewController.swift in Sources */,
@@ -488,7 +468,7 @@
 				4D1A9B8E1BE1EBEE006ECAE0 /* PastGoalViewCell.swift in Sources */,
 				4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */,
 				6E21E00B1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift in Sources */,
-				322E8FB01BE312E500746883 /* BaseTransition.swift in Sources */,
+				32F74C531BE6DB3D00B2FF56 /* BaseTransition.swift in Sources */,
 				4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */,
 				4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */,
 				4DE522931BE57CE400BDAF6F /* StepField.swift in Sources */,
@@ -661,7 +641,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = Codepath_CBTTests/Info.plist;
+				INFOPLIST_FILE = elmeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maggled.Codepath-CBTTests";
 				PRODUCT_NAME = elme;
@@ -673,7 +653,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = Codepath_CBTTests/Info.plist;
+				INFOPLIST_FILE = elmeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maggled.Codepath-CBTTests";
 				PRODUCT_NAME = elme;
@@ -684,7 +664,7 @@
 		4D360E821BD88B9500576A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Codepath_CBTUITests/Info.plist;
+				INFOPLIST_FILE = elmeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maggled.Codepath-CBTUITests";
 				PRODUCT_NAME = elme;
@@ -696,7 +676,7 @@
 		4D360E831BD88B9500576A69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Codepath_CBTUITests/Info.plist;
+				INFOPLIST_FILE = elmeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maggled.Codepath-CBTUITests";
 				PRODUCT_NAME = elme;
