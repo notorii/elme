@@ -425,7 +425,7 @@
                                     </connections>
                                 </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="StepListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="StepListCell" rowHeight="55" id="jfG-nM-5uX" customClass="StepListCell" customModule="elme" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="StepListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="StepListCell" rowHeight="55" id="jfG-nM-5uX" customClass="StepListCell" customModule="elme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="83" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jfG-nM-5uX" id="dpa-tC-4aL">
@@ -451,7 +451,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="checkmark" id="lAX-LC-poc">
-                                                            <rect key="frame" x="15" y="15" width="22" height="22"/>
+                                                            <rect key="frame" x="17" y="17" width="22" height="22"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </imageView>
                                                     </subviews>

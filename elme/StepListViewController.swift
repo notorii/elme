@@ -81,19 +81,20 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.borderView.layer.borderColor = borderColor.CGColor
         cell.borderView.layer.borderWidth = 1
         
+        
+        if checked[indexPath.row] {
+            cell.checkmark.hidden = false
+            cell.stepNumberLabel.hidden = true
+            cell.backgroundColor = darkBackgroundColor
+        } else {
+            cell.checkmark.hidden = true
+            cell.stepNumberLabel.hidden = false
+        }
+        
         if indexPath.row == steps.count - 1 {
             cell.borderView.frame.size.height = 57
         }
-//        if checked[indexPath.row] {
-//            cell.checkmark.hidden = false
-//            cell.stepNumberLabel.hidden = true
-//        } else {
-//            cell.checkmark.hidden = true
-//            cell.stepNumberLabel.hidden = false
-//        }
         
-        //cell.layer.borderColor = borderColor
-        //cell.layer.borderWidth = 1
         
         cell.stepTextLabel.text = steps[indexPath.row]
         cell.stepNumberLabel.text = "1"
