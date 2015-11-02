@@ -23,6 +23,16 @@
 		4D360E611BD88B9500576A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D360E5F1BD88B9500576A69 /* LaunchScreen.storyboard */; };
 		4D360E6C1BD88B9500576A69 /* Codepath_CBTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E6B1BD88B9500576A69 /* Codepath_CBTTests.swift */; };
 		4D360E771BD88B9500576A69 /* Codepath_CBTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E761BD88B9500576A69 /* Codepath_CBTUITests.swift */; };
+		4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E841BD89AE700576A69 /* Item1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E861BD89AFE00576A69 /* Item2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E8B1BD89EDC00576A69 /* StepListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E8D1BD89F6100576A69 /* PastGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8C1BD89F6100576A69 /* PastGoalsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E8E1BD8A0AB00576A69 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E911BD8A26F00576A69 /* MenuLoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E901BD8A26F00576A69 /* MenuLoggedInViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4D360E851BD89AE700576A69 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E841BD89AE700576A69 /* Item1ViewController.swift */; };
 		4D360E871BD89AFE00576A69 /* Item2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E861BD89AFE00576A69 /* Item2ViewController.swift */; };
 		4D360E891BD89E0000576A69 /* CompleteQuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */; };
@@ -38,6 +48,17 @@
 		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
 		4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */; };
 		4DE522931BE57CE400BDAF6F /* StepField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE522921BE57CE400BDAF6F /* StepField.swift */; };
+		6E150D981BE6D98200B17ED2 /* EditProfile2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E150D971BE6D98200B17ED2 /* EditProfile2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6E21E0051BE589AC00AC1F5C /* NextStepViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E0041BE589AC00AC1F5C /* NextStepViewViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6E21E00B1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00A1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6E21E00D1BE5AFC200AC1F5C /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00C1BE5AFC200AC1F5C /* Home2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6E21E00F1BE5AFF300AC1F5C /* Menu2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00E1BE5AFF300AC1F5C /* Menu2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6E6719231BDC286D002A0CE0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719221BDC286D002A0CE0 /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6E6719251BDC28AB002A0CE0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719241BDC28AB002A0CE0 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6E6719271BDC295F002A0CE0 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719261BDC295F002A0CE0 /* HamburgerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6E6719291BDE8B5E002A0CE0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6719281BDE8B5E002A0CE0 /* EditProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6EB3DFD01BE1D59700C4756F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3DFCF1BE1D59700C4756F /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6EFB55161BE1EFA300870B0F /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB55151BE1EFA300870B0F /* SignUp2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6E21E0051BE589AC00AC1F5C /* NextStepViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E0041BE589AC00AC1F5C /* NextStepViewViewController.swift */; };
 		6E21E00B1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00A1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift */; };
 		6E21E00D1BE5AFC200AC1F5C /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21E00C1BE5AFC200AC1F5C /* Home2ViewController.swift */; };
@@ -107,6 +128,7 @@
 		4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
 		4D9CA0AD1BDC362C008B0A6F /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
 		4DE522921BE57CE400BDAF6F /* StepField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepField.swift; sourceTree = "<group>"; };
+		6E150D971BE6D98200B17ED2 /* EditProfile2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfile2ViewController.swift; sourceTree = "<group>"; };
 		6E21E0041BE589AC00AC1F5C /* NextStepViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextStepViewViewController.swift; sourceTree = "<group>"; };
 		6E21E00A1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hamburger2ViewController.swift; sourceTree = "<group>"; };
 		6E21E00C1BE5AFC200AC1F5C /* Home2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2ViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +213,7 @@
 				4D360E561BD88B9500576A69 /* AppDelegate.swift */,
 				4D360E581BD88B9500576A69 /* ViewController.swift */,
 				4D360E5A1BD88B9500576A69 /* Main.storyboard */,
+				6E150D971BE6D98200B17ED2 /* EditProfile2ViewController.swift */,
 				6E21E00E1BE5AFF300AC1F5C /* Menu2ViewController.swift */,
 				6E21E00C1BE5AFC200AC1F5C /* Home2ViewController.swift */,
 				322E8FAD1BE3127500746883 /* AddStepsTransition.swift */,
@@ -445,6 +468,7 @@
 				32F74C551BE6E43000B2FF56 /* NewGoalTransition.swift in Sources */,
 				4D360E8F1BD8A0AB00576A69 /* SignUpViewController.swift in Sources */,
 				4D9CA0AE1BDC362C008B0A6F /* GradientSlider.swift in Sources */,
+				6E150D981BE6D98200B17ED2 /* EditProfile2ViewController.swift in Sources */,
 				6E21E00D1BE5AFC200AC1F5C /* Home2ViewController.swift in Sources */,
 				6E6719271BDC295F002A0CE0 /* HamburgerViewController.swift in Sources */,
 				4D360E591BD88B9500576A69 /* ViewController.swift in Sources */,
