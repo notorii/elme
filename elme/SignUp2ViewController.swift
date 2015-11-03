@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+
 
 class SignUp2ViewController: UIViewController {
 
@@ -57,38 +59,71 @@ class SignUp2ViewController: UIViewController {
     }
     @IBAction func signUpButton(sender: AnyObject) {
         
-        //SUCCESS EMAIL AND PASSWORD
-        if fullNameField.text == "name" && passwordField.text == "password" && emailField.text == "email" {
-            
-            // PUT SPINNER HERE SIGNNING IN...
-            self.activityIndicatorView.hidden = false
-            //loginButton.alpha = 0
-            signUpButton.setTitle("", forState: .Normal)
-            
-            // DELAY
-            // Delay for 2 seconds, then run the code between the braces.
-            delay(1) {
+        var user = PFUser()
+        user.username = emailField.text
+        user.password = passwordField.text
+        user.email = emailField.text
+        // other fields can be set just like with PFObject
+        user["fullName"] = fullNameField.text
+        
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool, error: NSError?) -> Void in
+            if let error = error {
+                let errorString = error.userInfo["error"] as? NSString
+                // Show the errorString somewhere and let the user try again.
+                print(errorString)
+            } else {
+                // Hooray! Let them use the app now.
+                print("success")
+                // PUT SPINNER HERE SIGNNING IN...
+                self.activityIndicatorView.hidden = false
+                //loginButton.alpha = 0
+                self.signUpButton.setTitle("", forState: .Normal)
                 
-                //SEGUE
-                self.performSegueWithIdentifier("SignUpSegue", sender: nil)
+                // Delay for 2 seconds, then run the code between the braces.
+                self.delay(1) {
                 
-            }
-        }
-            //FAIL
-        else{
-            if fullNameField.text!.isEmpty || emailField.text!.isEmpty || passwordField.text!.isEmpty {
-                
-                let alert = UIAlertView (title: "Credentials Missing", message: "Please make sure you have filled out all the fields", delegate: nil, cancelButtonTitle: "OK")
-                alert.show()
-            }
-                
-                //sign in failed
-            else{
-                let alert = UIAlertView (title: "Sign Up Failed", message: "Incorrect Credentials", delegate: nil, cancelButtonTitle: "OK")
-                alert.show()
+                    //SEGUE
+                    self.performSegueWithIdentifier("SignUpSegue", sender: nil)
+                                
+                }
+
             }
         }
         
+//        //SUCCESS EMAIL AND PASSWORD
+//        if fullNameField.text == "name" && passwordField.text == "password" && emailField.text == "email" {
+//            
+//            // PUT SPINNER HERE SIGNNING IN...
+//            self.activityIndicatorView.hidden = false
+//            //loginButton.alpha = 0
+//            signUpButton.setTitle("", forState: .Normal)
+//            
+//            // DELAY
+//            // Delay for 2 seconds, then run the code between the braces.
+//            delay(1) {
+//                
+//                //SEGUE
+//                self.performSegueWithIdentifier("SignUpSegue", sender: nil)
+//                
+//            }
+//        }
+//            //FAIL
+//        else{
+//            if fullNameField.text!.isEmpty || emailField.text!.isEmpty || passwordField.text!.isEmpty {
+//                
+//                let alert = UIAlertView (title: "Credentials Missing", message: "Please make sure you have filled out all the fields", delegate: nil, cancelButtonTitle: "OK")
+//                alert.show()
+//            }
+//                
+//                //sisgn in failed
+//            else{
+//                let alert = UIAlertView (title: "Sign Up Failed", message: "Incorrect Credentials", delegate: nil, cancelButtonTitle: "OK")
+//                alert.show()
+//            }
+//        }
+    
+    
         
     }
     
@@ -102,6 +137,9 @@ class SignUp2ViewController: UIViewController {
         view.endEditing(true)
         print("tap gesture")
     }
+    
+
+    
     /*
     // MARK: - Navigation
 

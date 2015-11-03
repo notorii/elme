@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
@@ -60,40 +61,70 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func onLogin(sender: AnyObject) {
-        
-        //SUCCESS EMAIL AND PASSWORD
-        if usernameField.text == "name" && passwordField.text == "password" {
-            
-            // PUT SPINNER HERE SIGNNING IN...
-            self.activityControllerView.hidden = false
-            //loginButton.alpha = 0
-            loginButton.setTitle("", forState: .Normal)
-            
-            // DELAY
-            // Delay for 2 seconds, then run the code between the braces.
-            delay(1) {
-                
-                //SEGUE
-              self.performSegueWithIdentifier("loginSegue", sender: nil)
-        
-                
+        PFUser.logInWithUsernameInBackground(self.usernameField.text!, password:self.passwordField.text!) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                // PUT SPINNER HERE SIGNNING IN...
+                self.activityControllerView.hidden = false
+                //loginButton.alpha = 0
+                self.loginButton.setTitle("", forState: .Normal)
+                print("success")
+                // DELAY
+                // Delay for 2 seconds, then run the code between the braces.
+                self.delay(1) {
+                    
+                    //SEGUE
+                    self.performSegueWithIdentifier("loginSegue", sender: nil)
+                    
+                }
+            } else {
+               
+                if self.usernameField.text!.isEmpty {
+                    
+                    let alert = UIAlertView (title: "Username not recognized", message: "Please enter your username", delegate: nil, cancelButtonTitle: "OK")
+                    alert.show()
+                }
+                    
+                    //sign in failed
+                else{
+                    let alert = UIAlertView (title: "Log In Failed", message: "Incorrect email or password", delegate: nil, cancelButtonTitle: "OK")
+                    alert.show()
+                }
             }
         }
+//        //SUCCESS EMAIL AND PASSWORD
+//        if usernameField.text == "name" && passwordField.text == "password" {
+//            
+//            // PUT SPINNER HERE SIGNNING IN...
+//            self.activityControllerView.hidden = false
+//            //loginButton.alpha = 0
+//            loginButton.setTitle("", forState: .Normal)
+//            
+//            // DELAY
+//            // Delay for 2 seconds, then run the code between the braces.
+//            delay(1) {
+//                
+//                //SEGUE
+//              self.performSegueWithIdentifier("loginSegue", sender: nil)
+//        
+//                
+//            }
+//        }
         
         //FAIL
-        else{
-            if usernameField.text!.isEmpty {
-                
-                let alert = UIAlertView (title: "Username not recognized", message: "Please enter your username", delegate: nil, cancelButtonTitle: "OK")
-                alert.show()
-            }
-                
-                //sign in failed
-            else{
-                let alert = UIAlertView (title: "Log In Failed", message: "Incorrect email or password", delegate: nil, cancelButtonTitle: "OK")
-                alert.show()
-            }
-        }
+//        else{
+//            if usernameField.text!.isEmpty {
+//                
+//                let alert = UIAlertView (title: "Username not recognized", message: "Please enter your username", delegate: nil, cancelButtonTitle: "OK")
+//                alert.show()
+//            }
+//                
+//                //sign in failed
+//            else{
+//                let alert = UIAlertView (title: "Log In Failed", message: "Incorrect email or password", delegate: nil, cancelButtonTitle: "OK")
+//                alert.show()
+//            }
+//        }
         
        
 
