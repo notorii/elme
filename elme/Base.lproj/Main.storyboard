@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="CEd-yX-8Og">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Ptp-Ig-bL3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -1400,7 +1400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Iz-nd-tMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3077.5" y="374.5"/>
+            <point key="canvasLocation" x="2719.5" y="399.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TZG-yb-R8J">
@@ -1501,7 +1501,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcQ-g5-8go" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.5" y="2126.5"/>
+            <point key="canvasLocation" x="847.5" y="2838.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Ka6-NF-ZdY">
@@ -2173,8 +2173,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1 - new goal" width="375" height="667"/>
-        <image name="2 - new goal tapped" width="375" height="667"/>
         <image name="13 - menu" width="375" height="667"/>
         <image name="4.2 - new goal add steps" width="375" height="667"/>
         <image name="4.3 - new goal add steps" width="375" height="667"/>
@@ -2199,5 +2197,10 @@
         <image name="x" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="K6S-L7-NZ7"/>
+        <segue reference="mcV-Tk-laD"/>
+        <segue reference="acR-mu-Qxj"/>
+        <segue reference="Ime-sA-K0C"/>
+        <segue reference="miw-Bx-Irs"/>
     </inferredMetricsTieBreakers>
 </document>
