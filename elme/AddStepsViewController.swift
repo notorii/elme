@@ -60,14 +60,7 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         for (index, cell) in tableView.visibleCells.enumerate() {
             let cell = cell as! AddStepCell
             if (cell.addStepTextField.text != "") {
-                
-                var step: NSMutableDictionary!
-                
-                // "fatal error: unexpectedly found nil while unwrapping an Optional value"
-                step.setObject(index, forKey: "step_index")
-                step.setObject(cell.addStepTextField.text!, forKey: "description")
-                
-                self.stepData.steps.append(step)
+                self.stepData.steps.append(["step_index": index, "description": cell.addStepTextField.text!])
             }
         }
     }

@@ -136,6 +136,10 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         
+        // update dictionary with step detail values specified in presenting view controller
+        let currentStep = self.stepData.steps[self.stepData.stepIndex]
+        currentStep.setObject(distressSlider.value, forKey: "distress_expected")
+        
         // If we're on the last step detail screen, open the 'next step' home screen
         if (self.stepData.stepIndex == (self.stepData.steps.count-1)) {
             
@@ -172,8 +176,6 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
             return false
         } else {
             self.stepData.stepIndex = self.stepData.stepIndex + 1
-            let currentStep = self.stepData.steps[self.stepData.stepIndex]
-            currentStep["distress_expected"] = distressSlider.value
             return true
         }
     }
