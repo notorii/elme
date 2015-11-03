@@ -14,6 +14,7 @@ class NextStepViewViewController: UIViewController {
     @IBOutlet weak var stepLabel: UILabel!
     @IBOutlet weak var navLabel: UILabel!
     @IBOutlet weak var navBarView: UIImageView!
+    @IBOutlet weak var hamburgerButton: UIButton!
     
     var newGoalTransition: NewGoalTransition!
     
@@ -35,6 +36,24 @@ class NextStepViewViewController: UIViewController {
     @IBAction func onRightChevronTap(sender: AnyObject) {
     }
     
+    @IBAction func onLongPress(sender: UILongPressGestureRecognizer) {
+        switch sender.state
+        {
+        case .Began:
+            print("began press")
+//            self.beginPressTime = CACurrentMediaTime()
+        case .Changed:
+            print("changed press")
+//            var deltaTime = CACurrentMediaTime() - self.beginPressTime
+//            var greenColor = self.greenColourForTimeDelta(deltaTime)
+//            gesture.view.backgroundColor = greenColor
+        case .Ended:
+            print("end press")
+//            self.gestureDidFinish(gesture)
+            default: ()
+        }
+    }
+   
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

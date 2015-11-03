@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="5A43880A-40B4-4AB0-9FBD-D6AEF7A6BFBF" id="faf-Yc-QO9">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="DB4A3DB2-7326-4C6E-942D-F5ABD73E74DC" id="faf-Yc-QO9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -1888,8 +1888,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="apG-Pp-nlp">
                                 <rect key="frame" x="151" y="298" width="72" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <state key="normal" image="checkmark_step_complete"/>
                                 <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bu2-FG-K0Z" appends="YES" id="v2f-A2-1Zz"/>
                                     <segue destination="HhJ-yh-X0b" kind="modal" id="mcV-Tk-laD"/>
                                 </connections>
                             </button>
@@ -1903,7 +1905,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ntb-HA-aS3">
-                                <rect key="frame" x="20" y="17" width="18" height="22"/>
+                                <rect key="frame" x="0.0" y="0.0" width="54" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Menu_icon"/>
                                 <connections>
@@ -1916,6 +1918,7 @@
                     <navigationItem key="navigationItem" id="Sor-7V-fVp"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="hamburgerButton" destination="ntb-HA-aS3" id="RUE-0g-T5o"/>
                         <outlet property="navBarView" destination="Mxk-ld-Wmo" id="xCi-el-0Cb"/>
                         <outlet property="navLabel" destination="1Bb-vE-eam" id="ovo-fX-VRm"/>
                         <outlet property="onCheckmarkTap" destination="apG-Pp-nlp" id="w2o-dJ-8Ez"/>
@@ -1924,6 +1927,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m72-bQ-edW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="bu2-FG-K0Z">
+                    <connections>
+                        <action selector="onLongPress:" destination="Gss-5Q-TJW" id="sfh-tA-SYv"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1800.5" y="1987.5"/>
         </scene>
@@ -1968,7 +1976,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="5A43880A-40B4-4AB0-9FBD-D6AEF7A6BFBF" width="375" height="667">
+        <image name="Chevron_right" width="8" height="12"/>
+        <image name="DB4A3DB2-7326-4C6E-942D-F5ABD73E74DC" width="375" height="667">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -18716,7 +18725,6 @@ AA9SywAPUs8AD1LWAA9S3gAPUusAD1LwAA9S8gAPUvQAD1L5AA9TAQAPUwQAD1MJAA9TEQAPUxQAD1Mm
 AA9TKQAPUy4AAAAAAAAEAQAAAAAAAAA/AAAAAAAAAAAAAAAAAA9TMA
 </mutableData>
         </image>
-        <image name="Chevron_right" width="8" height="12"/>
         <image name="Edit_profile_fields" width="375" height="163"/>
         <image name="LoginFields" width="375" height="109"/>
         <image name="Menu_icon" width="18" height="12"/>
