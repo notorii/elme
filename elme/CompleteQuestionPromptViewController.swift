@@ -179,7 +179,7 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
     
     
     @IBAction func onCompletePress(sender: UIButton) {
-        //  dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
         print("complete pressed", terminator: "")
         //RUN NEXT STEPS HERE
         

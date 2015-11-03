@@ -27,7 +27,7 @@ class HamburgerViewController: UIViewController {
         
         menuViewController = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
         
-        homeViewController = storyboard.instantiateViewControllerWithIdentifier("NextStepViewViewController")
+        homeViewController = storyboard.instantiateViewControllerWithIdentifier("questionNavigationController")
 
         // Do any additional setup after loading the view.
         

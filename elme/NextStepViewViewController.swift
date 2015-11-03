@@ -14,6 +14,9 @@ class NextStepViewViewController: UIViewController {
     @IBOutlet weak var stepLabel: UILabel!
     @IBOutlet weak var navLabel: UILabel!
     @IBOutlet weak var navBarView: UIImageView!
+    
+    var newGoalTransition: NewGoalTransition!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,14 +36,15 @@ class NextStepViewViewController: UIViewController {
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let destinationViewController = segue.destinationViewController
+        newGoalTransition = NewGoalTransition()
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        destinationViewController.transitioningDelegate = newGoalTransition
+        //destinationViewController.presentViewController(self, animated: true, completion: nil)
+        newGoalTransition.duration = 0.01
     }
-    */
 
+    
 }
