@@ -43,6 +43,9 @@ class Item1ViewController: UIViewController {
     var creationDistressLevel: CGFloat!
     var reflectionDistressLevel: CGFloat!
 
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +54,7 @@ class Item1ViewController: UIViewController {
         stepDetailsCompleteView.layer.borderColor = borderColor.CGColor
         
         closeButton.tintColor = mediumTextColor
+        print(closeButton.tintColor)
         
         howDistressingLabel.textColor = mediumTextColor
         

@@ -18,7 +18,7 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pastGoals = ["one", "two", "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.", "four"]
+        pastGoals = ["Eat a tomato", "Ride in an elevator", "Pet a dog"]
         
         view.backgroundColor = darkBackgroundColor
         tableView.backgroundColor = darkBackgroundColor

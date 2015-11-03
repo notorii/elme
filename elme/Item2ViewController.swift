@@ -21,6 +21,7 @@ class Item2ViewController: UIViewController {
     @IBOutlet weak var remindMeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
 
+    @IBOutlet weak var distressSlider: GradientSlider!
     @IBOutlet weak var border1: UIView!
     @IBOutlet weak var border2: UIView!
     @IBOutlet weak var border3: UIView!
@@ -28,6 +29,10 @@ class Item2ViewController: UIViewController {
     @IBOutlet weak var creationNoteLabel: UILabel!
     @IBOutlet weak var thoughtsTextView: UITextView!
     @IBOutlet weak var titleTextField: UITextField!
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +52,11 @@ class Item2ViewController: UIViewController {
         border2.backgroundColor = borderColor
         border3.backgroundColor = borderColor
         border4.backgroundColor = borderColor
+        
+        distressSlider.maxColor = scale0
+        distressSlider.minColor = scale0
+        distressSlider.thickness = 5.0
+        distressSlider.thumbSize = 40.0
         
         // Do any additional setup after loading the view.
     }

@@ -10,14 +10,25 @@ import UIKit
 
 class StepListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+
     @IBOutlet weak var stepsTitleLabel: UILabel!
     @IBOutlet weak var navBarView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-   var steps: [String]!
+    let CellIdentifier = "StepListCell"
+    
+    var steps: [String]!
+    var checked: [Bool]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        steps = ["One","Two","Ask a question in class","Four"]
+
+        //setting up cell check mark stuff
+        checked = [Bool](count: steps.count, repeatedValue: false)
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        //setting styles
         view.backgroundColor = darkBackgroundColor
         navBarView.backgroundColor = lightBackgroundColor
         navBarView.layer.borderWidth = 1
@@ -25,13 +36,15 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         stepsTitleLabel.textColor = darkTextColor
         
+        //setting up table view + styles
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = darkBackgroundColor
         tableView.estimatedRowHeight = 4
         tableView.separatorColor = borderColor
         
-        steps = ["Cats","dogs","monkies monkies Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.","ponies"]
+        checked[0] = true
+        
         
     }
 
@@ -40,13 +53,15 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    //back press
     @IBAction func onBackPress(sender: UIButton) {
      navigationController!.popViewControllerAnimated(true)
     }
 
-    
+    //list press action -> navigate to past goals view controller
     @IBAction func onListPress(sender: UIButton) {
         print("list press")
+
     }
     
     
@@ -54,38 +69,73 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         return steps.count
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        //picking up cell
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+//        checked[indexPath.row] = !checked[indexPath.row]
+//        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
+        //if checked, run segue to complete details view controller
+        if checked[indexPath.row] == true {
+            performSegueWithIdentifier("stepDetailsCompleteSegue", sender: self)
+        }
+        //if unchecked, run segue to incomplete view controller
+        else {
+            performSegueWithIdentifier("stepDetailsIncompleteSegue", sender: self)
+        }
+    }
+
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+       
+        //addressing cell in this file
         var cell = tableView.dequeueReusableCellWithIdentifier("StepListCell") as! StepListCell
         
-        //let steps = steps[indexPath.row]
+        //setting styles of cell
+        cell.checkmark.hidden = true
         cell.backgroundColor = lightBackgroundColor
         cell.stepTextLabel.textColor = darkTextColor
         cell.stepNumberLabel.textColor = darkTextColor
         cell.borderView.layer.borderColor = borderColor.CGColor
         cell.borderView.layer.borderWidth = 1
         
+        //set up check marks on completed tasks
+        if checked[indexPath.row] {
+            cell.checkmark.hidden = false
+            cell.stepNumberLabel.hidden = true
+            cell.backgroundColor = darkBackgroundColor
+        } else {
+            cell.checkmark.hidden = true
+            cell.stepNumberLabel.hidden = false
+        }
+        
+        //adjusting for border on last item in list
         if indexPath.row == steps.count - 1 {
             cell.borderView.frame.size.height = 57
         }
         
-        //cell.layer.borderColor = borderColor
-        //cell.layer.borderWidth = 1
-        
+        //setting proper numbering to left of steps
         cell.stepTextLabel.text = steps[indexPath.row]
         cell.stepNumberLabel.text = "1"
         
         return cell
     }
-    
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        var destinationViewController = segue.destinationViewController
+        
+
+        if segue == "listPress" {
+            
+        } else {
+            destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        }
     }
-    */
 
 }
+
