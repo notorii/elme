@@ -20,7 +20,7 @@ class NextStepViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = darkBackgroundColor
         // Do any additional setup after loading the view.
     }
 
@@ -44,6 +44,7 @@ class NextStepViewViewController: UIViewController {
 //            self.beginPressTime = CACurrentMediaTime()
         case .Changed:
             print("changed press")
+            
 //            var deltaTime = CACurrentMediaTime() - self.beginPressTime
 //            var greenColor = self.greenColourForTimeDelta(deltaTime)
 //            gesture.view.backgroundColor = greenColor

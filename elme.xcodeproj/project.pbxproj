@@ -33,6 +33,7 @@
 		4D360E931BD8A91E00576A69 /* AddStepDetails1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */; };
 		4D360E951BD8A92A00576A69 /* AddStepDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */; };
 		4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */; };
+		4D582CC91BE95ED600ADDA22 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D582CC81BE95ED600ADDA22 /* Common.swift */; };
 		4D9A7E671BE56B39009C8578 /* AddStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A7E661BE56B39009C8578 /* AddStepsViewController.swift */; };
 		4D9A7E691BE570FC009C8578 /* AddStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A7E681BE570FC009C8578 /* AddStepCell.swift */; };
 		4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */; };
@@ -103,6 +104,7 @@
 		4D360E921BD8A91E00576A69 /* AddStepDetails1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails1ViewController.swift; sourceTree = "<group>"; };
 		4D360E941BD8A92A00576A69 /* AddStepDetails2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepDetails2ViewController.swift; sourceTree = "<group>"; };
 		4D360E961BD8A9E800576A69 /* AddStepsKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsKeyboardViewController.swift; sourceTree = "<group>"; };
+		4D582CC81BE95ED600ADDA22 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		4D9A7E661BE56B39009C8578 /* AddStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepsViewController.swift; sourceTree = "<group>"; };
 		4D9A7E681BE570FC009C8578 /* AddStepCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStepCell.swift; sourceTree = "<group>"; };
 		4D9CA0A61BDC242A008B0A6F /* GlobalColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalColors.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				4D360E841BD89AE700576A69 /* Item1ViewController.swift */,
 				4D360E861BD89AFE00576A69 /* Item2ViewController.swift */,
 				4D360E881BD89E0000576A69 /* CompleteQuestionPromptViewController.swift */,
+				4D582CC81BE95ED600ADDA22 /* Common.swift */,
 				32F74C521BE6DB3D00B2FF56 /* BaseTransition.swift */,
 				4D360E8A1BD89EDC00576A69 /* StepListViewController.swift */,
 				4D1A9B8D1BE1EBEE006ECAE0 /* PastGoalViewCell.swift */,
@@ -473,6 +476,7 @@
 				4D360E571BD88B9500576A69 /* AppDelegate.swift in Sources */,
 				6E21E00B1BE5AF7C00AC1F5C /* Hamburger2ViewController.swift in Sources */,
 				32F74C531BE6DB3D00B2FF56 /* BaseTransition.swift in Sources */,
+				4D582CC91BE95ED600ADDA22 /* Common.swift in Sources */,
 				4D9CA0A71BDC242A008B0A6F /* GlobalColors.swift in Sources */,
 				4D360E971BD8A9E800576A69 /* AddStepsKeyboardViewController.swift in Sources */,
 				4DE522931BE57CE400BDAF6F /* StepField.swift in Sources */,
