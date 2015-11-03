@@ -75,40 +75,53 @@ class SignUp2ViewController: UIViewController {
             } else {
                 // Hooray! Let them use the app now.
                 print("success")
+                // PUT SPINNER HERE SIGNNING IN...
+                self.activityIndicatorView.hidden = false
+                //loginButton.alpha = 0
+                self.signUpButton.setTitle("", forState: .Normal)
+                
+                // Delay for 2 seconds, then run the code between the braces.
+                self.delay(1) {
+                
+                    //SEGUE
+                    self.performSegueWithIdentifier("SignUpSegue", sender: nil)
+                                
+                }
+
             }
         }
         
-        //SUCCESS EMAIL AND PASSWORD
-        if fullNameField.text == "name" && passwordField.text == "password" && emailField.text == "email" {
-            
-            // PUT SPINNER HERE SIGNNING IN...
-            self.activityIndicatorView.hidden = false
-            //loginButton.alpha = 0
-            signUpButton.setTitle("", forState: .Normal)
-            
-            // DELAY
-            // Delay for 2 seconds, then run the code between the braces.
-            delay(1) {
-                
-                //SEGUE
-                self.performSegueWithIdentifier("SignUpSegue", sender: nil)
-                
-            }
-        }
-            //FAIL
-        else{
-            if fullNameField.text!.isEmpty || emailField.text!.isEmpty || passwordField.text!.isEmpty {
-                
-                let alert = UIAlertView (title: "Credentials Missing", message: "Please make sure you have filled out all the fields", delegate: nil, cancelButtonTitle: "OK")
-                alert.show()
-            }
-                
-                //sisgn in failed
-            else{
-                let alert = UIAlertView (title: "Sign Up Failed", message: "Incorrect Credentials", delegate: nil, cancelButtonTitle: "OK")
-                alert.show()
-            }
-        }
+//        //SUCCESS EMAIL AND PASSWORD
+//        if fullNameField.text == "name" && passwordField.text == "password" && emailField.text == "email" {
+//            
+//            // PUT SPINNER HERE SIGNNING IN...
+//            self.activityIndicatorView.hidden = false
+//            //loginButton.alpha = 0
+//            signUpButton.setTitle("", forState: .Normal)
+//            
+//            // DELAY
+//            // Delay for 2 seconds, then run the code between the braces.
+//            delay(1) {
+//                
+//                //SEGUE
+//                self.performSegueWithIdentifier("SignUpSegue", sender: nil)
+//                
+//            }
+//        }
+//            //FAIL
+//        else{
+//            if fullNameField.text!.isEmpty || emailField.text!.isEmpty || passwordField.text!.isEmpty {
+//                
+//                let alert = UIAlertView (title: "Credentials Missing", message: "Please make sure you have filled out all the fields", delegate: nil, cancelButtonTitle: "OK")
+//                alert.show()
+//            }
+//                
+//                //sisgn in failed
+//            else{
+//                let alert = UIAlertView (title: "Sign Up Failed", message: "Incorrect Credentials", delegate: nil, cancelButtonTitle: "OK")
+//                alert.show()
+//            }
+//        }
     
     
         
