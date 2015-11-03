@@ -152,11 +152,28 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
                 }
             }
             
+            for stepDict in self.stepData.steps {
+                let step = PFObject(className:"Step")
+                step["user"] = user
+                step["goal"] = goal
+                step["description"] = stepDict["description"]
+                step["distress_expected"] = stepDict["distress_expected"]
+                step.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                    if (success) {
+                        print("saved step")
+                    } else {
+                        print(error!.description)
+                    }
+                }
+            }
+            
             // segue to 'next step' home screen
             performSegueWithIdentifier("lastStepDetailSegue", sender: self)
             return false
         } else {
             self.stepData.stepIndex = self.stepData.stepIndex + 1
+            let currentStep = self.stepData.steps[self.stepData.stepIndex]
+            currentStep["distress_expected"] = distressSlider.value
             return true
         }
     }
