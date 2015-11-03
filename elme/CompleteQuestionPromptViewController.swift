@@ -123,7 +123,7 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
     }
        
     func textViewDidBeginEditing(thoughtsTextView: UITextView) {
-        print("text view editing")
+        print("text view editing", terminator: "")
         if thoughtsTextView.textColor == UIColor.lightGrayColor() {
             thoughtsTextView.text = nil
             thoughtsTextView.textColor = UIColor.blackColor()
@@ -171,7 +171,7 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
     func textView(thoughtsTextView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n") {
             keyboardDismiss()
-            print("THIS ALSO NEEDS TO RUN THE NEXT STEPS")
+            print("THIS ALSO NEEDS TO RUN THE NEXT STEPS", terminator: "")
             //RUN NEXT STEPS HERE
         }
         return true
@@ -180,7 +180,7 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
     
     @IBAction func onCompletePress(sender: UIButton) {
         //  dismissViewControllerAnimated(true, completion: nil)
-        print("complete pressed")
+        print("complete pressed", terminator: "")
         //RUN NEXT STEPS HERE
         
     }

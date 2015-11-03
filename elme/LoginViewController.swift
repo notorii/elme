@@ -75,7 +75,7 @@ class LoginViewController: UIViewController {
                 
                 //SEGUE
               self.performSegueWithIdentifier("loginSegue", sender: nil)
-                
+        
                 
             }
         }
@@ -95,10 +95,18 @@ class LoginViewController: UIViewController {
             }
         }
         
+       
+
         
         
     }
 
+    @IBAction func onSignUp(sender: AnyObject) {
+        
+        navigationController!.popViewControllerAnimated(true)
+
+    }
+    
     /*
     // MARK: - Navigation
 
