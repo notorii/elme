@@ -2211,9 +2211,5 @@
         <image name="x" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="94d-9p-6Kf"/>
-        <segue reference="bHa-QY-yLc"/>
-        <segue reference="coL-eY-ftu"/>
-        <segue reference="oSL-aF-mz6"/>
     </inferredMetricsTieBreakers>
 </document>
