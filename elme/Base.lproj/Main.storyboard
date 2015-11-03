@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="cXG-KC-0Ow">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148.5" y="406.5"/>
+            <point key="canvasLocation" x="2086.5" y="-811.5"/>
         </scene>
         <!--Add Steps Keyboard View Controller-->
         <scene sceneID="mvq-Oz-ccX">
@@ -83,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8G-Va-1l9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3515.5" y="312.5"/>
+            <point key="canvasLocation" x="4102.5" y="312.5"/>
         </scene>
         <!--Add Step Details1 View Controller-->
         <scene sceneID="Uhd-kd-KTr">
@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kon-tW-GuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3932.5" y="312.5"/>
+            <point key="canvasLocation" x="4519.5" y="312.5"/>
         </scene>
         <!--Add Step Details2 View Controller-->
         <scene sceneID="GXM-bw-x4l">
@@ -155,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Hf-gO-jXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4233.5" y="304.5"/>
+            <point key="canvasLocation" x="5034.5" y="312.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2HE-dN-Wfq">
@@ -946,7 +946,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wox-ex-XJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284.5" y="1982.5"/>
+            <point key="canvasLocation" x="764.5" y="3314.5"/>
         </scene>
         <!--Past Goals View Controller-->
         <scene sceneID="hrd-eL-gs1">
@@ -1097,11 +1097,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yxh-Wu-Wkh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yxh-Wu-Wkh">
                                 <rect key="frame" x="10" y="604" width="355" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.94901960780000005" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Add Steps">
                                     <color key="titleColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -1118,12 +1119,12 @@
                     <connections>
                         <outlet property="addSteps" destination="Yxh-Wu-Wkh" id="Nwp-HS-uEC"/>
                         <outlet property="screenMask" destination="AnJ-lB-NxK" id="4wh-wC-nqx"/>
-                        <segue destination="bVs-Av-5T4" kind="modal" identifier="segueToAddSteps" id="Bwk-Ld-1ef"/>
+                        <segue destination="xIo-sM-wge" kind="modal" identifier="segueToAddSteps" id="Bwk-Ld-1ef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2b-pn-vgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1578.5" y="406.5"/>
+            <point key="canvasLocation" x="3180.5" y="-811.5"/>
         </scene>
         <!--Add Step Details View Controller-->
         <scene sceneID="fg7-D5-h6x">
@@ -1151,18 +1152,6 @@
                                         <color key="textColor" red="0.28627450980392155" green="0.18431372549019609" blue="0.13725490196078433" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2NN-F5-gCa">
-                                        <rect key="frame" x="178" y="592" width="177" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                        <state key="normal" title="Next">
-                                            <color key="titleColor" red="0.63529411764705879" green="0.25490196078431371" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="nextButton:" destination="qEe-gr-3zK" eventType="touchUpInside" id="Qmy-pb-hqT"/>
-                                            <segue destination="qEe-gr-3zK" kind="push" id="auq-pI-kFH"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NbA-uo-SBi">
                                         <rect key="frame" x="0.0" y="592" width="177" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1241,6 +1230,18 @@
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2NN-F5-gCa">
+                                        <rect key="frame" x="178" y="592" width="177" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.63529411764705879" green="0.25490196078431371" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButton:" destination="qEe-gr-3zK" eventType="touchUpInside" id="Qmy-pb-hqT"/>
+                                            <segue destination="qEe-gr-3zK" kind="push" identifier="addStepDetailsSegueToSelf" id="auq-pI-kFH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.94901960784313721" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -1263,7 +1264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6Q-DX-pbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3135.5" y="405.5"/>
+            <point key="canvasLocation" x="3598.5" y="399.5"/>
         </scene>
         <!--Add Steps View Controller-->
         <scene sceneID="CcS-2U-mIY">
@@ -1278,27 +1279,28 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="DuK-1T-IKB">
-                                        <rect key="frame" x="10" y="12" width="354" height="644"/>
+                                        <rect key="frame" x="10" y="10" width="355" height="647"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MZS-OM-52G">
-                                                <rect key="frame" x="316" y="0.0" width="38" height="40"/>
+                                                <rect key="frame" x="312" y="5" width="38" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="x"/>
                                                 <connections>
+                                                    <action selector="onClosePress:" destination="bVs-Av-5T4" eventType="touchUpInside" id="Foy-iI-bW6"/>
                                                     <action selector="onClosePress:" destination="PZV-Jy-cd1" eventType="touchUpInside" id="oS9-YJ-a3f"/>
                                                 </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="GIV-KG-VRs">
-                                                <rect key="frame" x="0.0" y="102" width="354" height="486"/>
+                                                <rect key="frame" x="0.0" y="102" width="355" height="482"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AddStepCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddStepCell" rowHeight="55" id="yhj-40-nmy" customClass="AddStepCell" customModule="elme" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="354" height="55"/>
+                                                        <rect key="frame" x="0.0" y="28" width="355" height="55"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yhj-40-nmy" id="sao-1p-PV3">
-                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="55"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="355" height="55"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pw2-LK-lDR">
@@ -1337,7 +1339,7 @@
                                                 </prototypes>
                                             </tableView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dDf-FH-gH4">
-                                                <rect key="frame" x="0.0" y="589" width="354" height="55"/>
+                                                <rect key="frame" x="0.0" y="592" width="354" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.97647058819999999" green="0.94901960780000005" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
@@ -1346,7 +1348,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="onCompletePress:" destination="HhJ-yh-X0b" eventType="touchUpInside" id="oxy-vZ-VSc"/>
-                                                    <segue destination="x7V-0d-lg7" kind="modal" id="0Hd-91-ujj"/>
+                                                    <segue destination="qEe-gr-3zK" kind="push" id="M5Y-rJ-D0g"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1355,10 +1357,10 @@
                                 </subviews>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A0s-RP-sOn">
-                                <rect key="frame" x="115" y="27" width="145" height="22"/>
+                                <rect key="frame" x="115" y="26" width="145" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1375,7 +1377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dK0-dh-kjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2045.5" y="406.5"/>
+            <point key="canvasLocation" x="3124.5" y="394.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6hg-nF-AcO">
@@ -1411,7 +1413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Iz-nd-tMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3077.5" y="374.5"/>
+            <point key="canvasLocation" x="3725.5" y="-741.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TZG-yb-R8J">
@@ -1455,7 +1457,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbP-8x-mid" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="290.5" y="1229.5"/>
+            <point key="canvasLocation" x="-365.5" y="1982.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UQM-fK-iIO">
@@ -1474,7 +1476,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjx-1W-ArV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1635.5" y="406.5"/>
+            <point key="canvasLocation" x="2663.5" y="-811.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OHE-LQ-aro">
@@ -1494,7 +1496,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyB-kC-9c6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652.5" y="2070.5"/>
+            <point key="canvasLocation" x="1072.5" y="2790.5"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="cyw-nR-A0h">
@@ -1512,7 +1514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcQ-g5-8go" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.5" y="2126.5"/>
+            <point key="canvasLocation" x="319.5" y="2146.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Ka6-NF-ZdY">
@@ -1695,7 +1697,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="502.5" y="1229.5"/>
+            <point key="canvasLocation" x="352.5" y="1229.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="lxM-pE-iqr">
@@ -1740,7 +1742,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUt-w4-qJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722.5" y="1982.5"/>
+            <point key="canvasLocation" x="286.5" y="3146.5"/>
         </scene>
         <!--Sign Up2 View Controller-->
         <scene sceneID="7oF-Xs-FOu">
@@ -1890,7 +1892,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBs-x1-aF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544.5" y="2126.5"/>
+            <point key="canvasLocation" x="554.5" y="3060.5"/>
         </scene>
         <!--Hamburger2 View Controller-->
         <scene sceneID="Thk-Es-hSv">
@@ -2161,31 +2163,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m72-bQ-edW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171.5" y="1981.5"/>
+            <point key="canvasLocation" x="791.5" y="1999.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="V3R-cQ-6hM">
+        <scene sceneID="hP8-Ze-dIK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="x7V-0d-lg7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="xIo-sM-wge" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ir4-at-Byy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JhQ-SF-6xp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qEe-gr-3zK" kind="relationship" relationship="rootViewController" id="K6S-L7-NZ7"/>
+                        <segue destination="bVs-Av-5T4" kind="relationship" relationship="rootViewController" id="tEY-yg-mJr"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NwU-va-YVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7x-Ou-KIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2532.5" y="406.5"/>
+            <point key="canvasLocation" x="2537.5" y="394.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="1 - new goal" width="375" height="667"/>
-        <image name="2 - new goal tapped" width="375" height="667"/>
         <image name="13 - menu" width="375" height="667"/>
         <image name="4.2 - new goal add steps" width="375" height="667"/>
         <image name="4.3 - new goal add steps" width="375" height="667"/>
@@ -2211,5 +2210,11 @@
         <image name="x" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Ja7-LM-paU"/>
+        <segue reference="miw-Bx-Irs"/>
+        <segue reference="M5Y-rJ-D0g"/>
+        <segue reference="6rS-TY-K0h"/>
+        <segue reference="acR-mu-Qxj"/>
+        <segue reference="bHa-QY-yLc"/>
     </inferredMetricsTieBreakers>
 </document>

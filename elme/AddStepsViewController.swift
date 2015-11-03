@@ -32,18 +32,15 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         
         closeButton.tintColor = mediumTextColor
         
-        AddStepsView.backgroundColor = lightBackgroundColor
+        AddStepsView.backgroundColor = darkBackgroundColor
         AddStepsView.layer.borderColor = borderColor.CGColor
         AddStepsView.layer.borderWidth = 1.0
+        AddStepsView.layer.cornerRadius = 4
         
-        tableView.backgroundColor = lightBackgroundColor
+        tableView.backgroundColor = darkBackgroundColor
         
-        nextButton.backgroundColor = lightBackgroundColor
-        nextButton.layer.borderColor = borderColor.CGColor
-        nextButton.layer.borderWidth = 1.0
-
-        // Do any additional setup after loading the view.
-
+        nextButton.backgroundColor = darkBackgroundColor
+        nextButton.layer.cornerRadius = 4
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,6 +86,7 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
                     steps.append(cell.addStepTextField.text!)
                     print(steps)
                 }
+        
         cell.addStepTextField.resignFirstResponder()
 
         tableView.reloadData()
@@ -97,8 +95,10 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         return true
     }
 
-
-    
+    @IBAction func onClosePress(sender: UIButton) {
+        NSNotificationCenter.defaultCenter().postNotificationName("addStepsDismissed", object: nil)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
