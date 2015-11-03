@@ -24,6 +24,6 @@ class StepData {
     
     var fearDescription : String!
     var achievementDescription : String!
-    var steps: [String] = []
+    var steps = [NSDictionary]()
     var stepIndex : Int!
 }

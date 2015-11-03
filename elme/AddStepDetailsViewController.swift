@@ -49,8 +49,12 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
             self.stepData.stepIndex = 0
         }
         
-        stepTitle.text = self.stepData.steps[self.stepData.stepIndex]
-        stepNumber.text = "Step \(self.stepData.stepIndex+1) of \(self.stepData.steps.count)"
+        let currentStep = self.stepData.steps[self.stepData.stepIndex]
+        
+        let currentStepIndex = currentStep["step_index"] as! Int
+        let currentStepDescription = currentStep["description"] as! String
+        stepTitle.text = currentStepDescription
+        stepNumber.text = "Step \(currentStepIndex + 1) of \(self.stepData.steps.count)"
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)

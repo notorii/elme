@@ -30,9 +30,6 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         
-        steps = []
-        
-        
         closeButton.tintColor = mediumTextColor
         
         AddStepsView.backgroundColor = darkBackgroundColor
@@ -44,6 +41,8 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         
         nextButton.backgroundColor = darkBackgroundColor
         nextButton.layer.cornerRadius = 4
+        
+        steps = []
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,10 +57,16 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // save steps to temp storage
-        for cell in tableView.visibleCells {
+        for (index, cell) in tableView.visibleCells.enumerate() {
             let cell = cell as! AddStepCell
             if (cell.addStepTextField.text != "") {
-                self.stepData.steps.append(cell.addStepTextField.text!)
+                
+                let step = [
+                    "step_index" : index,
+                    "description" : cell.addStepTextField.text!
+                ]
+                
+                self.stepData.steps.append(step)
             }
         }
     }
