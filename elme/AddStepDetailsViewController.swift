@@ -131,16 +131,27 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func previousButton(sender: UIButton) {
         navigationController!.popViewControllerAnimated(true)
-        self.stepData.stepIndex = self.stepData.stepIndex - 1
+        
+        // decrement stepIndex unless we're on step 1 (i.e. it's 0)
+        if (self.stepData.stepIndex > 0) {
+            self.stepData.stepIndex = self.stepData.stepIndex - 1
+        }
     }
 
-    @IBAction func nextButton(sender: UIButton) {
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         // If we're on the last step detail screen, open the 'next step' home screen
         if (self.stepData.stepIndex == (self.stepData.steps.count-1)) {
             performSegueWithIdentifier("lastStepDetailSegue", sender: self)
+            return false
         } else {
             self.stepData.stepIndex = self.stepData.stepIndex + 1
+            return true
         }
+    }
+
+    @IBAction func nextButton(sender: UIButton) {
+        
     }
     
     @IBAction func editDate(sender: UITextField) {

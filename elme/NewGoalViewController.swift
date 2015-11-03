@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class NewGoalViewController: UIViewController {
 
@@ -38,8 +39,20 @@ class NewGoalViewController: UIViewController {
         newGoalButton.lineWidth = 1
         
         view.layer.mask = newGoalButton
+        
+        // http://stackoverflow.com/questions/30274017/calling-a-parent-uiviewcontroller-method-from-a-child-uiviewcontroller
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "collapseAddStepsButton:", name:"addStepsDismissed", object: nil)
     }
     
+    // deal with case where we are coming back to this screen from the add step details screen (i.e. user has clicked x)
+    func collapseAddStepsButton(notification: NSNotification){
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.screenMask.alpha = 0
+            self.addSteps.frame = CGRectMake(0, 0, self.view.frame.width - 20, 53)
+            self.addSteps.frame.origin = CGPoint(x: 10, y: 604)
+        })
+    }
+
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         CATransaction.begin()
@@ -62,10 +75,7 @@ class NewGoalViewController: UIViewController {
     }
     
     @IBAction func addSteps(sender: AnyObject) {
-        
-        addSteps.setTitle("", forState: .Normal)
-        
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.screenMask.alpha = 1
             self.addSteps.frame = CGRectMake(0, 0, self.view.frame.width - 20, self.view.frame.height - 20)
             self.addSteps.frame.origin = CGPoint(x: 10, y: 10)
@@ -73,7 +83,6 @@ class NewGoalViewController: UIViewController {
             }) { (Bool) -> Void in
                 self.performSegueWithIdentifier("segueToAddSteps", sender: self)
         }
-        
     }
 
     @IBAction func onDismissButton(sender: UIButton) {
@@ -81,8 +90,8 @@ class NewGoalViewController: UIViewController {
         CATransaction.setCompletionBlock { () -> Void in
             self.dismissViewControllerAnimated(false, completion: nil)
         }
-        CATransaction.setValue(0.2, forKey: kCATransactionAnimationDuration)
-        newGoalButton.transform = CATransform3DMakeScale(0.01, 0.01, 1)
+        CATransaction.setValue(0.5, forKey: kCATransactionAnimationDuration)
+        newGoalButton.transform = CATransform3DMakeScale(1/20, 1/20, 1)
         CATransaction.commit()
     }
     
