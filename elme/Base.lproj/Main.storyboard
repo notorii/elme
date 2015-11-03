@@ -239,7 +239,7 @@
         <!--Step List View Controller-->
         <scene sceneID="Dk2-dz-23c">
             <objects>
-                <viewController id="Ta2-gq-nEA" customClass="StepListViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stepsViewController" id="Ta2-gq-nEA" customClass="StepListViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LcN-d5-0uS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,21 +248,21 @@
                                 <rect key="frame" x="-1" y="-1" width="377" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9Y7-BP-7uS">
-                                        <rect key="frame" x="331" y="13" width="46" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="listIcon"/>
-                                        <connections>
-                                            <action selector="onListPress:" destination="Ta2-gq-nEA" eventType="touchUpInside" id="FEb-V9-4rl"/>
-                                            <segue destination="J8a-Uf-n7A" kind="push" id="chb-qN-4u2"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HL9-EG-i0r">
                                         <rect key="frame" x="3" y="13" width="40" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="chevron"/>
                                         <connections>
                                             <action selector="onBackPress:" destination="Ta2-gq-nEA" eventType="touchUpInside" id="4ql-cE-s94"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9Y7-BP-7uS">
+                                        <rect key="frame" x="331" y="9" width="46" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="listIcon"/>
+                                        <connections>
+                                            <action selector="onListPress:" destination="Ta2-gq-nEA" eventType="touchUpInside" id="FEb-V9-4rl"/>
+                                            <segue destination="J8a-Uf-n7A" kind="push" identifier="listPress" id="chb-qN-4u2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -289,7 +289,7 @@
                                     </connections>
                                 </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StepListCell" rowHeight="55" id="jfG-nM-5uX" customClass="StepListCell" customModule="elme" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="StepListCell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="StepListCell" rowHeight="55" id="jfG-nM-5uX" customClass="StepListCell" customModule="elme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="83" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jfG-nM-5uX" id="dpa-tC-4aL">
@@ -313,25 +313,24 @@
                                                 <view contentMode="scaleToFill" id="sZW-hJ-Wn9">
                                                     <rect key="frame" x="-8" y="0.0" width="388" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="checkmark" id="lAX-LC-poc">
+                                                            <rect key="frame" x="17" y="17" width="22" height="22"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </imageView>
+                                                    </subviews>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="borderView" destination="sZW-hJ-Wn9" id="xyI-id-sNN"/>
+                                            <outlet property="checkmark" destination="lAX-LC-poc" id="aLu-mG-izB"/>
                                             <outlet property="stepNumberLabel" destination="u9L-8h-BP0" id="NPd-4O-bjJ"/>
                                             <outlet property="stepTextLabel" destination="qIq-L6-ibi" id="VI7-jR-Ec9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SZB-IJ-ivj">
-                                <rect key="frame" x="132" y="89" width="228" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="PZV-Jy-cd1" kind="modal" modalPresentationStyle="currentContext" id="vRY-7Q-Arh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -343,6 +342,8 @@
                         <outlet property="navBarView" destination="rkU-zJ-PXm" id="Yr1-vU-rL8"/>
                         <outlet property="stepsTitleLabel" destination="1fC-q6-i2J" id="3DC-2l-DdM"/>
                         <outlet property="tableView" destination="V5T-Sz-ioo" id="a3W-SA-HbS"/>
+                        <segue destination="PZV-Jy-cd1" kind="modal" identifier="stepDetailsIncompleteSegue" id="yMI-gI-PVz"/>
+                        <segue destination="xt5-Zc-Sae" kind="modal" identifier="stepDetailsCompleteSegue" id="C4k-fo-wMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDZ-xt-Fk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,7 +353,7 @@
         <!--Item2 View Controller-->
         <scene sceneID="gHF-91-GP4">
             <objects>
-                <viewController id="PZV-Jy-cd1" customClass="Item2ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stepDetailsIncompleteViewController" id="PZV-Jy-cd1" customClass="Item2ViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZn-G5-FvX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -369,8 +370,8 @@
                                             <action selector="onClosePress:" destination="PZV-Jy-cd1" eventType="touchUpInside" id="G10-o5-m4Y"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How distressing was it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d9j-D3-SB9">
-                                        <rect key="frame" x="9" y="113" width="179" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How distressing do you think this will be?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d9j-D3-SB9">
+                                        <rect key="frame" x="10" y="113" width="262" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                         <color key="textColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -443,7 +444,7 @@
                                             </label>
                                         </subviews>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ask question in class" textAlignment="center" minimumFontSize="17" id="yMW-ax-Ufz">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ask question in class" textAlignment="center" minimumFontSize="17" id="yMW-ax-Ufz">
                                         <rect key="frame" x="25" y="10" width="304" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -469,6 +470,14 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mce-LW-pRX">
+                                        <rect key="frame" x="260" y="606" width="95" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <state key="normal" title="Edit Step">
+                                            <color key="titleColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.93725490199999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -483,6 +492,7 @@
                         <outlet property="closeButton" destination="Yiu-W4-X9h" id="LYT-Ex-ySu"/>
                         <outlet property="creationNoteLabel" destination="b3j-Ys-Ahx" id="Wod-Qs-bKj"/>
                         <outlet property="distressLevelLabel" destination="hg8-1A-cSq" id="FCp-P5-iXK"/>
+                        <outlet property="distressSlider" destination="yeM-Y3-Eo3" id="0SJ-6w-djR"/>
                         <outlet property="howDistressingLabel" destination="d9j-D3-SB9" id="NpH-ea-aXi"/>
                         <outlet property="remindMeLabel" destination="L0G-t1-g3a" id="mJp-ia-lON"/>
                         <outlet property="stepDetailsView" destination="ePe-vN-3Xr" id="5EP-aO-C5h"/>
@@ -578,7 +588,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="zhO-zU-5XZ">
-                                        <rect key="frame" x="0.0" y="98" width="355" height="1"/>
+                                        <rect key="frame" x="0.0" y="100" width="355" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -668,6 +678,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -18707,6 +18718,7 @@ AA9TKQAPUy4AAAAAAAAEAQAAAAAAAAA/AAAAAAAAAAAAAAAAAA9TMA
         <image name="LoginFields" width="375" height="109"/>
         <image name="Menu_icon" width="18" height="12"/>
         <image name="Save_Button" width="355" height="55"/>
+        <image name="checkmark" width="22" height="22"/>
         <image name="checkmark_step_complete" width="72" height="72"/>
         <image name="chevron" width="8" height="12"/>
         <image name="listIcon" width="20" height="12"/>
@@ -18720,9 +18732,5 @@ AA9TKQAPUy4AAAAAAAAEAQAAAAAAAAA/AAAAAAAAAAAAAAAAAA9TMA
         <image name="x" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mcV-Tk-laD"/>
-        <segue reference="K6S-L7-NZ7"/>
-        <segue reference="Ja7-LM-paU"/>
-        <segue reference="miw-Bx-Irs"/>
     </inferredMetricsTieBreakers>
 </document>

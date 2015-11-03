@@ -48,6 +48,9 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
         distressLevelView.layer.borderColor = borderColor.CGColor
         distressSlider.maxColor = scale0
         distressSlider.minColor = scale0
+        distressSlider.thickness = 5.0
+        distressSlider.thumbSize = 40.0
+
         distressLevelLabel.text = "Peace, serenity, total relief. No more anxiety of any kind about any particular issue."
         
         thoughtsView.layer.borderWidth = 1
@@ -62,8 +65,6 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
         completeStepButton.setTitleColor(mediumTextColor, forState: .Normal)
         completeStepButton.layer.cornerRadius = 4
         
-        distressSlider.thickness = 5.0
-        distressSlider.thumbSize = 40.0
     }
 
     override func didReceiveMemoryWarning() {
@@ -127,7 +128,7 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
             thoughtsTextView.text = nil
             thoughtsTextView.textColor = UIColor.blackColor()
         }
-        UIView.animateWithDuration(0.3, delay: 0, options: [], animations: { () -> Void in
+        UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { () -> Void in
             self.interactiveView.center.y = self.interactiveViewOriginalCenter.y + -80
             self.thoughtsTextView.text = ""
             self.thoughtsView.backgroundColor = UIColor(white: 1, alpha: 1)
@@ -143,8 +144,8 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
     
     func keyboardDismiss() {
         view.endEditing(true)
-        print("tap gesture", terminator: "")
-        UIView.animateWithDuration(0.3, delay: 0, options: [], animations: { () -> Void in
+        print("tap gesture")
+        UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { () -> Void in
             self.interactiveView.center.y = self.interactiveViewOriginalCenter.y
             self.thoughtsView.backgroundColor = UIColor(white: 1, alpha: 0.8)
             self.stepView.center.y = self.stepViewOriginalCenter.y
@@ -153,7 +154,18 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
                 self.thoughtsTextView.text = "How did it go? What did you expect to happen? What actually happened?"
                 self.thoughtsTextView.textColor = placeholderTextColor
             }
+
             }, completion: nil)
+//        UIView.animateWithDuration(0.3, delay: 0, options: [], animations: { () -> Void in
+//            self.interactiveView.center.y = self.interactiveViewOriginalCenter.y
+//            self.thoughtsView.backgroundColor = UIColor(white: 1, alpha: 0.8)
+//            self.stepView.center.y = self.stepViewOriginalCenter.y
+//            
+//            if self.thoughtsTextView.text == "" {
+//                self.thoughtsTextView.text = "How did it go? What did you expect to happen? What actually happened?"
+//                self.thoughtsTextView.textColor = placeholderTextColor
+//            }
+//            }, completion: nil)
     }
     
     func textView(thoughtsTextView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
