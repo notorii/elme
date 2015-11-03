@@ -13,9 +13,13 @@ class NewGoalViewController: UIViewController {
 
     @IBOutlet weak var addSteps: UIButton!
     @IBOutlet weak var screenMask: UIView!
+    @IBOutlet weak var fearDescription: UITextView!
+    @IBOutlet weak var achievementDescription: UITextView!
     
     var addStepsTransition: AddStepsTransition!
     var newGoalButton: CAShapeLayer!
+    
+    let stepData = StepData.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +71,10 @@ class NewGoalViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        self.stepData.fearDescription = fearDescription.text
+        self.stepData.achievementDescription = achievementDescription.text
+        
         let destinationViewController = segue.destinationViewController
         addStepsTransition = AddStepsTransition()
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom

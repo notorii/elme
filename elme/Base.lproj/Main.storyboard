@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5sJ-Jl-1nF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="A82A17E5-EB64-4DE2-9D86-2FE5FC3EF3E1" id="faf-Yc-QO9">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="8993C184-3F7C-46F7-860D-E4D71AAC4E6F" id="faf-Yc-QO9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -974,7 +974,9 @@
                     <navigationItem key="navigationItem" id="ahu-dV-6xl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="achievementDescription" destination="Yjg-b6-pne" id="7T1-YI-y5O"/>
                         <outlet property="addSteps" destination="Yxh-Wu-Wkh" id="Nwp-HS-uEC"/>
+                        <outlet property="fearDescription" destination="0fX-9q-uXH" id="MVT-r3-Bld"/>
                         <outlet property="screenMask" destination="AnJ-lB-NxK" id="4wh-wC-nqx"/>
                         <segue destination="xIo-sM-wge" kind="modal" identifier="segueToAddSteps" id="Bwk-Ld-1ef"/>
                     </connections>
@@ -1278,7 +1280,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbP-8x-mid" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212.5" y="1229.5"/>
+            <point key="canvasLocation" x="374.5" y="1417.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UQM-fK-iIO">
@@ -1335,7 +1337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcQ-g5-8go" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="319.5" y="2146.5"/>
+            <point key="canvasLocation" x="1091.5" y="2870.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Ka6-NF-ZdY">
@@ -1503,7 +1505,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="692.5" y="1229.5"/>
+            <point key="canvasLocation" x="934.5" y="649.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="lxM-pE-iqr">
@@ -1555,7 +1557,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUt-w4-qJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286.5" y="3146.5"/>
+            <point key="canvasLocation" x="468.5" y="3052.5"/>
         </scene>
         <!--Sign Up2 View Controller-->
         <scene sceneID="7oF-Xs-FOu">
@@ -1792,7 +1794,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTt-5o-jwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213.5" y="3089.5"/>
+            <point key="canvasLocation" x="-503.5" y="3039.5"/>
         </scene>
         <!--Edit Profile2 View Controller-->
         <scene sceneID="iIn-qu-Uoq">
@@ -1887,7 +1889,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTt-iU-tAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="205.5" y="3089.5"/>
+            <point key="canvasLocation" x="-84.5" y="3039.5"/>
         </scene>
         <!--Next Step View View Controller-->
         <scene sceneID="Mhv-K8-j4f">
@@ -1984,7 +1986,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="A82A17E5-EB64-4DE2-9D86-2FE5FC3EF3E1" width="375" height="667">
+        <image name="8993C184-3F7C-46F7-860D-E4D71AAC4E6F" width="375" height="667">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

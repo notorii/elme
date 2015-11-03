@@ -22,17 +22,10 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var rememberTextView: UITextView!
     
     let stepData = StepData.sharedInstance
+    let user = PFUser.currentUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.stepData.steps = [
-            "Ask another student a question",
-            "Ask a professor a question",
-            "Ask a question in class",
-            "Answer a question in class",
-            "Express an opinion in class"
-        ]
 
         view.backgroundColor = lightBackgroundColor
         
@@ -56,7 +49,7 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
             self.stepData.stepIndex = 0
         }
         
-        stepTitle.text = self.stepData.steps[self.stepData.stepIndex] as? String
+        stepTitle.text = self.stepData.steps[self.stepData.stepIndex]
         stepNumber.text = "Step \(self.stepData.stepIndex+1) of \(self.stepData.steps.count)"
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -75,7 +68,6 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     @IBAction func distressSliderChanged(sender: GradientSlider) {
         
@@ -137,11 +129,26 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
             self.stepData.stepIndex = self.stepData.stepIndex - 1
         }
     }
-
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        
         // If we're on the last step detail screen, open the 'next step' home screen
         if (self.stepData.stepIndex == (self.stepData.steps.count-1)) {
+            
+            // save everything to parse first
+            let goal = PFObject(className:"Goal")
+            goal["user"] = user
+            goal["fear_description"] = self.stepData.fearDescription
+            goal["achievement_description"] = self.stepData.achievementDescription
+            goal.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if (success) {
+                    print("saved goal")
+                } else {
+                    print(error!.description)
+                }
+            }
+            
+            // segue to 'next step' home screen
             performSegueWithIdentifier("lastStepDetailSegue", sender: self)
             return false
         } else {
