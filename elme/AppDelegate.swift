@@ -33,31 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if user != nil {
             print("user check on launch - user \(user!.username) is logged in")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let nextStepHomeVC = storyboard.instantiateViewControllerWithIdentifier("NextStepViewViewController")
-            let newGoalHomeVC = storyboard.instantiateViewControllerWithIdentifier("NewGoalHome")
-            
-            // this gets all the user's goal + any goals with global read/write permissions. technically there shouldn't be any goals with global read/write permissions...
-            let goalQuery = PFQuery(className:"Goal")
-            
-            goalQuery.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
-                
-                if error == nil {
-                    // The find succeeded.
-                    print("Successfully retrieved \(objects!.count) goals.")
-                    
-                    // if user has created a goal show next step home, otherwise show new goal home
-                    if (objects!.count > 0) {
-                        self.window?.rootViewController = nextStepHomeVC
-                    } else {
-                        self.window?.rootViewController = newGoalHomeVC
-                    }
-                    
-                } else {
-                    // Log details of the failure
-                    print("Error: \(error!) \(error!.userInfo)")
-                }
-            }
+            let hamburgerVC = storyboard.instantiateViewControllerWithIdentifier("Hamburger")
+            self.window?.rootViewController = hamburgerVC
         }
     
         return true
