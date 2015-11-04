@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Parse
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var logOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        logOutButton.titleLabel!.textColor = mediumTextColor
 
         // Do any additional setup after loading the view.
     }
@@ -20,7 +24,14 @@ class MenuViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
+    @IBAction func onLogOutPressed(sender: UIButton) {
+        print("tapped")
+        PFUser.logOut()
+        var currentUser = PFUser.currentUser()
+        performSegueWithIdentifier("LogOutSegue", sender: self)
+    }
 
     /*
     // MARK: - Navigation
