@@ -56,7 +56,7 @@ class HamburgerViewController: UIViewController {
             
         } else if sender.state == UIGestureRecognizerState.Changed{
             contentView.center = CGPoint(x: translation.x + initialCenter.x, y:initialCenter.y)
-            if velocity.x < 0 {
+            if velocity.x > 0 {
                 self.contentView.center = self.view.center
             }
             

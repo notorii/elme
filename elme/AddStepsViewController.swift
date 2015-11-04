@@ -22,13 +22,13 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var AddStepsView: UIView!
     @IBOutlet weak var nextButton: UIButton!
+    
+    let stepData = StepData.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        steps = []
-        
         
         closeButton.tintColor = mediumTextColor
         
@@ -41,6 +41,8 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         
         nextButton.backgroundColor = darkBackgroundColor
         nextButton.layer.cornerRadius = 4
+        
+        steps = []
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +53,16 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return steps.count + 1
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // save steps to temp storage
+        for (index, cell) in tableView.visibleCells.enumerate() {
+            let cell = cell as! AddStepCell
+            if (cell.addStepTextField.text != "") {
+                self.stepData.steps.append(["step_index": index, "description": cell.addStepTextField.text!])
+            }
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -70,28 +82,20 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
             cell.bottomBorder.backgroundColor = borderColor
         }
         
-        var stepField = cell.addStepTextField as! StepField
+        let stepField = cell.addStepTextField as StepField
         stepField.index = indexPath.row
         cell.stepNumberLabel.text = "\(indexPath.row + 1)"
         return cell
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         
-        
-                if cell.addStepTextField.text == "" {
-                    print("do nothing")
-                    
-                } else {
-                    steps.append(cell.addStepTextField.text!)
-                    print(steps)
-                }
+        if cell.addStepTextField.text != "" {
+            steps.append(cell.addStepTextField.text!)
+        }
         
         cell.addStepTextField.resignFirstResponder()
-
         tableView.reloadData()
-        
-        
         return true
     }
 

@@ -7,7 +7,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewGoalHome" id="BYZ-38-t0r" customClass="HomeViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -982,7 +982,9 @@
                     <navigationItem key="navigationItem" id="ahu-dV-6xl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="achievementDescription" destination="Yjg-b6-pne" id="7T1-YI-y5O"/>
                         <outlet property="addSteps" destination="Yxh-Wu-Wkh" id="Nwp-HS-uEC"/>
+                        <outlet property="fearDescription" destination="0fX-9q-uXH" id="MVT-r3-Bld"/>
                         <outlet property="screenMask" destination="AnJ-lB-NxK" id="4wh-wC-nqx"/>
                         <segue destination="xIo-sM-wge" kind="modal" identifier="segueToAddSteps" id="Bwk-Ld-1ef"/>
                     </connections>
@@ -1251,7 +1253,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ZAT-pq-gOV"/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WRG-dF-Ewc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1264,7 +1265,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7cB-5y-5bF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399.5" y="3879.5"/>
+            <point key="canvasLocation" x="-865.5" y="4253.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6f2-Gf-olL">
@@ -1719,7 +1720,7 @@
                 </panGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Or9-Ru-lfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4.5" y="3867.5"/>
+            <point key="canvasLocation" x="-373.5" y="4245.5"/>
         </scene>
         <!--Menu2 View Controller-->
         <scene sceneID="Zj0-Oi-4dC">
@@ -1764,7 +1765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTt-5o-jwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213.5" y="3089.5"/>
+            <point key="canvasLocation" x="-647.5" y="3461.5"/>
         </scene>
         <!--Edit Profile2 View Controller-->
         <scene sceneID="iIn-qu-Uoq">
@@ -1859,7 +1860,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTt-iU-tAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="205.5" y="3089.5"/>
+            <point key="canvasLocation" x="-1096.5" y="3473.5"/>
         </scene>
         <!--Next Step View View Controller-->
         <scene sceneID="Mhv-K8-j4f">
@@ -18770,9 +18771,5 @@ AA9TKQAPUy4AAAAAAAAEAQAAAAAAAAA/AAAAAAAAAAAAAAAAAA9TMA
         <image name="x" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bHa-QY-yLc"/>
-        <segue reference="Pek-pz-rjm"/>
-        <segue reference="M5Y-rJ-D0g"/>
-        <segue reference="nt9-De-n9u"/>
     </inferredMetricsTieBreakers>
 </document>

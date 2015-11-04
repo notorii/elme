@@ -27,7 +27,7 @@ class Hamburger2ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         menuViewController = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
-        homeViewController = storyboard.instantiateViewControllerWithIdentifier("Home2ViewController")
+        homeViewController = storyboard.instantiateViewControllerWithIdentifier("TestingViewController")
         
         // Do any additional setup after loading the view.
         
@@ -60,7 +60,7 @@ class Hamburger2ViewController: UIViewController {
             }
             
         } else if sender.state == UIGestureRecognizerState.Ended{
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            UIView.animateWithDuration(0.8, animations: { () -> Void in
                 if velocity.x < 0 {
                     self.contentView.center = self.view.center
                     

@@ -22,17 +22,10 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var rememberTextView: UITextView!
     
     let stepData = StepData.sharedInstance
+    let user = PFUser.currentUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.stepData.steps = [
-            "Ask another student a question",
-            "Ask a professor a question",
-            "Ask a question in class",
-            "Answer a question in class",
-            "Express an opinion in class"
-        ]
 
         view.backgroundColor = lightBackgroundColor
         
@@ -56,8 +49,12 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
             self.stepData.stepIndex = 0
         }
         
-        stepTitle.text = self.stepData.steps[self.stepData.stepIndex] as? String
-        stepNumber.text = "Step \(self.stepData.stepIndex+1) of \(self.stepData.steps.count)"
+        let currentStep = self.stepData.steps[self.stepData.stepIndex]
+        
+        let currentStepIndex = currentStep["step_index"] as! Int
+        let currentStepDescription = currentStep["description"] as! String
+        stepTitle.text = currentStepDescription
+        stepNumber.text = "Step \(currentStepIndex + 1) of \(self.stepData.steps.count)"
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -75,7 +72,6 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     @IBAction func distressSliderChanged(sender: GradientSlider) {
         
@@ -137,11 +133,50 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
             self.stepData.stepIndex = self.stepData.stepIndex - 1
         }
     }
-
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        
+        // update dictionary with step detail values specified in presenting view controller
+        let currentStep = self.stepData.steps[self.stepData.stepIndex]
+        currentStep.setObject(distressSlider.value, forKey: "distress_expected")
+        currentStep.setObject(rememberTextView.text, forKey: "remember")
+        currentStep.setObject(dateTextField.text!, forKey: "reminder_date")
+        
         // If we're on the last step detail screen, open the 'next step' home screen
         if (self.stepData.stepIndex == (self.stepData.steps.count-1)) {
+            
+            // save everything to parse first
+            let goal = PFObject(className:"Goal")
+            goal["user"] = user
+            goal["fear_description"] = self.stepData.fearDescription
+            goal["achievement_description"] = self.stepData.achievementDescription
+            //goal.ACL = PFACL(user: user!)
+            goal.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if (success) {
+                    print("saved goal")
+                } else {
+                    print(error!.description)
+                }
+            }
+            
+            for stepDict in self.stepData.steps {
+                let step = PFObject(className:"Step")
+                step["user"] = user
+                step["goal"] = goal
+                step["description"] = stepDict["description"]
+                step["distress_expected"] = stepDict["distress_expected"]
+                step["remember"] = stepDict["remember"]
+                step["reminder_date"] = stepDict["reminder_date"]
+                step.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                    if (success) {
+                        print("saved step")
+                    } else {
+                        print(error!.description)
+                    }
+                }
+            }
+            
+            // segue to 'next step' home screen
             performSegueWithIdentifier("lastStepDetailSegue", sender: self)
             return false
         } else {
