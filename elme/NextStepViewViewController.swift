@@ -22,6 +22,7 @@ class NextStepViewViewController: UIViewController {
     @IBOutlet weak var hamburgerButton: UIButton!
     
     var hamburgerViewController: HamburgerViewController!
+    var isMenuOpen = false
     
     var newGoalTransition: NewGoalTransition!
     var counter = 0
@@ -49,8 +50,13 @@ class NextStepViewViewController: UIViewController {
     @IBOutlet weak var onCheckmarkTap: UIButton!
     
     @IBAction func onMenuTap(sender: AnyObject) {
-        print("tapped the hamburgs")
-        hamburgerViewController.openMenu()
+        if (isMenuOpen == false) {
+            hamburgerViewController.openMenu()
+            isMenuOpen = true
+        } else {
+            hamburgerViewController.closeMenu()
+            isMenuOpen = false
+        }
     }
     
     @IBAction func onRightChevronTap(sender: AnyObject) {

@@ -19,7 +19,7 @@ class HamburgerViewController: UIViewController {
     
     var menuVC: UIViewController!
     var nextStepHomeVC: UINavigationController!
-    var newGoalVC: UIViewController!
+    var newGoalVC: HomeViewController! // inconsistent naming here...
     
    // viewControllers = [homeViewController, menuViewController]
     
@@ -27,14 +27,15 @@ class HamburgerViewController: UIViewController {
         super.viewDidLoad()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let user = PFUser.currentUser()
         
         menuVC = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
         nextStepHomeVC = storyboard.instantiateViewControllerWithIdentifier("NextStepHome") as! UINavigationController
-        newGoalVC = storyboard.instantiateViewControllerWithIdentifier("NewGoalHome")
+        newGoalVC = storyboard.instantiateViewControllerWithIdentifier("NewGoalHome") as! HomeViewController
         
         let nextStepHomeTopVC = nextStepHomeVC.topViewController as! NextStepViewViewController
         nextStepHomeTopVC.hamburgerViewController = self
+        newGoalVC.hamburgerViewController = self
+        
         
         // this gets all the user's goal + any goals with global read/write permissions. technically there shouldn't be any goals with global read/write permissions...
         let goalQuery = PFQuery(className:"Goal")
@@ -46,7 +47,7 @@ class HamburgerViewController: UIViewController {
                 print("Successfully retrieved \(objects!.count) goals.")
                 
                 // if user has created a goal show next step home, otherwise show new goal home
-                if (objects!.count > 0) {
+                if (objects!.count < 0) {
                     self.nextStepHomeVC.view.frame = self.contentView.frame
                     self.contentView.addSubview(self.nextStepHomeVC.view)
                 } else {
@@ -66,58 +67,40 @@ class HamburgerViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
     @IBAction func onPan(sender: UIPanGestureRecognizer) {
         let translation = sender.translationInView(view)
-        let location = sender.locationInView(view)
         let velocity = sender.velocityInView(view)
         
         if sender.state == UIGestureRecognizerState.Began {
             initialCenter = contentView.center
-            
         } else if sender.state == UIGestureRecognizerState.Changed{
             contentView.center = CGPoint(x: translation.x + initialCenter.x, y:initialCenter.y)
             if velocity.x > 0 {
                 self.contentView.center = self.view.center
             }
-            
         } else if sender.state == UIGestureRecognizerState.Ended{
-            
-                if velocity.x < 0 {
-                    UIView.animateWithDuration(0.3, animations: { () -> Void in
-                    self.contentView.center = self.view.center
-                        })
-                    
-                } else{
-                    self.openMenu()
-                }
-
-            
+            if velocity.x < 0 {
+                self.closeMenu()
+            } else{
+                self.openMenu()
+            }
         }
-        
+    }
+    
+    func closeMenu() {
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.contentView.center = self.view.center
+        })
     }
     
     func openMenu() {
         UIView.animateWithDuration(0.3, animations: { () -> Void in
-            
             self.contentView.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
-            
         })
     }
-    
-//
-//    @IBAction func onHamburgerPress(sender: AnyObject) {
-//        UIView.animateWithDuration(0.3, animations: { () -> Void in
-//            
-//                self.contentView.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
-//                
-//            
-//        })
-//    }
-    
     
     /*
     // MARK: - Navigation

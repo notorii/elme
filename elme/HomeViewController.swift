@@ -11,6 +11,9 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var newGoalTransition: NewGoalTransition!
+    
+    var hamburgerViewController: HamburgerViewController!
+    var isMenuOpen = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +35,13 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onHamburgerTap(sender: AnyObject) {
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
-            self.view.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
-        })
+        if (isMenuOpen == false) {
+            hamburgerViewController.openMenu()
+            isMenuOpen = true
+        } else {
+            hamburgerViewController.closeMenu()
+            isMenuOpen = false
+        }
     }
     
     /*
