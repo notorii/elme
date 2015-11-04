@@ -12,6 +12,7 @@ class HamburgerViewController: UIViewController {
 
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var hamburgerButtonHack: UIButton!
     
     var initialCenter: CGPoint!
     
@@ -27,7 +28,7 @@ class HamburgerViewController: UIViewController {
         
         menuViewController = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
         
-        homeViewController = storyboard.instantiateViewControllerWithIdentifier("NextStepViewViewController")
+        homeViewController = storyboard.instantiateViewControllerWithIdentifier("questionNavigationController")
 
         // Do any additional setup after loading the view.
         
@@ -74,6 +75,15 @@ class HamburgerViewController: UIViewController {
             
         }
     }
+//
+//    @IBAction func onHamburgerPress(sender: AnyObject) {
+//        UIView.animateWithDuration(0.3, animations: { () -> Void in
+//            
+//                self.contentView.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
+//                
+//            
+//        })
+//    }
     
     
     /*
