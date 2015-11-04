@@ -21,6 +21,8 @@ class NextStepViewViewController: UIViewController {
     @IBOutlet weak var navBarView: UIImageView!
     @IBOutlet weak var hamburgerButton: UIButton!
     
+    var hamburgerViewController: HamburgerViewController!
+    
     var newGoalTransition: NewGoalTransition!
     var counter = 0
     
@@ -48,9 +50,7 @@ class NextStepViewViewController: UIViewController {
     
     @IBAction func onMenuTap(sender: AnyObject) {
         print("tapped the hamburgs")
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
-            self.view.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
-        })
+        hamburgerViewController.openMenu()
     }
     
     @IBAction func onRightChevronTap(sender: AnyObject) {
