@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class HamburgerViewController: UIViewController {
 
@@ -16,8 +17,9 @@ class HamburgerViewController: UIViewController {
     
     var initialCenter: CGPoint!
     
-    var menuViewController: UIViewController!
-    var homeViewController: UIViewController!
+    var menuVC: UIViewController!
+    var nextStepHomeVC: UIViewController!
+    var newGoalVC: UIViewController!
     
    // viewControllers = [homeViewController, menuViewController]
     
@@ -25,19 +27,38 @@ class HamburgerViewController: UIViewController {
         super.viewDidLoad()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let user = PFUser.currentUser()
         
-        menuViewController = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
+        menuVC = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
+        nextStepHomeVC = storyboard.instantiateViewControllerWithIdentifier("NextStepHome")
+        newGoalVC = storyboard.instantiateViewControllerWithIdentifier("NewGoalHome")
         
-        homeViewController = storyboard.instantiateViewControllerWithIdentifier("questionNavigationController")
-
-        // Do any additional setup after loading the view.
+        // this gets all the user's goal + any goals with global read/write permissions. technically there shouldn't be any goals with global read/write permissions...
+        let goalQuery = PFQuery(className:"Goal")
         
-        homeViewController.view.frame = contentView.frame
-        contentView.addSubview(homeViewController.view)
+        goalQuery.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) goals.")
+                
+                // if user has created a goal show next step home, otherwise show new goal home
+                if (objects!.count > 0) {
+                    self.nextStepHomeVC.view.frame = self.contentView.frame
+                    self.contentView.addSubview(self.nextStepHomeVC.view)
+                } else {
+                    self.newGoalVC.view.frame = self.contentView.frame
+                    self.contentView.addSubview(self.newGoalVC.view)
+                }
+                
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
         
-        menuViewController.view.frame = menuView.frame
-        menuView.addSubview(menuViewController.view)
-        
+        menuVC.view.frame = menuView.frame
+        menuView.addSubview(menuVC.view)
     }
 
     override func didReceiveMemoryWarning() {

@@ -31,6 +31,12 @@ class HomeViewController: UIViewController {
         newGoalTransition.duration = 0.01
     }
     
+    @IBAction func onHamburgerTap(sender: AnyObject) {
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.view.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
+        })
+    }
+    
     /*
     // MARK: - Navigation
 
