@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize Parse.
         Parse.setApplicationId("EQFjHyZBZbMYYlgDL7WjSSBH8Q8XU55LOWbcqZjn",
             clientKey: "FrzBgGqH3N3MePKV5HGrcw6ZCm6hBf4WM7xpvc3z")
+        
+        // user data only accessible by current user
+        PFACL.setDefaultACL(PFACL(), withAccessForCurrentUser:true)
     
         return true
     }

@@ -22,6 +22,8 @@ class StepData {
         return Static.instance!
     }
     
-    var steps = []
+    var fearDescription : String!
+    var achievementDescription : String!
+    var steps = [NSMutableDictionary]()
     var stepIndex : Int!
 }
