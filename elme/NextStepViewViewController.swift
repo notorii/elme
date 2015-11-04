@@ -66,7 +66,7 @@ class NextStepViewViewController: UIViewController {
         case .Changed:
             print("changed press")
 
-            if counter > 20 {
+            if counter > 22 {
                 performSegueWithIdentifier("CompleteQuestionStep", sender: self)
                 delay(1) {
                     self.testExpand.transform = CGAffineTransformMakeScale(1, 1)
@@ -83,15 +83,14 @@ class NextStepViewViewController: UIViewController {
                 
             }
 
-
         case .Ended:
             print("end press")
-                        default: ()
-                        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: { () -> Void in
+                        UIView.animateWithDuration(0.7, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: { () -> Void in
                             self.testExpand.transform = CGAffineTransformMakeScale(1, 1)
                             
                             }, completion: nil)
                         counter = 0
+        default: ()
         }
     }
    
