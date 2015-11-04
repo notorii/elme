@@ -55,7 +55,8 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     //back press
     @IBAction func onBackPress(sender: UIButton) {
-     navigationController!.popViewControllerAnimated(true)
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     //list press action -> navigate to past goals view controller
