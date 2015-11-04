@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5sJ-Jl-1nF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vVU-Tw-PjW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
@@ -68,7 +68,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="28EE1677-CBFA-4AF0-AEA6-1BEF0E7E92E0" id="faf-Yc-QO9">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="69B440FB-B35E-4A6E-9AE6-E84EB863A677" id="faf-Yc-QO9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -1862,15 +1862,6 @@
                                 <color key="textColor" red="0.22352941176470589" green="0.13725490196078433" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="apG-Pp-nlp">
-                                <rect key="frame" x="151" y="298" width="72" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <state key="normal" image="checkmark_step_complete"/>
-                                <connections>
-                                    <segue destination="HhJ-yh-X0b" kind="modal" identifier="CompleteQuestionStep" id="mcV-Tk-laD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JW6-UO-Rir">
                                 <rect key="frame" x="323" y="4.5" width="52" height="50.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1889,14 +1880,19 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="HWT-h1-4uD">
-                                <rect key="frame" x="131" y="277" width="113" height="113"/>
+                                <rect key="frame" x="135" y="282" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.037066020669999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="uLB-B1-7Sf" appends="YES" id="jXc-K9-Uzu"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ffm-h6-f4Q" appends="YES" id="UL0-TH-y4R"/>
                                 </connections>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="check" id="UQR-ty-lVG">
+                                <rect key="frame" x="172" y="320" width="31" height="28"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                             <view contentMode="scaleToFill" id="82I-VA-9gV">
                                 <rect key="frame" x="0.0" y="65" width="375" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1923,15 +1919,14 @@
                     <navigationItem key="navigationItem" id="Sor-7V-fVp"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="checkmarkButton" destination="apG-Pp-nlp" id="Pq3-1p-r1A"/>
                         <outlet property="dateLabel" destination="V4t-ax-SOW" id="e7T-xt-nRo"/>
                         <outlet property="hamburgerButton" destination="ntb-HA-aS3" id="RUE-0g-T5o"/>
                         <outlet property="navBarView" destination="Mxk-ld-Wmo" id="xCi-el-0Cb"/>
                         <outlet property="navLabel" destination="1Bb-vE-eam" id="ovo-fX-VRm"/>
-                        <outlet property="onCheckmarkTap" destination="apG-Pp-nlp" id="w2o-dJ-8Ez"/>
                         <outlet property="stepLabel" destination="chI-qz-P7e" id="fbw-2r-DMi"/>
                         <outlet property="stepView" destination="82I-VA-9gV" id="XDm-of-Gcl"/>
                         <outlet property="testExpand" destination="HWT-h1-4uD" id="95r-M6-aeM"/>
+                        <segue destination="HhJ-yh-X0b" kind="modal" identifier="CompleteQuestionStep" id="q1Z-Od-9AM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m72-bQ-edW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1940,6 +1935,11 @@
                         <action selector="onLongPress:" destination="Gss-5Q-TJW" id="xN9-I6-rvB"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="Ffm-h6-f4Q">
+                    <connections>
+                        <action selector="onTap:" destination="Gss-5Q-TJW" id="DCt-mh-zMi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1800.5" y="1987.5"/>
         </scene>
@@ -1984,7 +1984,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="28EE1677-CBFA-4AF0-AEA6-1BEF0E7E92E0" width="375" height="667">
+        <image name="69B440FB-B35E-4A6E-9AE6-E84EB863A677" width="375" height="667">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -18737,8 +18737,8 @@ AA9TKQAPUy4AAAAAAAAEAQAAAAAAAAA/AAAAAAAAAAAAAAAAAA9TMA
         <image name="LoginFields" width="375" height="109"/>
         <image name="Menu_icon" width="18" height="12"/>
         <image name="Save_Button" width="355" height="55"/>
+        <image name="check" width="31" height="28"/>
         <image name="checkmark" width="22" height="22"/>
-        <image name="checkmark_step_complete" width="72" height="72"/>
         <image name="chevron" width="8" height="12"/>
         <image name="listIcon" width="20" height="12"/>
         <image name="nav bar" width="375" height="55"/>
