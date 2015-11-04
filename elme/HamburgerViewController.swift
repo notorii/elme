@@ -18,7 +18,7 @@ class HamburgerViewController: UIViewController {
     var initialCenter: CGPoint!
     
     var menuVC: UIViewController!
-    var nextStepHomeVC: UIViewController!
+    var nextStepHomeVC: UINavigationController!
     var newGoalVC: UIViewController!
     
    // viewControllers = [homeViewController, menuViewController]
@@ -30,8 +30,11 @@ class HamburgerViewController: UIViewController {
         let user = PFUser.currentUser()
         
         menuVC = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
-        nextStepHomeVC = storyboard.instantiateViewControllerWithIdentifier("NextStepHome")
+        nextStepHomeVC = storyboard.instantiateViewControllerWithIdentifier("NextStepHome") as! UINavigationController
         newGoalVC = storyboard.instantiateViewControllerWithIdentifier("NewGoalHome")
+        
+        let nextStepHomeTopVC = nextStepHomeVC.topViewController as! NextStepViewViewController
+        nextStepHomeTopVC.hamburgerViewController = self
         
         // this gets all the user's goal + any goals with global read/write permissions. technically there shouldn't be any goals with global read/write permissions...
         let goalQuery = PFQuery(className:"Goal")
@@ -82,20 +85,29 @@ class HamburgerViewController: UIViewController {
             }
             
         } else if sender.state == UIGestureRecognizerState.Ended{
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            
                 if velocity.x < 0 {
+                    UIView.animateWithDuration(0.3, animations: { () -> Void in
                     self.contentView.center = self.view.center
+                        })
                     
                 } else{
-                    self.contentView.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
-                    
+                    self.openMenu()
                 }
 
-            })
-            
             
         }
+        
     }
+    
+    func openMenu() {
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            
+            self.contentView.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
+            
+        })
+    }
+    
 //
 //    @IBAction func onHamburgerPress(sender: AnyObject) {
 //        UIView.animateWithDuration(0.3, animations: { () -> Void in
