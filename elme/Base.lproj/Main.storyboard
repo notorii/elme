@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5sJ-Jl-1nF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vVU-Tw-PjW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="DB4A3DB2-7326-4C6E-942D-F5ABD73E74DC" id="faf-Yc-QO9">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="8B8757FB-A763-41AD-9FA2-A539A8ADB8C4" id="faf-Yc-QO9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -190,6 +190,15 @@
                                     </view>
                                 </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="anc-Ad-ddR">
+                                <rect key="frame" x="333" y="9" width="38" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="onClosePress:" destination="PZV-Jy-cd1" eventType="touchUpInside" id="7CH-YT-IHq"/>
+                                    <action selector="onClosePress:" destination="HhJ-yh-X0b" eventType="touchUpInside" id="sC4-8n-dJu"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j6d-6s-eEU">
                                 <rect key="frame" x="9" y="603" width="356" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -213,6 +222,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="closeButton" destination="anc-Ad-ddR" id="avd-Gc-rfE"/>
                         <outlet property="completeStepButton" destination="j6d-6s-eEU" id="9fV-y4-txR"/>
                         <outlet property="dateLabel" destination="Mes-f6-ACJ" id="IIe-iE-3fU"/>
                         <outlet property="distressLevelLabel" destination="3zY-1F-At9" id="zLb-pF-GlR"/>
@@ -1871,28 +1881,13 @@
                                 <color key="textColor" red="0.22352941176470589" green="0.13725490196078433" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask a question in class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nPT-FV-1Y5">
-                                <rect key="frame" x="65" y="110" width="246" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                <color key="textColor" red="0.22352941179999999" green="0.13725490200000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday, October 19, 2:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1CR-4h-lGn">
-                                <rect key="frame" x="90" y="142" width="195" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                <color key="textColor" red="0.52156862745098043" green="0.46666666666666667" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="apG-Pp-nlp">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="apG-Pp-nlp">
                                 <rect key="frame" x="151" y="298" width="72" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" image="checkmark_step_complete"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="bu2-FG-K0Z" appends="YES" id="v2f-A2-1Zz"/>
-                                    <segue destination="HhJ-yh-X0b" kind="modal" id="mcV-Tk-laD"/>
+                                    <segue destination="HhJ-yh-X0b" kind="modal" identifier="CompleteQuestionStep" id="mcV-Tk-laD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JW6-UO-Rir">
@@ -1912,24 +1907,56 @@
                                     <action selector="onMenuTap:" destination="Gss-5Q-TJW" eventType="touchUpInside" id="GB6-AQ-Z4T"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="82I-VA-9gV">
+                                <rect key="frame" x="0.0" y="65" width="375" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday, October 19, 9:00PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V4t-ax-SOW">
+                                        <rect key="frame" x="74" y="86" width="224" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <color key="textColor" red="0.28627450980000002" green="0.1843137255" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask a question in class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="chI-qz-P7e">
+                                        <rect key="frame" x="20" y="27" width="345" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                        <color key="textColor" red="0.28627450980000002" green="0.1843137255" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" id="HWT-h1-4uD">
+                                <rect key="frame" x="151" y="298" width="76" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.037066020669999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uLB-B1-7Sf" appends="YES" id="jXc-K9-Uzu"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.93725490196078431" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Sor-7V-fVp"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="checkmarkButton" destination="apG-Pp-nlp" id="Pq3-1p-r1A"/>
+                        <outlet property="dateLabel" destination="V4t-ax-SOW" id="e7T-xt-nRo"/>
                         <outlet property="hamburgerButton" destination="ntb-HA-aS3" id="RUE-0g-T5o"/>
                         <outlet property="navBarView" destination="Mxk-ld-Wmo" id="xCi-el-0Cb"/>
                         <outlet property="navLabel" destination="1Bb-vE-eam" id="ovo-fX-VRm"/>
                         <outlet property="onCheckmarkTap" destination="apG-Pp-nlp" id="w2o-dJ-8Ez"/>
-                        <outlet property="stepLabel" destination="nPT-FV-1Y5" id="G34-z7-ZEb"/>
-                        <outlet property="timeDateLabel" destination="1CR-4h-lGn" id="egi-vV-jcS"/>
+                        <outlet property="stepLabel" destination="chI-qz-P7e" id="fbw-2r-DMi"/>
+                        <outlet property="stepView" destination="82I-VA-9gV" id="XDm-of-Gcl"/>
+                        <outlet property="testExpand" destination="HWT-h1-4uD" id="95r-M6-aeM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m72-bQ-edW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="bu2-FG-K0Z">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="uLB-B1-7Sf">
                     <connections>
-                        <action selector="onLongPress:" destination="Gss-5Q-TJW" id="sfh-tA-SYv"/>
+                        <action selector="onLongPress:" destination="Gss-5Q-TJW" id="xN9-I6-rvB"/>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
@@ -1976,8 +2003,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Chevron_right" width="8" height="12"/>
-        <image name="DB4A3DB2-7326-4C6E-942D-F5ABD73E74DC" width="375" height="667">
+        <image name="8B8757FB-A763-41AD-9FA2-A539A8ADB8C4" width="375" height="667">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -18725,6 +18751,7 @@ AA9SywAPUs8AD1LWAA9S3gAPUusAD1LwAA9S8gAPUvQAD1L5AA9TAQAPUwQAD1MJAA9TEQAPUxQAD1Mm
 AA9TKQAPUy4AAAAAAAAEAQAAAAAAAAA/AAAAAAAAAAAAAAAAAA9TMA
 </mutableData>
         </image>
+        <image name="Chevron_right" width="8" height="12"/>
         <image name="Edit_profile_fields" width="375" height="163"/>
         <image name="LoginFields" width="375" height="109"/>
         <image name="Menu_icon" width="18" height="12"/>

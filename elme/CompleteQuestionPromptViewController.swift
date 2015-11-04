@@ -13,6 +13,7 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
     @IBOutlet weak var interactiveView: UIView!
     var interactiveViewOriginalCenter: CGPoint!
     
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var stepView: UIView!
     @IBOutlet weak var stepLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -35,6 +36,7 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
         
         view.backgroundColor = lightBackgroundColor
         
+        closeButton.tintColor = mediumTextColor
     
         
         stepLabel.textColor = darkTextColor
@@ -183,6 +185,10 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
         print("complete pressed", terminator: "")
         //RUN NEXT STEPS HERE
         
+    }
+    @IBAction func onClosePress(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+        print("closed press")
     }
 
     /*
