@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="8B8757FB-A763-41AD-9FA2-A539A8ADB8C4" id="faf-Yc-QO9">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="373CCFF3-9B40-4D4D-9EEF-D2DF5DDF76A5" id="faf-Yc-QO9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -1954,7 +1954,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m72-bQ-edW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="uLB-B1-7Sf">
+                <pongPressGestureRecognizer delaysTouchesEnded="NO" allowableMovement="15" minimumPressDuration="0.29999999999999999" id="uLB-B1-7Sf">
                     <connections>
                         <action selector="onLongPress:" destination="Gss-5Q-TJW" id="xN9-I6-rvB"/>
                     </connections>
@@ -2003,7 +2003,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8B8757FB-A763-41AD-9FA2-A539A8ADB8C4" width="375" height="667">
+        <image name="373CCFF3-9B40-4D4D-9EEF-D2DF5DDF76A5" width="375" height="667">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
