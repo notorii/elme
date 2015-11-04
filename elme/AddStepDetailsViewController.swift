@@ -139,6 +139,8 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
         // update dictionary with step detail values specified in presenting view controller
         let currentStep = self.stepData.steps[self.stepData.stepIndex]
         currentStep.setObject(distressSlider.value, forKey: "distress_expected")
+        currentStep.setObject(rememberTextView.text, forKey: "remember")
+        currentStep.setObject(dateTextField.text!, forKey: "reminder_date")
         
         // If we're on the last step detail screen, open the 'next step' home screen
         if (self.stepData.stepIndex == (self.stepData.steps.count-1)) {
@@ -148,6 +150,7 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
             goal["user"] = user
             goal["fear_description"] = self.stepData.fearDescription
             goal["achievement_description"] = self.stepData.achievementDescription
+            //goal.ACL = PFACL(user: user!)
             goal.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if (success) {
                     print("saved goal")
@@ -162,6 +165,8 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
                 step["goal"] = goal
                 step["description"] = stepDict["description"]
                 step["distress_expected"] = stepDict["distress_expected"]
+                step["remember"] = stepDict["remember"]
+                step["reminder_date"] = stepDict["reminder_date"]
                 step.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                     if (success) {
                         print("saved step")
