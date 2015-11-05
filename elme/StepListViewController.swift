@@ -19,7 +19,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     let CellIdentifier = "StepListCell"
     
     var steps: [String]!
-    var checked: [Bool]!
+    var checked = [Bool]()
     var goal: String!
     
     override func viewDidLoad() {
@@ -57,9 +57,21 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
                 query2.whereKey("goal", equalTo: goal)
                 query2.findObjectsInBackgroundWithBlock {
                     (objects: [PFObject]?, error: NSError?) -> Void in
+                    var counter = 0
                     for object in objects! {
                         let stepsListItem = object["description"] as! String
                         self.steps.append(stepsListItem)
+                        print(counter)
+                        
+                        if (object.objectForKey("completed_at") != nil) {
+                            print("completed_at key exists for \(object["objectId"])")
+                            self.checked.append(true)
+                        } else {
+                            print("completed_at key DOES NOT exist for \(object["objectId"])")
+                            self.checked.append(false)
+                        }
+                        
+                        counter++
                     }
                     self.tableView.reloadData()
                 }
@@ -67,9 +79,19 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
             
         }
     
-        
-
-
+//        var query3 = PFQuery(className: "Step")
+//        query3.orderByDescending("completedAt")
+//
+//        query3.findObjectsInBackgroundWithBlock {
+//            (steps: [PFObject]?, error: NSError?) -> Void in
+//            for step in steps! {
+//                if step["completedAt"] != nil {
+//                    checked[indexRow] = true
+//                } else {
+//                    checked[indexRow] = false
+//                }
+//            }
+//        }
 
         
     }
