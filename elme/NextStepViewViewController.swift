@@ -32,6 +32,8 @@ class NextStepViewViewController: UIViewController {
     
     var chevronTapped: Bool!
     
+    var completeQuestionVC: CompleteQuestionPromptViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,16 +51,25 @@ class NextStepViewViewController: UIViewController {
         testExpand.layer.cornerRadius = testExpand.frame.size.width/2
         testExpand.clipsToBounds = true
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        completeQuestionVC = storyboard.instantiateViewControllerWithIdentifier("CompleteQuestionVC") as! CompleteQuestionPromptViewController
+        completeQuestionVC.nextStepVC = self
+        
         setTitleAndDate()
     }
     
     @IBAction func unwindStepCompletion(segue: UIStoryboardSegue) {
+        print("[NextStepViewViewController] unwindStepCompletion executed, running setTitleAndDate()...")
         setTitleAndDate()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func testFunction() -> String {
+        return "[NextStepViewViewController] testFunction() executed"
     }
     
     func setTitleAndDate() {

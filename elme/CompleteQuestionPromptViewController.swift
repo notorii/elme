@@ -31,6 +31,8 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
     @IBOutlet weak var completeStepButton: UIButton!
     @IBOutlet weak var distressSlider: GradientSlider!
     
+    var nextStepVC: NextStepViewViewController!
+    
     var stepForCompletion: PFObject!
     
     override func viewDidLoad() {
@@ -40,7 +42,6 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
         view.backgroundColor = lightBackgroundColor
         
         closeButton.tintColor = mediumTextColor
-    
         
         stepLabel.textColor = darkTextColor
         dateLabel.textColor = darkSecondaryTextColor
@@ -202,18 +203,18 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
         stepForCompletion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if (success) {
                 print("completed goal saved")
+                self.close()
                 // The object has been saved.
             } else {
                 print("uh oh - \(error!.description)")
                 // There was a problem, check error.description
             }
         }
-        
-        close()
     }
     
     @IBAction func onClosePress(sender: AnyObject) {
         print("closed press")
+        print(nextStepVC.testFunction())
         close()
     }
     
