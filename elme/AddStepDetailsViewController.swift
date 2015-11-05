@@ -170,7 +170,14 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
                         step["description"] = stepDict["description"]
                         step["distress_expected"] = stepDict["distress_expected"]
                         step["remember"] = stepDict["remember"]
-                        step["reminder_date"] = stepDict["reminder_date"]
+                        
+                        // save as actual date in parse by casting to NSDate
+                        let dateFormatter = NSDateFormatter()
+                        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+                        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+                        let date = dateFormatter.dateFromString(stepDict["reminder_date"] as! String)
+                        step["reminder_date"] = date
+                        
                         step.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                             if (success) {
                                 print("saved step")

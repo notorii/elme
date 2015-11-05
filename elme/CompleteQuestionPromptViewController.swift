@@ -76,7 +76,11 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
     
     func setTitleAndDate() {
         stepLabel.text = stepForCompletion.objectForKey("description") as? String
-        dateLabel.text = stepForCompletion.objectForKey("reminder_date") as? String
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        dateLabel.text = dateFormatter.stringFromDate(stepForCompletion.objectForKey("reminder_date") as! NSDate)
     }
 
     override func didReceiveMemoryWarning() {

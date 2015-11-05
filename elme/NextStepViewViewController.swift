@@ -78,7 +78,10 @@ class NextStepViewViewController: UIViewController {
                     print("least recent (by reminder date) incomplete step retrieved: \(step!.objectId)")
                     
                     self.stepLabel.text = step!["description"] as? String
-                    self.dateLabel.text = step!["reminder_date"] as? String
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+                    dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+                    self.dateLabel.text = dateFormatter.stringFromDate(step!["reminder_date"] as! NSDate)
                     
                     self.stepForCompletion = step!
                 })
