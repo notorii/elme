@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class StepListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -19,13 +20,13 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var steps: [String]!
     var checked: [Bool]!
+    var goal: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        steps = ["One","Two","Ask a question in class","Four"]
+        steps = []
 
         //setting up cell check mark stuff
-        checked = [Bool](count: steps.count, repeatedValue: false)
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         //setting styles
@@ -43,8 +44,35 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.estimatedRowHeight = 4
         tableView.separatorColor = borderColor
         
-        checked[0] = true
         
+        var query1 = PFQuery(className: "Goal")
+        query1.orderByAscending("createdAt")
+        query1.limit = 1
+        print(query1)
+
+        query1.findObjectsInBackgroundWithBlock {
+            (goals: [PFObject]?, error: NSError?) -> Void in
+            for goal in goals! {
+                print("new goal")
+                var query2 = PFQuery(className:"Step")
+                query2.orderByAscending("createdAt")
+                query2.findObjectsInBackgroundWithBlock {
+                    (objects: [PFObject]?, error: NSError?) -> Void in
+                    
+                    for object in objects! {
+                        let stepsListItem = object["description"] as! String
+                        self.steps.append(stepsListItem)
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+            
+        }
+    
+        
+
+
+
         
     }
 
@@ -101,14 +129,19 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.borderView.layer.borderColor = borderColor.CGColor
         cell.borderView.layer.borderWidth = 1
         
+        checked = [Bool](count: steps.count, repeatedValue: false)
+
+        
         //set up check marks on completed tasks
-        if checked[indexPath.row] {
-            cell.checkmark.hidden = false
-            cell.stepNumberLabel.hidden = true
-            cell.backgroundColor = darkBackgroundColor
-        } else {
-            cell.checkmark.hidden = true
-            cell.stepNumberLabel.hidden = false
+        if checked.count > 0 {
+            if checked[indexPath.row] {
+                cell.checkmark.hidden = false
+                cell.stepNumberLabel.hidden = true
+                cell.backgroundColor = darkBackgroundColor
+            } else {
+                cell.checkmark.hidden = true
+                cell.stepNumberLabel.hidden = false
+            }
         }
         
         //adjusting for border on last item in list
@@ -118,7 +151,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //setting proper numbering to left of steps
         cell.stepTextLabel.text = steps[indexPath.row]
-        cell.stepNumberLabel.text = "1"
+        cell.stepNumberLabel.text = "\(indexPath.row + 1)"
         
         return cell
     }

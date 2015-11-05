@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -18,7 +19,7 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pastGoals = ["Eat a tomato", "Ride in an elevator", "Pet a dog"]
+        pastGoals = []
         
         view.backgroundColor = darkBackgroundColor
         tableView.backgroundColor = darkBackgroundColor
@@ -31,6 +32,23 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 4
+        
+        var query = PFQuery(className:"Goal")
+        query.orderByDescending("createdAt")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            print(objects)
+            
+            for object in objects! {
+                print(object["fear_description"])
+                let pastGoalTest = object["fear_description"] as! String
+                print(pastGoalTest)
+                self.pastGoals.append(pastGoalTest)
+                print(self.pastGoals)
+            }
+            self.tableView.reloadData()
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +61,8 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pastGoals.count
+        print("pastgoals = \(pastGoals.count)")
+        return pastGoals.count - 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -55,11 +74,11 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
         cell.borderView.layer.borderColor = borderColor.CGColor
         cell.borderView.layer.borderWidth = 1
         
-        if indexPath.row == pastGoals.count - 1 {
+        if indexPath.row == pastGoals.count - 2 {
             cell.borderView.frame.size.height = 55
         }
         
-        cell.pastGoalLabel.text = pastGoals[indexPath.row]
+        cell.pastGoalLabel.text = pastGoals[indexPath.row + 1]
         
         return cell
     }
