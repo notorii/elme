@@ -27,7 +27,6 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         steps = []
 
         //setting up cell check mark stuff
-        checked = [Bool](count: steps.count, repeatedValue: false)
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         //setting styles
@@ -45,13 +44,12 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.estimatedRowHeight = 4
         tableView.separatorColor = borderColor
         
-//        checked[0] = true
-        
         
         var query1 = PFQuery(className: "Goal")
         query1.orderByAscending("createdAt")
         query1.limit = 1
         print(query1)
+
         query1.findObjectsInBackgroundWithBlock {
             (goals: [PFObject]?, error: NSError?) -> Void in
             for goal in goals! {
@@ -130,6 +128,9 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.stepNumberLabel.textColor = darkTextColor
         cell.borderView.layer.borderColor = borderColor.CGColor
         cell.borderView.layer.borderWidth = 1
+        
+        checked = [Bool](count: steps.count, repeatedValue: false)
+
         
         //set up check marks on completed tasks
         if checked.count > 0 {
