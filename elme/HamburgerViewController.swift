@@ -47,7 +47,7 @@ class HamburgerViewController: UIViewController {
                 print("Successfully retrieved \(objects!.count) goals.")
                 
                 // if user has created a goal show next step home, otherwise show new goal home
-                if (objects!.count < 0) {
+                if (objects!.count > 0) {
                     self.nextStepHomeVC.view.frame = self.contentView.frame
                     self.contentView.addSubview(self.nextStepHomeVC.view)
                 } else {
