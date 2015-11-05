@@ -52,8 +52,15 @@ class NextStepViewViewController: UIViewController {
         setTitleAndDate()
     }
     
+    /* This is called when CompleteQuestionPromptViewController exits. It's called immediately when
+     * the 'Complete' button is pressed, and is therefore executed before Parse has a chance to save
+     * the completed goal/step. Therefore add a 1 second delay, giving it a chance to save. This is 
+     * very brittle and should be executed as a callback on the function that saves data to Parse. TODO
+     */
     @IBAction func unwindStepCompletion(segue: UIStoryboardSegue) {
-        setTitleAndDate()
+        delay(1) {
+            self.setTitleAndDate()
+        }
     }
 
     override func didReceiveMemoryWarning() {
