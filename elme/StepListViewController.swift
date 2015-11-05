@@ -24,7 +24,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        steps = ["One","Two","Ask a question in class","Four"]
+        steps = []
 
         //setting up cell check mark stuff
         checked = [Bool](count: steps.count, repeatedValue: false)
@@ -45,12 +45,9 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.estimatedRowHeight = 4
         tableView.separatorColor = borderColor
         
-        checked[0] = true
+//        checked[0] = true
         
-//        var returnedGoal = PFObject
         
-
-//
         var query1 = PFQuery(className: "Goal")
         query1.orderByAscending("createdAt")
         query1.limit = 1
@@ -63,12 +60,12 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
                 query2.orderByAscending("createdAt")
                 query2.findObjectsInBackgroundWithBlock {
                     (objects: [PFObject]?, error: NSError?) -> Void in
-                    print(objects)
                     
                     for object in objects! {
-                        print(object["description"])
+                        let stepsListItem = object["description"] as! String
+                        self.steps.append(stepsListItem)
                     }
-                    
+                    self.tableView.reloadData()
                 }
             }
             
@@ -135,13 +132,15 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.borderView.layer.borderWidth = 1
         
         //set up check marks on completed tasks
-        if checked[indexPath.row] {
-            cell.checkmark.hidden = false
-            cell.stepNumberLabel.hidden = true
-            cell.backgroundColor = darkBackgroundColor
-        } else {
-            cell.checkmark.hidden = true
-            cell.stepNumberLabel.hidden = false
+        if checked.count > 0 {
+            if checked[indexPath.row] {
+                cell.checkmark.hidden = false
+                cell.stepNumberLabel.hidden = true
+                cell.backgroundColor = darkBackgroundColor
+            } else {
+                cell.checkmark.hidden = true
+                cell.stepNumberLabel.hidden = false
+            }
         }
         
         //adjusting for border on last item in list
