@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class Item1ViewController: UIViewController {
 
@@ -82,8 +83,7 @@ class Item1ViewController: UIViewController {
         
         creationDistressLevel = 0
         reflectionDistressLevel = 9
-        setUpActualDistressLevel()
-        setUpExpectedDistressLevel()
+        setTitleAndDate()
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,75 +95,110 @@ class Item1ViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func setTitleAndDate() {
+        
+        let goalQuery = PFQuery(className:"Goal")
+        goalQuery.orderByAscending("createdAt")
+        
+        // get most recent goal
+        goalQuery.getFirstObjectInBackgroundWithBlock { (goal: PFObject?, error: NSError?) -> Void in
+            if error == nil {
+                print("most recent goal retrieved: \(goal!.objectId)")
+                
+                let stepsQuery = PFQuery(className:"Step")
+                stepsQuery.whereKey("goal", equalTo: goal!)
+                stepsQuery.orderByAscending("reminder_date")
+                stepsQuery.whereKeyDoesNotExist("completion_date")
+                
+                stepsQuery.getFirstObjectInBackgroundWithBlock({ (step: PFObject?, error: NSError?) -> Void in
+                    print("least recent (by reminder date) incomplete step retrieved: \(step!.objectId)")
+                    
+                    self.titleTextField.text = step!["description"] as? String
+                    self.timeLabel.text = step!["reminder_date"] as? String
+                    self.thoughtsTextView.text = step!["remember"] as? String
+                    self.thoughtsTextView.textColor = darkTextColor
+                    self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16)
+                    self.creationDistressLevel = CGFloat((step!["distress_expected"] as? Int)!)
+                    self.setUpActualDistressLevel()
+                    self.setUpExpectedDistressLevel()
+                })
+                
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
+    }
+    
     func setUpActualDistressLevel() {
-        if reflectionDistressLevel == 0 {
+        if reflectionDistressLevel < 9 {
             actualMarkerView.frame.origin.x = 5
             actualBar.backgroundColor = scale0
-        } else if reflectionDistressLevel == 1 {
+        } else if reflectionDistressLevel >= 9 && reflectionDistressLevel < 18 {
             actualMarkerView.frame.origin.x = 35
             actualBar.backgroundColor = scale1
-        } else if reflectionDistressLevel == 2 {
+        } else if reflectionDistressLevel >= 18 && reflectionDistressLevel < 27 {
             actualMarkerView.frame.origin.x = 65
             actualBar.backgroundColor = scale2
-        } else if reflectionDistressLevel == 3 {
+        } else if reflectionDistressLevel >= 27 && reflectionDistressLevel < 36 {
             actualMarkerView.frame.origin.x = 95
             actualBar.backgroundColor = scale3
-        } else if reflectionDistressLevel == 4 {
+        } else if reflectionDistressLevel >= 36 && reflectionDistressLevel < 45 {
             actualMarkerView.frame.origin.x = 125
             actualBar.backgroundColor = scale4
-        } else if reflectionDistressLevel == 5 {
+        } else if reflectionDistressLevel >= 45 && reflectionDistressLevel < 54 {
             actualMarkerView.frame.origin.x = 155
             actualBar.backgroundColor = scale5
-        } else if reflectionDistressLevel == 6 {
+        } else if reflectionDistressLevel >= 54 && reflectionDistressLevel < 63 {
             actualMarkerView.frame.origin.x = 185
             actualBar.backgroundColor = scale6
-        } else if reflectionDistressLevel == 7 {
+        } else if reflectionDistressLevel >= 63 && reflectionDistressLevel < 72 {
             actualMarkerView.frame.origin.x = 215
             actualBar.backgroundColor = scale7
-        } else if reflectionDistressLevel == 8 {
+        } else if reflectionDistressLevel >= 72 && reflectionDistressLevel < 81 {
             actualMarkerView.frame.origin.x = 235
             actualBar.backgroundColor = scale8
-        } else if reflectionDistressLevel == 9 {
+        } else if reflectionDistressLevel >= 81 && reflectionDistressLevel < 90 {
             actualMarkerView.frame.origin.x = 265
             actualBar.backgroundColor = scale9
-        } else if reflectionDistressLevel == 10 {
+        } else if reflectionDistressLevel >= 90 {
             actualMarkerView.frame.origin.x = 295
             actualBar.backgroundColor = scale10
         }
     }
     
     func setUpExpectedDistressLevel() {
-        if creationDistressLevel == 0 {
+        if creationDistressLevel < 9 {
             expectedMarkerView.frame.origin.x = 5
             expectedBar.backgroundColor = scale0
-        } else if creationDistressLevel == 1 {
+        } else if creationDistressLevel >= 9 && creationDistressLevel < 18 {
             expectedMarkerView.frame.origin.x = 35
             expectedBar.backgroundColor = scale1
-        } else if creationDistressLevel == 2 {
+        } else if creationDistressLevel >= 18 && creationDistressLevel < 27 {
             expectedMarkerView.frame.origin.x = 65
             expectedBar.backgroundColor = scale2
-        } else if creationDistressLevel == 3 {
+        } else if creationDistressLevel >= 27 && creationDistressLevel < 36 {
             expectedMarkerView.frame.origin.x = 95
             expectedBar.backgroundColor = scale3
-        } else if creationDistressLevel == 4 {
+        } else if creationDistressLevel >= 36 && creationDistressLevel < 45 {
             expectedMarkerView.frame.origin.x = 125
             expectedBar.backgroundColor = scale4
-        } else if creationDistressLevel == 5 {
+        } else if creationDistressLevel >= 45 && creationDistressLevel < 54 {
             expectedMarkerView.frame.origin.x = 155
             expectedBar.backgroundColor = scale5
-        } else if creationDistressLevel == 6 {
+        } else if creationDistressLevel >= 54 && creationDistressLevel < 63 {
             expectedMarkerView.frame.origin.x = 185
             expectedBar.backgroundColor = scale6
-        } else if creationDistressLevel == 7 {
+        } else if creationDistressLevel >= 63 && creationDistressLevel < 72 {
             expectedMarkerView.frame.origin.x = 215
             expectedBar.backgroundColor = scale7
-        } else if creationDistressLevel == 8 {
+        } else if creationDistressLevel >= 72 && creationDistressLevel < 81 {
             expectedMarkerView.frame.origin.x = 235
             expectedBar.backgroundColor = scale8
-        } else if creationDistressLevel == 9 {
+        } else if creationDistressLevel >= 81 && creationDistressLevel < 90 {
             expectedMarkerView.frame.origin.x = 265
             expectedBar.backgroundColor = scale9
-        } else if creationDistressLevel == 10 {
+        } else if creationDistressLevel >= 90 {
             expectedMarkerView.frame.origin.x = 285
             expectedBar.backgroundColor = scale10
         }
