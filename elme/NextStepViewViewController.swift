@@ -52,7 +52,9 @@ class NextStepViewViewController: UIViewController {
         setTitleAndDate()
     }
     
-    
+    @IBAction func unwindStepCompletion(segue: UIStoryboardSegue) {
+        setTitleAndDate()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
