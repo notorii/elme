@@ -149,7 +149,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.borderView.layer.borderColor = borderColor.CGColor
         cell.borderView.layer.borderWidth = 1
         
-        checked = [Bool](count: steps.count, repeatedValue: false)
+//        checked = [Bool](count: steps.count, repeatedValue: false)
 
         
         //set up check marks on completed tasks
