@@ -30,6 +30,7 @@ let mediumSecondaryTextColor = UIColor(red:0.64, green:0.25, blue:0.09, alpha:0.
 let placeholderTextColor = UIColor(red:0.29, green:0.18, blue:0.14, alpha:0.3)
 
 let borderColor = UIColor(red:0.92, green:0.80, blue:0.69, alpha:1.0)
+let disabledBorderColor = UIColor(red: 245/255, green: 229/255, blue: 215/255, alpha: 1.0)
 
 
 //distressScale colors

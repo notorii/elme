@@ -41,11 +41,14 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         
         
         nextButton.backgroundColor = darkBackgroundColor
-        nextButton.layer.borderColor = borderColor.CGColor
         nextButton.layer.borderWidth = 1.0
+        nextButton.layer.borderColor = disabledBorderColor.CGColor
+        
         AddStepsView.layer.borderWidth = 1.0
         
+        
         steps = []
+        nextButton.enabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +78,8 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         if indexPath.row > 4 {
             print("greater than six")
         }
+        
+
         cell.stepNumberLabel.textColor = darkTextColor
         cell.backgroundColor = lightBackgroundColor
         cell.topBorder.backgroundColor = borderColor
@@ -95,6 +100,8 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         
         if cell.addStepTextField.text != "" {
             steps.append(cell.addStepTextField.text!)
+            nextButton.enabled = true
+            nextButton.layer.borderColor = borderColor.CGColor
         }
         
         cell.addStepTextField.resignFirstResponder()
