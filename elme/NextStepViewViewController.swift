@@ -28,6 +28,8 @@ class NextStepViewViewController: UIViewController {
     var newGoalTransition: NewGoalTransition!
     var counter = 0
     
+    var stepForCompletion: PFObject!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = darkBackgroundColor
@@ -40,8 +42,15 @@ class NextStepViewViewController: UIViewController {
         testExpand.layer.cornerRadius = testExpand.frame.size.width/2
         testExpand.clipsToBounds = true
         
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //
+        //hamburgerViewController = storyboard.instantiateViewControllerWithIdentifier("Hamburger") as! HamburgerViewController
+        //hamburgerViewController.nextStepViewViewController = self
+        
         setTitleAndDate()
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,27 +63,29 @@ class NextStepViewViewController: UIViewController {
         goalQuery.orderByDescending("createdAt")
         
         // get most recent goal
-//        goalQuery.getFirstObjectInBackgroundWithBlock { (goal: PFObject?, error: NSError?) -> Void in
-//            if error == nil {
-//                print("most recent goal retrieved: \(goal!.objectId)")
-//                
-//                let stepsQuery = PFQuery(className:"Step")
-//                stepsQuery.whereKey("goal", equalTo: goal!)
-//                stepsQuery.orderByAscending("reminder_date")
-//                stepsQuery.whereKeyDoesNotExist("completion_date")
-//                
-//                stepsQuery.getFirstObjectInBackgroundWithBlock({ (step: PFObject?, error: NSError?) -> Void in
-//                    print("least recent (by reminder date) incomplete step retrieved: \(step!.objectId)")
-//                    
-//                    self.stepLabel.text = step!["description"] as? String
-//                    self.dateLabel.text = step!["reminder_date"] as? String
-//                })
-//                
-//            } else {
-//                // Log details of the failure
-//                print("Error: \(error!) \(error!.userInfo)")
-//            }
-//        }
+        goalQuery.getFirstObjectInBackgroundWithBlock { (goal: PFObject?, error: NSError?) -> Void in
+            if error == nil {
+                print("most recent goal retrieved: \(goal!.objectId)")
+                
+                let stepsQuery = PFQuery(className:"Step")
+                stepsQuery.whereKey("goal", equalTo: goal!)
+                stepsQuery.orderByAscending("reminder_date")
+                stepsQuery.whereKeyDoesNotExist("completed_at")
+                
+                stepsQuery.getFirstObjectInBackgroundWithBlock({ (step: PFObject?, error: NSError?) -> Void in
+                    print("least recent (by reminder date) incomplete step retrieved: \(step!.objectId)")
+                    
+                    self.stepLabel.text = step!["description"] as? String
+                    self.dateLabel.text = step!["reminder_date"] as? String
+                    
+                    self.stepForCompletion = step!
+                })
+                
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
     }
     
 
@@ -134,11 +145,14 @@ class NextStepViewViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let destinationViewController = segue.destinationViewController
+        let destinationViewController = segue.destinationViewController as! CompleteQuestionPromptViewController
+        
+        // pass through the next step to CompleteQuestionPromptViewController
+        destinationViewController.stepForCompletion = stepForCompletion
+        
         newGoalTransition = NewGoalTransition()
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
         destinationViewController.transitioningDelegate = newGoalTransition
-        //destinationViewController.presentViewController(self, animated: true, completion: nil)
         newGoalTransition.duration = 0.01
     }
 

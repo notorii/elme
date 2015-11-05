@@ -31,7 +31,8 @@ class SignUp2ViewController: UIViewController {
         onAccountLogInButton.layer.borderWidth = 1
         onAccountLogInButton.layer.borderColor = borderColor.CGColor
         onAccountLogInButton.setTitleColor(mediumTextColor, forState: .Normal)
-        onAccountLogInButton.layer.cornerRadius = 4
+        onAccountLogInButton.layer.backgroundColor = buttonBackgroundColor.CGColor
+        
 
         // Do any additional setup after loading the view.
     }
