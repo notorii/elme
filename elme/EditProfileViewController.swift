@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class EditProfileViewController: UIViewController {
 
@@ -16,8 +17,34 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var onBackButton: UIButton!
     @IBOutlet weak var smokeScreen: UIView!
     
+    var email: [String]!
+    var name: [String]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let user = PFUser.currentUser()
+        let email = user!.username
+        emailField.text = email
+        
+        let name = user!["fullName"] as? String
+        nameField.text = name
+        
+        
+       /*
+        
+        var query = PFQuery(className:"email")
+        query.orderByAscending("createdAt")
+        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+            if error == nil && self.email != nil {
+                print(self.email)
+            } else {
+                print(error)
+        }
+        }
+        */
+        
 
         // Do any additional setup after loading the view.
     }
@@ -49,9 +76,10 @@ class EditProfileViewController: UIViewController {
             print("smoke", terminator: "")
             
             //DELAY
-            delay(2){
+            delay(1){
                 //self.performSegueWithIdentifier("editProfileSegue", sender: nil)
-                self.navigationController!.popViewControllerAnimated(true)
+               // self.navigationController!.popViewControllerAnimated(true)
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
 
