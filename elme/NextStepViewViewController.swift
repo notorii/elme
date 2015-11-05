@@ -30,6 +30,8 @@ class NextStepViewViewController: UIViewController {
     
     var stepForCompletion: PFObject!
     
+    var chevronTapped: Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = darkBackgroundColor
@@ -102,6 +104,7 @@ class NextStepViewViewController: UIViewController {
     }
     
     @IBAction func onRightChevronTap(sender: AnyObject) {
+        self.chevronTapped = true
     }
     
 
@@ -145,15 +148,16 @@ class NextStepViewViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let destinationViewController = segue.destinationViewController as! CompleteQuestionPromptViewController
-        
-        // pass through the next step to CompleteQuestionPromptViewController
-        destinationViewController.stepForCompletion = stepForCompletion
-        
-        newGoalTransition = NewGoalTransition()
-        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
-        destinationViewController.transitioningDelegate = newGoalTransition
-        newGoalTransition.duration = 0.01
+        if (chevronTapped != true) {
+            let destinationViewController = segue.destinationViewController as! CompleteQuestionPromptViewController
+            // pass through the next step to CompleteQuestionPromptViewController
+            destinationViewController.stepForCompletion = stepForCompletion
+            newGoalTransition = NewGoalTransition()
+            destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+            destinationViewController.transitioningDelegate = newGoalTransition
+            newGoalTransition.duration = 0.01
+            chevronTapped = false // reset, probably not even necessary
+        }
     }
 
     @IBAction func onTap(sender: UITapGestureRecognizer) {
