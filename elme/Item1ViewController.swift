@@ -114,7 +114,12 @@ class Item1ViewController: UIViewController {
                     print("least recent (by reminder date) incomplete step retrieved: \(step!.objectId)")
                     
                     self.titleTextField.text = step!["description"] as? String
-                    self.timeLabel.text = step!["reminder_date"] as? String
+                    
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+                    dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+                    self.timeLabel.text = dateFormatter.stringFromDate(step!["reminder_date"] as! NSDate)
+                    
                     self.thoughtsTextView.text = step!["remember"] as? String
                     self.thoughtsTextView.textColor = darkTextColor
                     self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16)
