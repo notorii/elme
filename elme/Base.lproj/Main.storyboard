@@ -172,6 +172,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onCompletePress:" destination="HhJ-yh-X0b" eventType="touchUpInside" id="ZfM-fN-Tjt"/>
+                                    <segue destination="fvX-jb-s47" kind="unwind" unwindAction="unwindStepCompletion:" id="kuP-hE-Cxn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -200,6 +201,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQz-cN-RKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fvX-jb-s47" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="L9S-QB-E6V">
                     <connections>
                         <action selector="onTap:" destination="HhJ-yh-X0b" id="flZ-fP-uAf"/>
