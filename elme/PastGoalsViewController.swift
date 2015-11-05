@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -18,7 +19,7 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pastGoals = ["Eat a tomato", "Ride in an elevator", "Pet a dog"]
+        pastGoals = []
         
         view.backgroundColor = darkBackgroundColor
         tableView.backgroundColor = darkBackgroundColor
@@ -31,6 +32,22 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 4
+        
+        var query = PFQuery(className:"Goal")
+        query.orderByAscending("createdAt")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            print(objects)
+            
+            for object in objects! {
+                print(object["fear_description"])
+                let pastGoalTest = object["fear_description"] as String
+                print(pastGoalTest)
+                //                pastGoals.append(pastGoalTest)
+            }
+            
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
