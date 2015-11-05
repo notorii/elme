@@ -20,6 +20,8 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var stepNumber: UILabel!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var rememberTextView: UITextView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var previousButton: UIButton!
     
     let stepData = StepData.sharedInstance
     let user = PFUser.currentUser()
@@ -40,6 +42,12 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
         
         distressSlider.thickness = 5.0
         distressSlider.thumbSize = 40.0
+        
+        nextButton.layer.borderWidth = 1.0
+        nextButton.layer.borderColor = borderColor.CGColor
+        
+        previousButton.layer.borderWidth = 1.0
+        previousButton.layer.borderColor = borderColor.CGColor
         
         containerView.layer.borderWidth = 1.0
         containerView.layer.borderColor = borderColor.CGColor

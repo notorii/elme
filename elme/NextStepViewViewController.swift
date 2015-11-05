@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class NextStepViewViewController: UIViewController {
 
@@ -38,12 +39,42 @@ class NextStepViewViewController: UIViewController {
         testExpand.layer.borderWidth = 1.0
         testExpand.layer.cornerRadius = testExpand.frame.size.width/2
         testExpand.clipsToBounds = true
-        // Do any additional setup after loading the view.
+        
+        setTitleAndDate()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setTitleAndDate() {
+        
+        let goalQuery = PFQuery(className:"Goal")
+        goalQuery.orderByDescending("createdAt")
+        
+        // get most recent goal
+        goalQuery.getFirstObjectInBackgroundWithBlock { (goal: PFObject?, error: NSError?) -> Void in
+            if error == nil {
+                print("most recent goal retrieved: \(goal!.objectId)")
+                
+                let stepsQuery = PFQuery(className:"Step")
+                stepsQuery.whereKey("goal", equalTo: goal!)
+                stepsQuery.orderByAscending("reminder_date")
+                stepsQuery.whereKeyDoesNotExist("completion_date")
+                
+                stepsQuery.getFirstObjectInBackgroundWithBlock({ (step: PFObject?, error: NSError?) -> Void in
+                    print("least recent (by reminder date) incomplete step retrieved: \(step!.objectId)")
+                    
+                    self.stepLabel.text = step!["description"] as? String
+                    self.dateLabel.text = step!["reminder_date"] as? String
+                })
+                
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
     }
     
 
