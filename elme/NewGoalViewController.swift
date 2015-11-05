@@ -88,6 +88,8 @@ class NewGoalViewController: UIViewController {
             self.addSteps.frame = CGRectMake(0, 0, self.view.frame.width - 20, self.view.frame.height - 20)
             self.addSteps.frame.origin = CGPoint(x: 10, y: 10)
             
+            
+            
             }) { (Bool) -> Void in
                 self.performSegueWithIdentifier("segueToAddSteps", sender: self)
         }
