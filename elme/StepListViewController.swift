@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class StepListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -19,6 +20,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var steps: [String]!
     var checked: [Bool]!
+    var goal: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +47,47 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         checked[0] = true
         
+        var returnedGoal = PFObject
+        
+
+//        pull down steps from current goal
+//        var query = PFQuery(className:"GameScore")
+//        query.getObjectInBackgroundWithId("xWMyZEGZ") {
+//            (gameScore: PFObject?, error: NSError?) -> Void in
+//            if error == nil && gameScore != nil {
+//                print(gameScore)
+//            } else {
+//                print(error)
+//            }
+//        }
+        
+        var query1 = PFQuery(className: "Goal")
+        query1.orderByAscending("createdAt")
+        query1.limit = 1
+        print(query1)
+        query1.findObjectsInBackgroundWithBlock {
+            (goals: [PFObject]?, error: NSError?) -> Void in
+            for goal in goals! {
+                returnedGoal = goal
+            }
+            
+        }
+        print(returnedGoal)
+        
+//        var query2 = PFQuery(className:"Step")
+//        query2.orderByAscending("createdAt")
+//        query2.whereKey("Goal", equalTo: query1)
+//        query2.findObjectsInBackgroundWithBlock {
+//            (objects: [PFObject]?, error: NSError?) -> Void in
+//           print(objects)
+//        
+//            for object in objects! {
+//                print(object["description"])
+//            }
+//            
+//        }
+
+
         
     }
 
@@ -118,7 +161,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //setting proper numbering to left of steps
         cell.stepTextLabel.text = steps[indexPath.row]
-        cell.stepNumberLabel.text = "1"
+        cell.stepNumberLabel.text = "\(indexPath.row + 1)"
         
         return cell
     }
