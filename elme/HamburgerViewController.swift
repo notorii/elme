@@ -21,7 +21,7 @@ class HamburgerViewController: UIViewController {
     var nextStepHomeVC: UINavigationController!
     var newGoalVC: HomeViewController! // inconsistent naming here...
     
-    var nextStepViewViewController: NextStepViewViewController!
+    //var nextStepViewViewController: NextStepViewViewController!
     
     var currentState: String!
     
@@ -75,16 +75,16 @@ class HamburgerViewController: UIViewController {
         menuView.addSubview(menuVC.view)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        print("[hamburger] viewWillAppear called")
-        
-        if currentState != nil && currentState == "nextStepHomeVC" {
-            print("[hamburger] view will appear called AND current state is next step home VC - setting title and date via nextStepViewViewController")
-            nextStepViewViewController.setTitleAndDate()
-        }
-    }
+    //override func viewWillAppear(animated: Bool) {
+    //    super.viewWillAppear(animated)
+    //    
+    //    print("[hamburger] viewWillAppear called")
+    //    
+    //    if currentState != nil && currentState == "nextStepHomeVC" {
+    //        print("[hamburger] view will appear called AND current state is next step home VC - setting title and date via nextStepViewViewController")
+    //        nextStepViewViewController.setTitleAndDate()
+    //    }
+    //}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

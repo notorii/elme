@@ -42,10 +42,10 @@ class NextStepViewViewController: UIViewController {
         testExpand.layer.cornerRadius = testExpand.frame.size.width/2
         testExpand.clipsToBounds = true
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        hamburgerViewController = storyboard.instantiateViewControllerWithIdentifier("Hamburger") as! HamburgerViewController
-        hamburgerViewController.nextStepViewViewController = self
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //
+        //hamburgerViewController = storyboard.instantiateViewControllerWithIdentifier("Hamburger") as! HamburgerViewController
+        //hamburgerViewController.nextStepViewViewController = self
         
         setTitleAndDate()
     }
