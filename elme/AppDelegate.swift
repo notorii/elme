@@ -30,12 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let user = PFUser.currentUser()
         
         // skip login screen if user is logged in
-//        if user != nil {
-//            print("user check on launch - user \(user!.username) is logged in")
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let hamburgerVC = storyboard.instantiateViewControllerWithIdentifier("Hamburger")
-//            self.window?.rootViewController = hamburgerVC
-//        }
+        if user != nil {
+            print("user check on launch - user \(user!.username) is logged in")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let hamburgerVC = storyboard.instantiateViewControllerWithIdentifier("Hamburger")
+            self.window?.rootViewController = hamburgerVC
+        }
     
         return true
     }
