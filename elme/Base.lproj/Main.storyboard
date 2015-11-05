@@ -1387,8 +1387,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="281" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sai Perchard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dL6-EG-Vae">
-                                        <rect key="frame" x="20" y="34" width="90" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dL6-EG-Vae">
+                                        <rect key="frame" x="20" y="34" width="28" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1737,9 +1737,9 @@
         <image name="x" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="S3r-RY-PZI"/>
-        <segue reference="VgA-CI-6JD"/>
-        <segue reference="M5Y-rJ-D0g"/>
+        <segue reference="Pul-Nz-taf"/>
         <segue reference="bHa-QY-yLc"/>
+        <segue reference="M5Y-rJ-D0g"/>
+        <segue reference="VgA-CI-6JD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -46,7 +46,7 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         
         var query1 = PFQuery(className: "Goal")
-        query1.orderByAscending("createdAt")
+        query1.orderByDescending("createdAt")
         query1.limit = 1
 
         query1.findObjectsInBackgroundWithBlock {
