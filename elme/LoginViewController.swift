@@ -30,7 +30,8 @@ class LoginViewController: UIViewController {
         loginButton.layer.borderWidth = 1
         loginButton.layer.borderColor = borderColor.CGColor
         loginButton.setTitleColor(mediumTextColor, forState: .Normal)
-        loginButton.layer.cornerRadius = 4
+        loginButton.layer.backgroundColor = buttonBackgroundColor.CGColor
+
         
 
         // Do any additional setup after loading the view.
