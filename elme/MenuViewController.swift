@@ -27,10 +27,9 @@ class MenuViewController: UIViewController {
 
     
     @IBAction func onLogOutPressed(sender: UIButton) {
-        print("tapped")
+        print("onLogOutPressed called")
         PFUser.logOut()
-        var currentUser = PFUser.currentUser()
-        performSegueWithIdentifier("LogOutSegue", sender: self)
+        performSegueWithIdentifier("segueToSignUpNC", sender: self)
     }
 
     /*
