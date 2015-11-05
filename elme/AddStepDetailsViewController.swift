@@ -158,39 +158,47 @@ class AddStepDetailsViewController: UIViewController, UITextViewDelegate {
             goal["user"] = user
             goal["fear_description"] = self.stepData.fearDescription
             goal["achievement_description"] = self.stepData.achievementDescription
+            // TODO: explicitly set permissions rather than relying on global setting
             //goal.ACL = PFACL(user: user!)
             goal.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if (success) {
                     print("saved goal")
+                    for (index, stepDict) in self.stepData.steps.enumerate() {
+                        let step = PFObject(className:"Step")
+                        step["user"] = self.user
+                        step["goal"] = goal
+                        step["description"] = stepDict["description"]
+                        step["distress_expected"] = stepDict["distress_expected"]
+                        step["remember"] = stepDict["remember"]
+                        step["reminder_date"] = stepDict["reminder_date"]
+                        step.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                            if (success) {
+                                print("saved step")
+                                // segue to 'next step' home screen on successful save of the last step
+                                if (index == (self.stepData.steps.count-1)) {
+                                    self.segueToLastStepDetail()
+                                }
+                            } else {
+                                print(error!.description)
+                            }
+                        }
+                    }
                 } else {
                     print(error!.description)
                 }
             }
             
-            for stepDict in self.stepData.steps {
-                let step = PFObject(className:"Step")
-                step["user"] = user
-                step["goal"] = goal
-                step["description"] = stepDict["description"]
-                step["distress_expected"] = stepDict["distress_expected"]
-                step["remember"] = stepDict["remember"]
-                step["reminder_date"] = stepDict["reminder_date"]
-                step.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                    if (success) {
-                        print("saved step")
-                    } else {
-                        print(error!.description)
-                    }
-                }
-            }
-            
-            // segue to 'next step' home screen
-            performSegueWithIdentifier("lastStepDetailSegue", sender: self)
             return false
+            
+            
         } else {
             self.stepData.stepIndex = self.stepData.stepIndex + 1
             return true
         }
+    }
+    
+    func segueToLastStepDetail() {
+        performSegueWithIdentifier("lastStepDetailSegue", sender: self)
     }
 
     @IBAction func nextButton(sender: UIButton) {
