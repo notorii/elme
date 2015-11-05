@@ -45,18 +45,20 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.separatorColor = borderColor
         
         
-        var query1 = PFQuery(className: "Goal")
-        query1.orderByDescending("createdAt")
-        query1.limit = 1
-
-        query1.findObjectsInBackgroundWithBlock {
-            (goals: [PFObject]?, error: NSError?) -> Void in
-            for goal in goals! {
-                var query2 = PFQuery(className:"Step")
-                query2.orderByAscending("createdAt")
-                query2.whereKey("goal", equalTo: goal)
-                query2.findObjectsInBackgroundWithBlock {
-                    (objects: [PFObject]?, error: NSError?) -> Void in
+        let goalQuery = PFQuery(className:"Goal")
+        goalQuery.orderByDescending("createdAt")
+        
+        // get most recent goal
+        goalQuery.getFirstObjectInBackgroundWithBlock { (goal: PFObject?, error: NSError?) -> Void in
+            if error == nil {
+                print("most recent goal retrieved: \(goal!.objectId)")
+                
+                let stepsQuery = PFQuery(className:"Step")
+                stepsQuery.whereKey("goal", equalTo: goal!)
+                stepsQuery.orderByAscending("reminder_date")
+                stepsQuery.whereKeyDoesNotExist("completed_at")
+                
+                stepsQuery.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
                     var counter = 0
                     for object in objects! {
                         let stepsListItem = object["description"] as! String
@@ -75,25 +77,11 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
                     }
                     self.tableView.reloadData()
                 }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
             }
-            
         }
-    
-//        var query3 = PFQuery(className: "Step")
-//        query3.orderByDescending("completedAt")
-//
-//        query3.findObjectsInBackgroundWithBlock {
-//            (steps: [PFObject]?, error: NSError?) -> Void in
-//            for step in steps! {
-//                if step["completedAt"] != nil {
-//                    checked[indexRow] = true
-//                } else {
-//                    checked[indexRow] = false
-//                }
-//            }
-//        }
-
-        
     }
 
     override func didReceiveMemoryWarning() {
