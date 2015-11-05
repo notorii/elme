@@ -56,7 +56,6 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
                 let stepsQuery = PFQuery(className:"Step")
                 stepsQuery.whereKey("goal", equalTo: goal!)
                 stepsQuery.orderByAscending("reminder_date")
-                stepsQuery.whereKeyDoesNotExist("completed_at")
                 
                 stepsQuery.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
                     var counter = 0
