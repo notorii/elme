@@ -76,9 +76,10 @@ class EditProfileViewController: UIViewController {
             print("smoke", terminator: "")
             
             //DELAY
-            delay(2){
+            delay(1){
                 //self.performSegueWithIdentifier("editProfileSegue", sender: nil)
-                self.navigationController!.popViewControllerAnimated(true)
+               // self.navigationController!.popViewControllerAnimated(true)
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
 
