@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate {
 
@@ -29,6 +30,8 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
     
     @IBOutlet weak var completeStepButton: UIButton!
     @IBOutlet weak var distressSlider: GradientSlider!
+    
+    var stepForCompletion: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +70,13 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
         completeStepButton.setTitleColor(mediumTextColor, forState: .Normal)
         completeStepButton.layer.cornerRadius = 4
         
+        
+        setTitleAndDate()
+    }
+    
+    func setTitleAndDate() {
+        stepLabel.text = stepForCompletion.objectForKey("description") as? String
+        dateLabel.text = stepForCompletion.objectForKey("reminder_date") as? String
     }
 
     override func didReceiveMemoryWarning() {
@@ -173,21 +183,37 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
     func textView(thoughtsTextView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n") {
             keyboardDismiss()
-            print("THIS ALSO NEEDS TO RUN THE NEXT STEPS", terminator: "")
-            //RUN NEXT STEPS HERE
         }
         return true
     }
     
     
     @IBAction func onCompletePress(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: nil)
+        print("complete pressed")
         
-        print("complete pressed", terminator: "")
-        //RUN NEXT STEPS HERE
+        // save data
+        stepForCompletion.setValue(distressSlider.value, forKey: "distress_actual")
+        stepForCompletion.setValue(thoughtsTextView.text, forKey: "reflection")
+        stepForCompletion.setValue(NSDate(), forKey: "completed_at")
+        stepForCompletion.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                print("completed goal saved")
+                // The object has been saved.
+            } else {
+                print("uh oh - \(error!.description)")
+                // There was a problem, check error.description
+            }
+        }
         
+        close()
     }
+    
     @IBAction func onClosePress(sender: AnyObject) {
+        print("closed press")
+        close()
+    }
+    
+    func close() {
         UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { () -> Void in
             self.distressLevelView.center.y = self.distressLevelView.center.y + 500
             self.thoughtsView.center.y = self.thoughtsView.center.y + 500
@@ -198,7 +224,6 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
         delay(0.4) {
             self.dismissViewControllerAnimated(false, completion: nil)
         }
-        print("closed press")
     }
 
     /*
