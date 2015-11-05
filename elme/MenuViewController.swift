@@ -12,10 +12,14 @@ import Parse
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var logOutButton: UIButton!
+    @IBOutlet weak var userFullName: UILabel!
+    let user = PFUser.currentUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         logOutButton.titleLabel!.textColor = mediumTextColor
+        userFullName.text = user!["fullName"] as? String
 
         // Do any additional setup after loading the view.
     }
