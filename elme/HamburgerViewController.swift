@@ -29,6 +29,11 @@ class HamburgerViewController: UIViewController {
         super.viewDidLoad()
         print("[hamburger] viewDidLoad called")
         
+        
+        setState()
+    }
+    
+    func setState() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         menuVC = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")

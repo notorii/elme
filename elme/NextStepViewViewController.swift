@@ -84,15 +84,21 @@ class NextStepViewViewController: UIViewController {
                 stepsQuery.whereKeyDoesNotExist("completed_at")
                 
                 stepsQuery.getFirstObjectInBackgroundWithBlock({ (step: PFObject?, error: NSError?) -> Void in
-                    print("least recent (by reminder date) incomplete step retrieved: \(step!.objectId)")
                     
-                    self.stepLabel.text = step!["description"] as? String
-                    let dateFormatter = NSDateFormatter()
-                    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-                    dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-                    self.dateLabel.text = dateFormatter.stringFromDate(step!["reminder_date"] as! NSDate)
-                    
-                    self.stepForCompletion = step!
+                    if error == nil {
+                        print("least recent (by reminder date) incomplete step retrieved: \(step!.objectId)")
+                        
+                        self.stepLabel.text = step!["description"] as? String
+                        let dateFormatter = NSDateFormatter()
+                        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+                        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+                        self.dateLabel.text = dateFormatter.stringFromDate(step!["reminder_date"] as! NSDate)
+                        
+                        self.stepForCompletion = step!
+                    } else {
+                        print("all steps complete for this goal - reset state (set to new goal)")
+                        self.hamburgerViewController.setState()
+                    }
                 })
                 
             } else {

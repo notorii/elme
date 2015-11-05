@@ -208,7 +208,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2272.5" y="1993.5"/>
+            <point key="canvasLocation" x="2260.5" y="2535.5"/>
         </scene>
         <!--Step List View Controller-->
         <scene sceneID="Dk2-dz-23c">
@@ -1678,7 +1678,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1800.5" y="1987.5"/>
+            <point key="canvasLocation" x="1788.5" y="2529.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hP8-Ze-dIK">
@@ -1717,7 +1717,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yM8-6d-UBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337.5" y="1987.5"/>
+            <point key="canvasLocation" x="1325.5" y="2529.5"/>
         </scene>
     </scenes>
     <resources>
