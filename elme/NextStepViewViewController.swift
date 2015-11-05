@@ -34,6 +34,11 @@ class NextStepViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set to blank so we never see the placeholder values. will be set to values from parse later.
+        stepLabel.text = ""
+        dateLabel.text = ""
+        
         view.backgroundColor = darkBackgroundColor
         stepLabel.textColor = darkTextColor
         dateLabel.textColor = darkSecondaryTextColor
