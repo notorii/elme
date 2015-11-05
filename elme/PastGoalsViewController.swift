@@ -14,9 +14,10 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var navBarView: UIView!
     var pastGoals: [String]!
 
+    @IBOutlet weak var emptyState: UILabel!
     @IBOutlet weak var pastGoalsTitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         pastGoals = []
@@ -32,6 +33,8 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 4
+        
+        emptyState.textColor = mediumSecondaryTextColor
         
         var query = PFQuery(className:"Goal")
         query.orderByDescending("createdAt")
@@ -67,6 +70,10 @@ class PastGoalsViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("PastGoalViewCell") as! PastGoalViewCell
+        
+        if pastGoals.count > 0 {
+            emptyState.hidden = true
+        }
         
         cell.backgroundColor = lightBackgroundColor
         cell.pastGoalLabel.textColor = darkTextColor

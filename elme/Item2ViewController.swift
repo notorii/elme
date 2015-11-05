@@ -75,7 +75,7 @@ class Item2ViewController: UIViewController {
                 
                 let stepsQuery = PFQuery(className:"Step")
                 stepsQuery.whereKey("goal", equalTo: goal!)
-                stepsQuery.orderByAscending("reminder_date")
+                stepsQuery.orderByDescending("reminder_date")
                 stepsQuery.whereKeyDoesNotExist("completion_date")
                 
                 stepsQuery.getFirstObjectInBackgroundWithBlock({ (step: PFObject?, error: NSError?) -> Void in
@@ -85,7 +85,7 @@ class Item2ViewController: UIViewController {
                     self.timeLabel.text = step!["reminder_date"] as? String
                     self.thoughtsTextView.text = step!["remember"] as? String
                     self.thoughtsTextView.textColor = darkTextColor
-                    self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16)
+                    self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16.0)
                     self.distressSlider.value = CGFloat((step!["distress_expected"] as? Int)!)
                     self.setSliderData()
                 })
