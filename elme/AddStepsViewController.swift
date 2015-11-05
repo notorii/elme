@@ -39,8 +39,11 @@ class AddStepsViewController: UIViewController, UITextFieldDelegate, UITableView
         
         tableView.backgroundColor = darkBackgroundColor
         
+        
         nextButton.backgroundColor = darkBackgroundColor
-        nextButton.layer.cornerRadius = 4
+        nextButton.layer.borderColor = borderColor.CGColor
+        nextButton.layer.borderWidth = 1.0
+        AddStepsView.layer.borderWidth = 1.0
         
         steps = []
     }
