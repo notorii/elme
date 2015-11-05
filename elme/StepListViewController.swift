@@ -48,17 +48,15 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         var query1 = PFQuery(className: "Goal")
         query1.orderByAscending("createdAt")
         query1.limit = 1
-        print(query1)
 
         query1.findObjectsInBackgroundWithBlock {
             (goals: [PFObject]?, error: NSError?) -> Void in
             for goal in goals! {
-                print("new goal")
                 var query2 = PFQuery(className:"Step")
                 query2.orderByAscending("createdAt")
+                query2.whereKey("goal", equalTo: goal)
                 query2.findObjectsInBackgroundWithBlock {
                     (objects: [PFObject]?, error: NSError?) -> Void in
-                    
                     for object in objects! {
                         let stepsListItem = object["description"] as! String
                         self.steps.append(stepsListItem)
