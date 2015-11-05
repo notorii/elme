@@ -21,6 +21,9 @@ class NextStepViewViewController: UIViewController {
     @IBOutlet weak var navBarView: UIImageView!
     @IBOutlet weak var hamburgerButton: UIButton!
     
+    var hamburgerViewController: HamburgerViewController!
+    var isMenuOpen = false
+    
     var newGoalTransition: NewGoalTransition!
     var counter = 0
     
@@ -45,8 +48,17 @@ class NextStepViewViewController: UIViewController {
     
 
     @IBOutlet weak var onCheckmarkTap: UIButton!
+    
     @IBAction func onMenuTap(sender: AnyObject) {
+        if (isMenuOpen == false) {
+            hamburgerViewController.openMenu()
+            isMenuOpen = true
+        } else {
+            hamburgerViewController.closeMenu()
+            isMenuOpen = false
+        }
     }
+    
     @IBAction func onRightChevronTap(sender: AnyObject) {
     }
     
@@ -60,7 +72,7 @@ class NextStepViewViewController: UIViewController {
         case .Changed:
             print("changed press")
 
-            if counter > 20 {
+            if counter > 22 {
                 performSegueWithIdentifier("CompleteQuestionStep", sender: self)
                 delay(1) {
                     self.testExpand.transform = CGAffineTransformMakeScale(1, 1)
@@ -69,7 +81,7 @@ class NextStepViewViewController: UIViewController {
             } else {
                 counter = counter + 1
                 print(counter)
-                var checkmarkScaleX = convertValue(CGFloat(counter), r1Min: 0, r1Max: 80, r2Min: 1, r2Max: 2)
+                var checkmarkScaleX = convertValue(CGFloat(counter), r1Min: 0, r1Max: 120, r2Min: 1, r2Max: 2)
 
                 print(checkmarkScaleX)
                 testExpand.transform = CGAffineTransformScale(self.testExpand.transform, CGFloat(checkmarkScaleX), CGFloat(checkmarkScaleX))
@@ -77,15 +89,14 @@ class NextStepViewViewController: UIViewController {
                 
             }
 
-
         case .Ended:
             print("end press")
-                        default: ()
-                        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: { () -> Void in
+                        UIView.animateWithDuration(0.7, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: { () -> Void in
                             self.testExpand.transform = CGAffineTransformMakeScale(1, 1)
                             
                             }, completion: nil)
                         counter = 0
+        default: ()
         }
     }
    
@@ -100,5 +111,13 @@ class NextStepViewViewController: UIViewController {
         newGoalTransition.duration = 0.01
     }
 
+    @IBAction func onTap(sender: UITapGestureRecognizer) {
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: { () -> Void in
+            self.testExpand.transform = CGAffineTransformMakeScale(1.2, 1.2)
+            }, completion: {
+                (value: Bool) in
+                self.testExpand.transform = CGAffineTransformMakeScale(1, 1)
+        })
+    }
     
 }

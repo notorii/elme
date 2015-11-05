@@ -27,6 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bUc-iY-GoN">
                                 <rect key="frame" x="0.0" y="0.0" width="57" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onHamburgerTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deF-hr-7PN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oi2-GI-xwA">
                                 <rect key="frame" x="321" y="0.0" width="54" height="54"/>
@@ -1128,7 +1131,7 @@
                         <outlet property="rememberTextView" destination="5Y4-hB-NNp" id="fx4-aD-FB9"/>
                         <outlet property="stepNumber" destination="0Bn-oN-ajb" id="tuD-DM-Bbr"/>
                         <outlet property="stepTitle" destination="Lby-XT-S1u" id="oNj-Jb-xPY"/>
-                        <segue destination="cXG-KC-0Ow" kind="modal" identifier="lastStepDetailSegue" id="nt9-De-n9u"/>
+                        <segue destination="nvA-7C-NCP" kind="push" identifier="lastStepDetailSegue" id="2D1-4Q-1K0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6Q-DX-pbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1270,28 +1273,6 @@
             <point key="canvasLocation" x="-865.5" y="4253.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="6f2-Gf-olL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="cXG-KC-0Ow" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="izV-Ee-0sC"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qMl-v3-b4r">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="nvA-7C-NCP" kind="relationship" relationship="rootViewController" id="Ja7-LM-paU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vbP-8x-mid" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="412.5" y="1229.5"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="UQM-fK-iIO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="UuN-dF-i2U" sceneMemberID="viewController">
@@ -1420,7 +1401,7 @@
                         <outlet property="loginButton" destination="SoE-0A-xqK" id="9Dc-dc-P4T"/>
                         <outlet property="passwordField" destination="BVt-6a-jJc" id="y0m-qk-bAe"/>
                         <outlet property="usernameField" destination="g1B-WL-TgW" id="GFQ-lW-Jqv"/>
-                        <segue destination="cXG-KC-0Ow" kind="modal" identifier="loginSegue" id="oHZ-jM-O4e"/>
+                        <segue destination="nvA-7C-NCP" kind="push" identifier="loginSegue" id="VgA-CI-6JD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2t-5u-8Vv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1460,7 +1441,7 @@
         <!--Hamburger View Controller-->
         <scene sceneID="skM-oi-S17">
             <objects>
-                <viewController id="nvA-7C-NCP" customClass="HamburgerViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Hamburger" id="nvA-7C-NCP" customClass="HamburgerViewController" customModule="elme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Yr-fj-heI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1468,12 +1449,11 @@
                             <view contentMode="scaleToFill" id="xra-au-cnk" userLabel="MenuView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.79335956773830041" blue="0.38942296953596389" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="SKg-wb-y5E" userLabel="ContentView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.35230684341160867" green="0.67556152187742025" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.97647058823529409" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="NnS-1H-edv" appends="YES" id="Uge-fv-kHd"/>
@@ -1884,15 +1864,6 @@
                                 <color key="textColor" red="0.22352941176470589" green="0.13725490196078433" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="apG-Pp-nlp">
-                                <rect key="frame" x="151" y="298" width="72" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <state key="normal" image="checkmark_step_complete"/>
-                                <connections>
-                                    <segue destination="HhJ-yh-X0b" kind="modal" identifier="CompleteQuestionStep" id="mcV-Tk-laD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JW6-UO-Rir">
                                 <rect key="frame" x="323" y="4.5" width="52" height="50.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1910,6 +1881,20 @@
                                     <action selector="onMenuTap:" destination="Gss-5Q-TJW" eventType="touchUpInside" id="GB6-AQ-Z4T"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="HWT-h1-4uD">
+                                <rect key="frame" x="135" y="282" width="104" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.037066020669999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uLB-B1-7Sf" appends="YES" id="jXc-K9-Uzu"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ffm-h6-f4Q" appends="YES" id="UL0-TH-y4R"/>
+                                </connections>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="check" id="UQR-ty-lVG">
+                                <rect key="frame" x="172" y="320" width="31" height="28"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                             <view contentMode="scaleToFill" id="82I-VA-9gV">
                                 <rect key="frame" x="0.0" y="65" width="375" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1930,30 +1915,20 @@
                                     </label>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" id="HWT-h1-4uD">
-                                <rect key="frame" x="151" y="298" width="76" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.037066020669999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="uLB-B1-7Sf" appends="YES" id="jXc-K9-Uzu"/>
-                                </connections>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.93725490196078431" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Sor-7V-fVp"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="checkmarkButton" destination="apG-Pp-nlp" id="Pq3-1p-r1A"/>
                         <outlet property="dateLabel" destination="V4t-ax-SOW" id="e7T-xt-nRo"/>
                         <outlet property="hamburgerButton" destination="ntb-HA-aS3" id="RUE-0g-T5o"/>
                         <outlet property="navBarView" destination="Mxk-ld-Wmo" id="xCi-el-0Cb"/>
                         <outlet property="navLabel" destination="1Bb-vE-eam" id="ovo-fX-VRm"/>
-                        <outlet property="onCheckmarkTap" destination="apG-Pp-nlp" id="w2o-dJ-8Ez"/>
                         <outlet property="stepLabel" destination="chI-qz-P7e" id="fbw-2r-DMi"/>
                         <outlet property="stepView" destination="82I-VA-9gV" id="XDm-of-Gcl"/>
                         <outlet property="testExpand" destination="HWT-h1-4uD" id="95r-M6-aeM"/>
+                        <segue destination="HhJ-yh-X0b" kind="modal" identifier="CompleteQuestionStep" id="q1Z-Od-9AM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m72-bQ-edW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1962,6 +1937,11 @@
                         <action selector="onLongPress:" destination="Gss-5Q-TJW" id="xN9-I6-rvB"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="Ffm-h6-f4Q">
+                    <connections>
+                        <action selector="onTap:" destination="Gss-5Q-TJW" id="DCt-mh-zMi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1800.5" y="1987.5"/>
         </scene>
@@ -1986,7 +1966,7 @@
         <!--Navigation Controller-->
         <scene sceneID="LUl-6q-o5b">
             <objects>
-                <navigationController storyboardIdentifier="questionNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vVU-Tw-PjW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NextStepHome" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vVU-Tw-PjW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="u0j-iG-ut8"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -18759,8 +18739,8 @@ AA9TKQAPUy4AAAAAAAAEAQAAAAAAAAA/AAAAAAAAAAAAAAAAAA9TMA
         <image name="LoginFields" width="375" height="109"/>
         <image name="Menu_icon" width="18" height="12"/>
         <image name="Save_Button" width="355" height="55"/>
+        <image name="check" width="31" height="28"/>
         <image name="checkmark" width="22" height="22"/>
-        <image name="checkmark_step_complete" width="72" height="72"/>
         <image name="chevron" width="8" height="12"/>
         <image name="listIcon" width="20" height="12"/>
         <image name="nav bar" width="375" height="55"/>
@@ -18773,9 +18753,5 @@ AA9TKQAPUy4AAAAAAAAEAQAAAAAAAAA/AAAAAAAAAAAAAAAAAA9TMA
         <image name="x" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M5Y-rJ-D0g"/>
-        <segue reference="nt9-De-n9u"/>
-        <segue reference="miw-Bx-Irs"/>
-        <segue reference="bHa-QY-yLc"/>
     </inferredMetricsTieBreakers>
 </document>

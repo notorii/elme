@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class HamburgerViewController: UIViewController {
 
@@ -16,8 +17,9 @@ class HamburgerViewController: UIViewController {
     
     var initialCenter: CGPoint!
     
-    var menuViewController: UIViewController!
-    var homeViewController: UIViewController!
+    var menuVC: UIViewController!
+    var nextStepHomeVC: UINavigationController!
+    var newGoalVC: HomeViewController! // inconsistent naming here...
     
    // viewControllers = [homeViewController, menuViewController]
     
@@ -26,65 +28,79 @@ class HamburgerViewController: UIViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        menuViewController = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
+        menuVC = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
+        nextStepHomeVC = storyboard.instantiateViewControllerWithIdentifier("NextStepHome") as! UINavigationController
+        newGoalVC = storyboard.instantiateViewControllerWithIdentifier("NewGoalHome") as! HomeViewController
         
-        homeViewController = storyboard.instantiateViewControllerWithIdentifier("questionNavigationController")
-
-        // Do any additional setup after loading the view.
+        let nextStepHomeTopVC = nextStepHomeVC.topViewController as! NextStepViewViewController
+        nextStepHomeTopVC.hamburgerViewController = self
+        newGoalVC.hamburgerViewController = self
         
-        homeViewController.view.frame = contentView.frame
-        contentView.addSubview(homeViewController.view)
         
-        menuViewController.view.frame = menuView.frame
-        menuView.addSubview(menuViewController.view)
+        // this gets all the user's goal + any goals with global read/write permissions. technically there shouldn't be any goals with global read/write permissions...
+        let goalQuery = PFQuery(className:"Goal")
         
+        goalQuery.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) goals.")
+                
+                // if user has created a goal show next step home, otherwise show new goal home
+                if (objects!.count < 0) {
+                    self.nextStepHomeVC.view.frame = self.contentView.frame
+                    self.contentView.addSubview(self.nextStepHomeVC.view)
+                } else {
+                    self.newGoalVC.view.frame = self.contentView.frame
+                    self.contentView.addSubview(self.newGoalVC.view)
+                }
+                
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
+        
+        menuVC.view.frame = menuView.frame
+        menuView.addSubview(menuVC.view)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
     @IBAction func onPan(sender: UIPanGestureRecognizer) {
         let translation = sender.translationInView(view)
-        let location = sender.locationInView(view)
         let velocity = sender.velocityInView(view)
         
         if sender.state == UIGestureRecognizerState.Began {
             initialCenter = contentView.center
-            
         } else if sender.state == UIGestureRecognizerState.Changed{
             contentView.center = CGPoint(x: translation.x + initialCenter.x, y:initialCenter.y)
             if velocity.x > 0 {
                 self.contentView.center = self.view.center
             }
-            
         } else if sender.state == UIGestureRecognizerState.Ended{
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
-                if velocity.x < 0 {
-                    self.contentView.center = self.view.center
-                    
-                } else{
-                    self.contentView.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
-                    
-                }
-
-            })
-            
-            
+            if velocity.x < 0 {
+                self.closeMenu()
+            } else{
+                self.openMenu()
+            }
         }
     }
-//
-//    @IBAction func onHamburgerPress(sender: AnyObject) {
-//        UIView.animateWithDuration(0.3, animations: { () -> Void in
-//            
-//                self.contentView.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
-//                
-//            
-//        })
-//    }
     
+    func closeMenu() {
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.contentView.center = self.view.center
+        })
+    }
+    
+    func openMenu() {
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.contentView.center = CGPoint(x: self.view.center.x + 280, y: self.view.center.y)
+        })
+    }
     
     /*
     // MARK: - Navigation

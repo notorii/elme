@@ -11,6 +11,9 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var newGoalTransition: NewGoalTransition!
+    
+    var hamburgerViewController: HamburgerViewController!
+    var isMenuOpen = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,16 @@ class HomeViewController: UIViewController {
         destinationViewController.transitioningDelegate = newGoalTransition
         //destinationViewController.presentViewController(self, animated: true, completion: nil)
         newGoalTransition.duration = 0.01
+    }
+    
+    @IBAction func onHamburgerTap(sender: AnyObject) {
+        if (isMenuOpen == false) {
+            hamburgerViewController.openMenu()
+            isMenuOpen = true
+        } else {
+            hamburgerViewController.closeMenu()
+            isMenuOpen = false
+        }
     }
     
     /*
