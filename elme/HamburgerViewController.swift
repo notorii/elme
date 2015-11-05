@@ -21,7 +21,9 @@ class HamburgerViewController: UIViewController {
     var nextStepHomeVC: UINavigationController!
     var newGoalVC: HomeViewController! // inconsistent naming here...
     
-   // viewControllers = [homeViewController, menuViewController]
+    var nextStepViewViewController: NextStepViewViewController!
+    
+    var currentState: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,24 +38,32 @@ class HamburgerViewController: UIViewController {
         nextStepHomeTopVC.hamburgerViewController = self
         newGoalVC.hamburgerViewController = self
         
-        
         // this gets all the user's goal + any goals with global read/write permissions. technically there shouldn't be any goals with global read/write permissions...
         let goalQuery = PFQuery(className:"Goal")
+        goalQuery.orderByDescending("createdAt")
         
-        goalQuery.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
-            
+        goalQuery.getFirstObjectInBackgroundWithBlock { (goal: PFObject?, error: NSError?) -> Void in
             if error == nil {
-                // The find succeeded.
-                print("Successfully retrieved \(objects!.count) goals.")
+                print("[hamburger] most recent goal retrieved: \(goal!.objectId)")
                 
-                // if user has created a goal show next step home, otherwise show new goal home
-                if (objects!.count > 0) {
-                    self.nextStepHomeVC.view.frame = self.contentView.frame
-                    self.contentView.addSubview(self.nextStepHomeVC.view)
-                } else {
-                    self.newGoalVC.view.frame = self.contentView.frame
-                    self.contentView.addSubview(self.newGoalVC.view)
-                }
+                let stepsQuery = PFQuery(className:"Step")
+                stepsQuery.whereKey("goal", equalTo: goal!)
+                stepsQuery.orderByAscending("reminder_date")
+                stepsQuery.whereKeyDoesNotExist("completed_at")
+                
+                stepsQuery.getFirstObjectInBackgroundWithBlock({ (step: PFObject?, error: NSError?) -> Void in
+                    if error != nil || step == nil {
+                        print("[hamburger] step is nil - show newGoalVC")
+                        self.newGoalVC.view.frame = self.contentView.frame
+                        self.contentView.addSubview(self.newGoalVC.view)
+                        self.currentState = "newGoalVC"
+                    } else {
+                        print("[hamburger] step is not nil - show nextStepHomeVC")
+                        self.nextStepHomeVC.view.frame = self.contentView.frame
+                        self.contentView.addSubview(self.nextStepHomeVC.view)
+                        self.currentState = "nextStepHomeVC"
+                    }
+                })
                 
             } else {
                 // Log details of the failure
@@ -63,6 +73,17 @@ class HamburgerViewController: UIViewController {
         
         menuVC.view.frame = menuView.frame
         menuView.addSubview(menuVC.view)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("[hamburger] viewWillAppear called")
+        
+        if currentState != nil && currentState == "nextStepHomeVC" {
+            print("[hamburger] view will appear called AND current state is next step home VC - setting title and date via nextStepViewViewController")
+            nextStepViewViewController.setTitleAndDate()
+        }
     }
 
     override func didReceiveMemoryWarning() {
