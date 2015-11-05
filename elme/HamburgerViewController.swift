@@ -27,6 +27,7 @@ class HamburgerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("[hamburger] viewDidLoad called")
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -68,6 +69,9 @@ class HamburgerViewController: UIViewController {
             } else {
                 // Log details of the failure
                 print("Error: \(error!) \(error!.userInfo)")
+                self.newGoalVC.view.frame = self.contentView.frame
+                self.contentView.addSubview(self.newGoalVC.view)
+                self.currentState = "newGoalVC"
             }
         }
         

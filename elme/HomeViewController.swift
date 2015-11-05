@@ -25,12 +25,10 @@ class HomeViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         let destinationViewController = segue.destinationViewController
         newGoalTransition = NewGoalTransition()
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
         destinationViewController.transitioningDelegate = newGoalTransition
-        //destinationViewController.presentViewController(self, animated: true, completion: nil)
         newGoalTransition.duration = 0.01
     }
     
