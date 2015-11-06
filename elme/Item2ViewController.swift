@@ -76,9 +76,12 @@ class Item2ViewController: UIViewController {
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         self.timeLabel.text = dateFormatter.stringFromDate(stepObject["reminder_date"] as! NSDate)
         
+        // http://stackoverflow.com/questions/27709965/how-to-make-uitextview-selectable-in-swift
+        thoughtsTextView.selectable = true
         self.thoughtsTextView.text = stepObject["remember"] as? String
+        thoughtsTextView.selectable = false
+        
         self.thoughtsTextView.textColor = darkTextColor
-        self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16.0)
         self.distressSlider.value = CGFloat((stepObject["distress_expected"] as? Int)!)
         self.setSliderData()
        

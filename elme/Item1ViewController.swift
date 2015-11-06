@@ -106,9 +106,17 @@ class Item1ViewController: UIViewController {
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         self.timeLabel.text = dateFormatter.stringFromDate(stepObject["reminder_date"] as! NSDate)
         
+        thoughtsTextView.selectable = true
+        reflectionTextView.selectable = true
         self.thoughtsTextView.text = stepObject["remember"] as? String
+        self.reflectionTextView.text = stepObject["reflection"] as? String
+        thoughtsTextView.selectable = false
+        reflectionTextView.selectable = false
+        
         self.thoughtsTextView.textColor = darkTextColor
-        self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16)
+        
+        //self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16)
+        
         self.creationDistressLevel = CGFloat((stepObject["distress_expected"] as? Int)!)
         self.setUpActualDistressLevel()
         self.setUpExpectedDistressLevel()
