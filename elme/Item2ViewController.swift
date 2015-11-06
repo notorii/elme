@@ -31,6 +31,8 @@ class Item2ViewController: UIViewController {
     @IBOutlet weak var thoughtsTextView: UITextView!
     @IBOutlet weak var titleTextField: UITextField!
     
+    var stepObject: PFObject!
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -61,45 +63,25 @@ class Item2ViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setTitleAndDate()
+        
+        print("stepObject passed from StepListView: \(stepObject)")
     }
     
     func setTitleAndDate() {
         
-        let goalQuery = PFQuery(className:"Goal")
-        goalQuery.orderByAscending("createdAt")
+        self.titleTextField.text = stepObject["description"] as? String
         
-        // get most recent goal
-        goalQuery.getFirstObjectInBackgroundWithBlock { (goal: PFObject?, error: NSError?) -> Void in
-            if error == nil {
-                print("most recent goal retrieved: \(goal!.objectId)")
-                
-                let stepsQuery = PFQuery(className:"Step")
-                stepsQuery.whereKey("goal", equalTo: goal!)
-                stepsQuery.orderByDescending("reminder_date")
-                stepsQuery.whereKeyDoesNotExist("completion_date")
-                
-                stepsQuery.getFirstObjectInBackgroundWithBlock({ (step: PFObject?, error: NSError?) -> Void in
-                    print("least recent (by reminder date) incomplete step retrieved: \(step!.objectId)")
-                    
-                    self.titleTextField.text = step!["description"] as? String
-                    
-                    let dateFormatter = NSDateFormatter()
-                    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-                    dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-                    self.timeLabel.text = dateFormatter.stringFromDate(step!["reminder_date"] as! NSDate)
-                    
-                    self.thoughtsTextView.text = step!["remember"] as? String
-                    self.thoughtsTextView.textColor = darkTextColor
-                    self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16.0)
-                    self.distressSlider.value = CGFloat((step!["distress_expected"] as? Int)!)
-                    self.setSliderData()
-                })
-                
-            } else {
-                // Log details of the failure
-                print("Error: \(error!) \(error!.userInfo)")
-            }
-        }
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        self.timeLabel.text = dateFormatter.stringFromDate(stepObject["reminder_date"] as! NSDate)
+        
+        self.thoughtsTextView.text = stepObject["remember"] as? String
+        self.thoughtsTextView.textColor = darkTextColor
+        self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16.0)
+        self.distressSlider.value = CGFloat((stepObject["distress_expected"] as? Int)!)
+        self.setSliderData()
+       
     }
     
     func setSliderData() {

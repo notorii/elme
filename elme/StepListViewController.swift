@@ -19,6 +19,8 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
     let CellIdentifier = "StepListCell"
     
     var steps: [String]!
+    var stepObjects = [PFObject]()
+    var stepObject: PFObject!
     var checked = [Bool]()
     var goal: String!
     
@@ -60,6 +62,9 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
                 stepsQuery.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
                     var counter = 0
                     for object in objects! {
+                        self.stepObjects.insert(object, atIndex: counter)
+                        print("stepObjects[\(counter)] = \(self.stepObjects[counter])")
+                        
                         let stepsListItem = object["description"] as! String
                         self.steps.append(stepsListItem)
                         print(counter)
@@ -111,6 +116,11 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
         
 //        checked[indexPath.row] = !checked[indexPath.row]
 //        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
+        // set stepObject so we can pass through segue
+        stepObject = stepObjects[indexPath.row]
+        print("indexPath.row = \(indexPath.row)")
+        print("stepObjects[IndexPath.row] = \(stepObjects[indexPath.row])")
         
         //if checked, run segue to complete details view controller
         if checked[indexPath.row] == true {
@@ -166,14 +176,22 @@ class StepListViewController: UIViewController, UITableViewDataSource, UITableVi
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
-        var destinationViewController = segue.destinationViewController
-        
-
-        if segue == "listPress" {
+        if segue.identifier == "stepDetailsIncompleteSegue" {
+            
+            let destinationViewController = segue.destinationViewController as! Item2ViewController
+            destinationViewController.stepObject = self.stepObject
+            destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+            
+        } else if segue.identifier == "stepDetailsCompleteSegue" {
+            
+            let destinationViewController = segue.destinationViewController as! Item1ViewController
+            destinationViewController.stepObject = self.stepObject
+            destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
             
         } else {
-            destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+            
+            let destinationViewController = segue.destinationViewController
+            
         }
     }
 

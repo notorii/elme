@@ -258,9 +258,6 @@
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EoE-kw-6Eb">
                                     <rect key="frame" x="0.0" y="83" width="375" height="56"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <connections>
-                                        <segue destination="xt5-Zc-Sae" kind="modal" modalTransitionStyle="crossDissolve" id="bHa-QY-yLc"/>
-                                    </connections>
                                 </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="StepListCell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="StepListCell" rowHeight="55" id="jfG-nM-5uX" customClass="StepListCell" customModule="elme" customModuleProvider="target">
@@ -477,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lkt-2A-IqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3489.5" y="1973.5"/>
+            <point key="canvasLocation" x="3669.5" y="1397.5"/>
         </scene>
         <!--Item1 View Controller-->
         <scene sceneID="gdI-gS-CRG">
@@ -681,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yuo-XG-yUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3953.5" y="1973.5"/>
+            <point key="canvasLocation" x="3797.5" y="2227.5"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="TQd-zL-v5h">
@@ -1740,7 +1737,6 @@
         <image name="x" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bHa-QY-yLc"/>
         <segue reference="M5Y-rJ-D0g"/>
         <segue reference="2D1-4Q-1K0"/>
     </inferredMetricsTieBreakers>

@@ -43,6 +43,8 @@ class Item1ViewController: UIViewController {
     
     var creationDistressLevel: CGFloat!
     var reflectionDistressLevel: CGFloat!
+    
+    var stepObject: PFObject!
 
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -97,42 +99,20 @@ class Item1ViewController: UIViewController {
     
     func setTitleAndDate() {
         
-        let goalQuery = PFQuery(className:"Goal")
-        goalQuery.orderByAscending("createdAt")
+        self.titleTextField.text = stepObject["description"] as? String
         
-        // get most recent goal
-        goalQuery.getFirstObjectInBackgroundWithBlock { (goal: PFObject?, error: NSError?) -> Void in
-            if error == nil {
-                print("most recent goal retrieved: \(goal!.objectId)")
-                
-                let stepsQuery = PFQuery(className:"Step")
-                stepsQuery.whereKey("goal", equalTo: goal!)
-                stepsQuery.orderByAscending("reminder_date")
-                stepsQuery.whereKeyDoesNotExist("completion_date")
-                
-                stepsQuery.getFirstObjectInBackgroundWithBlock({ (step: PFObject?, error: NSError?) -> Void in
-                    print("least recent (by reminder date) incomplete step retrieved: \(step!.objectId)")
-                    
-                    self.titleTextField.text = step!["description"] as? String
-                    
-                    let dateFormatter = NSDateFormatter()
-                    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-                    dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-                    self.timeLabel.text = dateFormatter.stringFromDate(step!["reminder_date"] as! NSDate)
-                    
-                    self.thoughtsTextView.text = step!["remember"] as? String
-                    self.thoughtsTextView.textColor = darkTextColor
-                    self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16)
-                    self.creationDistressLevel = CGFloat((step!["distress_expected"] as? Int)!)
-                    self.setUpActualDistressLevel()
-                    self.setUpExpectedDistressLevel()
-                })
-                
-            } else {
-                // Log details of the failure
-                print("Error: \(error!) \(error!.userInfo)")
-            }
-        }
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        self.timeLabel.text = dateFormatter.stringFromDate(stepObject["reminder_date"] as! NSDate)
+        
+        self.thoughtsTextView.text = stepObject["remember"] as? String
+        self.thoughtsTextView.textColor = darkTextColor
+        self.thoughtsTextView.font = UIFont(name: "Avenir-Next", size: 16)
+        self.creationDistressLevel = CGFloat((stepObject["distress_expected"] as? Int)!)
+        self.setUpActualDistressLevel()
+        self.setUpExpectedDistressLevel()
+        
     }
     
     func setUpActualDistressLevel() {
