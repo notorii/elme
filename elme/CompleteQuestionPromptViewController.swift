@@ -224,8 +224,9 @@ class CompleteQuestionPromptViewController: UIViewController, UITextViewDelegate
             self.view.backgroundColor = UIColor(white: 1, alpha: 0)
             self.completeStepButton.center.y = self.completeStepButton.center.y + 500
             self.stepView.alpha = 0
+            self.closeButton.alpha = 0
             }, completion: nil)
-        delay(0.4) {
+        delay(0.6) {
             self.dismissViewControllerAnimated(false, completion: nil)
         }
     }
